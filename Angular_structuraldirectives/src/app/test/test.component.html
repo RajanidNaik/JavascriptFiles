@@ -1,0 +1,22 @@
+<p>test works!</p>
+<!-- <h2 *ngIf="true">RajaniNaik</h2> -->
+<!-- <h2 *ngIf="false">RajaniNaik</h2> -->
+<!-- <h2 *ngIf="displayName">RajaniNaik</h2> -->
+
+    <!-- <h2 *ngIf="displayName;else elseBlock">RajaniNaik </h2>
+    <ng-template #elseBlock>
+        <h2>Name is hidden</h2>
+    </ng-template> -->
+
+
+
+
+
+<div *ngIf="displayName; then thenBlock; else elseBlock"></div>
+<ng-template #thenBlock>
+    <h2>RajaniNaik</h2>
+</ng-template>    
+<ng-template #elseBlock>
+    <h2>name hidden</h2>
+</ng-template>    
+

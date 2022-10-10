@@ -1,0 +1,20 @@
+<p>test3 works!</p>
+<div *ngFor="let color of colors">
+    <h1>{{color}}</h1>
+</div>
+
+<div *ngFor="let color of colors;index as i">
+    <h2>{{i}} {{color}}</h2>
+</div>
+
+<div *ngFor="let color of colors;first as f">
+    <h3>{{f}} {{color}}</h3>
+</div>
+
+<div *ngFor="let color of colors;last as l">
+    <h4>{{l}} {{color}}</h4>
+</div>
+
+<div *ngFor="let color of colors;odd as o;even as e">
+    <h5>{{o}} {{e}} {{color}}</h5>
+</div>
