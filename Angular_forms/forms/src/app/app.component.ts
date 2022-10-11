@@ -11,14 +11,14 @@ export class AppComponent {
    firstname:string="";
   lastname:string="";
   //using child decorators @view child
-  // @ViewChild('myForm')form:NgForm;
-  // onSubmit(){
-  //   console.log(this.form);
-  // }
+  @ViewChild('myForm')form!:NgForm;
+  onSubmit(){
+    console.log(this.form);
+  }
 
   // onSubmit(form:HTMLFormElement){
-    onSubmit(form:NgForm){
-    console.log(form);
-    //console.log("forms submitted");
-  }
+  //   onSubmit(form:NgForm){
+  //   console.log(form);
+  //   //console.log("forms submitted");
+  // }
   }

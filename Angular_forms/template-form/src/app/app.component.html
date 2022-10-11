@@ -1,0 +1,89 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+   <div id="container">
+    <div class="form-wrap">
+    <h1>Sign Up</h1>
+    <p>Its free and only takes a minute</p>
+   <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+    <div ngModelGroup="personDetails" #personalDetail="ngModelGroup">
+      <div class="form-group">
+        <label for="fname">First Name</label>
+        <input type="text" placeholder="Enter the name" name="firstname" id="fname" name="firstname" ngModel required>
+      </div>
+      <div class="form-group">
+        <label for="lname">Last Name</label>
+        <input type="text" placeholder="Enter the name" name="lastname" id="lname" name="lastname" ngModel required>
+      </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" placeholder="Enter email" name="email" id="email" name="email" ngModel required>
+        </div>
+        <div>
+        <small *ngIf="personalDetail.invalid && personalDetail.touched">Some of the required fields does not have valid value</small>
+        <div>
+          <button (click)="setDefaultValues()">set Default Values</button>
+        </div>
+        
+        </div>
+    </div>
+    <!-- <div class="form-group">
+    <label for="fname">First Name</label>
+    <input type="text" placeholder="Enter the name" name="firstname" id="fname" required>
+  </div>
+  <div class="form-group">
+    <label for="lname">Last Name</label>
+    <input type="text" placeholder="Enter the name" name="lastname" id="lname" >
+  </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" placeholder="Enter email" name="email" id="email" required>
+    </div> -->
+    <div class="form-group">
+        <label for="psw">Password</label>
+    <input type="password" placeholder="Enter the password" id="psw" name="psw" ngModel required>
+
+    <div class="form-group">
+    <div class="form-group">
+        <label for="repeat-psw">confirm Password</label>
+        <input type="password" placeholder="repeat password" name="repeat-psw" >
+    </div>
+    <div>
+        <button type="submit" class="btn">Sign-Up</button>
+        <p>By creating an account you agree to our <a href="#">Terms&conditions and Privacy policy</a>.</p>
+    </div>
+</div>
+    </div>
+</form>
+<footer>
+    <p>Already have an account? <a href="#">Login Here</a></p>
+  </footer>
+</div> 
+
+<!--Retriving form data and resetting-->
+<div class="form-data">
+  <h3>Form Data</h3>
+  <p>First Name:<b>{{firstname}}</b></p>
+  <p>Last Name:<b>{{lastname}}</b></p>
+  <p>Email:<b>{{email}}</b></p>
+  <p>Password:<b>{{password}}</b></p>
+
+</div>
+
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet></router-outlet>

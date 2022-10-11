@@ -16,9 +16,9 @@
     <div class="form-wrap">
       <h1>Travel  reservation form</h1>
     <h3>* denotes mandotory</h3>
-    <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+    <!-- <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm"> -->
       <!--using child decorators-->
-    <!-- <form (ngSubmit)="onSubmit()" #myForm="ngForm">   -->
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">  
       <div class="form-group">
         <label for="firstName">First name*</label>
         <input type="text" name="fname" id="firstName" placeholder="your fname..." name="firstname" [(ngModel)]="firstname"  #fname="ngModel" required>
