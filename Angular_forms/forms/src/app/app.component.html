@@ -1,0 +1,82 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+
+  
+
+  <div id="container">
+    
+    <div class="form-wrap">
+      <h1>Travel  reservation form</h1>
+    <h3>* denotes mandotory</h3>
+    <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+      <!--using child decorators-->
+    <!-- <form (ngSubmit)="onSubmit()" #myForm="ngForm">   -->
+      <div class="form-group">
+        <label for="firstName">First name*</label>
+        <input type="text" name="fname" id="firstName" placeholder="your fname..." name="firstname" [(ngModel)]="firstname"  #fname="ngModel" required>
+      </div>
+      <div>
+        <small *ngIf="fname.invalid&&fname.touched">First name is required field</small>
+        <span>you entered {{firstname}}</span>
+      </div>
+      <div class="form-group">
+       <label for="lastName">Last name*</label>
+       <input type="text" name="lname" id="lastName" placeholder="your lname..."name="lastname" [(ngModel)]="lastname" #lname="ngModel" required>
+      </div>
+      <div>
+        <small *ngIf="lname.invalid&&lname.touched">last name is required field</small>
+        <span>you entered {{lastname}}</span>
+      </div>
+      <div class="form-group">
+        <label for="email">Email*</label>
+        <input type="email" name="email" id="email" placeholder="your email..."name="email" ngModel required email>
+      </div>
+      <div class="form-group">
+       <label for="phoneNumber">Phone number*</label>
+       <input type="number" name="number" id="phoneNumber" placeholder="your number..."name="number" ngModel required>
+      </div>
+      <div class="form-group">
+        <label>Select tour Package*</label><br>
+        <select class="custom-select" name="package" ngModel>
+          <option value="Goa">Goa</option>
+          <option value="Ladakh">Ladakh</option>
+          <option value="Karnataka">Karnataka</option>
+        </select>
+        <div class="form-group">
+          <label>Arrival date</label>
+          <input type="date" id="date" name="date" placeholder="dd/mm/yyyy" name="arrivalDate" ngModel>
+          
+        </div>
+        <div class="form-group">
+          <label>Number of persons*</label>
+          <input type="number" id="number" name="number" placeholder="1"name="person" ngModel >
+        </div>
+        <div class="form-group">
+          <label>What would you want to avail*</label>
+          <input type="radio" name="Boarding" value="Boarding" > Boarding
+          <input type="radio" name="Fooding" value="Fooding" >Fooding
+          <input type="radio" name="Sight seeing " value="Sight seeing" checked>Sight seeing
+          <input type="radio" name="others" value="others" >others
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn" [disabled]="!myForm.valid">Complete reservation</button>
+          <p>By reserving a package you agree to our <a href="#">Terms&conditions and Privacy policy</a>.</p>
+      </div>
+    </div>
+    </form>
+    <footer>
+      <p>Further information <a href="#">click Here</a></p>
+    </footer>
+  </div>
+ 
+
+  
+<router-outlet></router-outlet>
