@@ -1,0 +1,132 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<div class="form-wrap myForm" [ngClass]="formStatus">
+  <h1>Student Registartion Form</h1>
+  <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="image"> Student image</label>
+      <input type="file" placeholder="Student image" name="image" id="image"  (change)="selectFile($event)" >
+      
+      <p>less than 5 mb</p>
+    </div>
+    
+    <div class="form-group">
+      <label for="fname">Student Name<span class="required">*</span></label>
+      <input type="text" placeholder="Enter the full name" name="studentname" id="fname" formControlName="studentname">
+    </div>
+    <div>
+      <small *ngIf="reactiveForm.get('studentname').errors?.['required'] && reactiveForm.get('studentname')?.touched "> student name is required field</small>
+      <small *ngIf="reactiveForm.get('studentname').errors?.['pattern']"> student name cannot contain number</small>
+    </div>
+    <div class="form-group">
+      <label for="fname">Father's Name<span class="required">*</span></label>
+      <input type="text" placeholder="Father's full name" name="fathername" id="fname" formControlName="fathername">
+    </div>
+    <div>
+      <small *ngIf="reactiveForm.get('fathername').errors?.['required'] && reactiveForm.get('fathername')?.touched "> Father name is required field</small>
+      <small *ngIf="reactiveForm.get('fathername').errors?.['pattern']"> Father name cannot contain number</small>
+    </div>
+    <div class="form-group">
+      <label for="fname">Mother's Name*</label>
+      <input type="text" placeholder="Mother's full name" name="mothername" id="fname" formControlName="mothername">
+    </div>
+    <div class="form-group">
+      <label for="gender" formControlName="gender" formControlName="gender">Gender:</label>
+      <input type="radio" id="male" value="male" formControlName="gender">
+      <label for="male">Male</label>
+      <input type="radio" id="female" value="female" formControlName="gender">
+      <label for="female">Female</label>
+      <input type="radio" id="other" value="other" formControlName="gender">
+      <label for="other">Other</label>
+    </div>
+    <div class="form-group">
+      <label>Date of Birth:</label>
+      <input type="date" id="date" name="date" placeholder="dd/mm/yyyy" >
+    </div>
+    <div class="form-group">
+      <label for="email">Email<span class="required">*</span></label>
+      <input type="email" name="email" id="email" placeholder="your email..." formControlName="email">
+    </div>
+    <div>
+       <span class="emailColor" *ngIf="!reactiveForm.get('email')?.valid && reactiveForm.get('email')?.touched">The email you entered is not a valid email</span> 
+    </div>
+    
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input type="text" name="age" id="age" placeholder="your age...">
+     </div>
+    <div class="form-group">
+     <label for="phoneNumber">Phone number<span class="required">*</span></label>
+     <input type="number" name="number" id="phoneNumber" placeholder="your number..." maxlength="10" formControlName="phoneNumber">
+    </div>
+    <div >
+      <small *ngIf="reactiveForm.get('phoneNumber').errors?.['pattern']" >
+        Please, Enter 10 digit Mobile Number.
+      </small>
+    </div>
+   
+                  
+    <div class="form-group">
+      <label>Level*</label><br>
+      <select class="custom-select">
+        <option value="High school">High School</option>
+        <option value="Puc">PUC</option>
+        <option value="Graduate">Graduate</option>
+      </select>
+      </div>
+      <div formArrayName="skills" class="form-group">
+        <ng-container *ngFor="let skill of reactiveForm.get('skills')['controls']; index as i">
+          <input type="text" placeholder="aditional skill" formControlName="{{i}}">
+        </ng-container>
+       <button (click)="addSkills()"> +addSkills<span class="required">*</span></button>
+      </div>
+      <!-- <div class="form-group">
+      <label for="address">Address</label>
+      <textarea  id="address" placeholder="your address..." rows="4" cols="30"></textarea>
+      
+     </div> -->
+     <div formGroupName="address" class="form-group">
+      <h2>Address</h2>
+    
+      <label for="street">Street: </label>
+      <input id="street" type="text" formControlName="street">
+    
+      <label for="city">City: </label>
+      <input id="city" type="text" formControlName="city">
+    
+      <label for="state">State: </label>
+      <input id="state" type="text" formControlName="state">
+    
+      <label for="zip">Zip Code: </label>
+      <input id="zip" type="text" formControlName="zip">
+    </div>
+        <div class="form-group">
+          <p>I here by declare that the above information is true to the best of my knowledge and belief and I bear the responsibility for the correctness of the above mentioned particulars</p>
+          <div>
+            <button type="submit" class="btn" (click)="onSubmisson()">submit</button>
+            <small *ngIf="reactiveForm.invalid && reactiveForm.touched" >
+              Please enter required details
+            </small>
+          </div>
+          
+          
+      </div>
+  </form>
+</div>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet></router-outlet>

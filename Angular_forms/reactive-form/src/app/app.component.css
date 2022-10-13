@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    
+} 
+ .form-wrap h1,h2{
+   text-align: center;
+   background-color: lavender;
+ }
+ .form-wrap p{
+    text-align:justify;
+ }
+ #image{
+    height: 80px;
+    width: 80px;
+    border-radius: 5px;
+    color:rgb(59,55,55);
+    text-align: center;
+ }
+    .form-wrap .form-group input {
+        width: 100%;
+        padding: 12px 20px;
+        border: #ddd 1px solid;
+        border-radius: 4px;
+        margin:8px 0;
+        box-sizing: border-box;
+        display: inline-block;
+        
+    }
+    .form-wrap .form-group input[type=radio]{
+    position: absolute;
+    line-height: 2em;
+    }
+    .form-wrap {
+        background-color: #fff;
+        padding: 15px 25px;
+        color: #333;
+        width:70%;
+        margin: 0 15%;
+    }
+    .form-wrap .form-group {
+        margin-top:15px;
+    }
+    .form-wrap .form-group label {
+        display: block;
+        color: #666;
+    }
+    .form-wrap button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        background: #49c1a2;
+        color: #fff;
+        cursor: pointer;
+    }
+    .form-wrap button:hover {
+        background-color:#37a08e ;
+    }
+    .form{
+        border-radius: 5px;
+        background-color: lightblue;
+        padding: 20px;
+        width:420px;
+        margin:10px auto;
+    }
+    .form-group input.ng-invalid.ng-touched{
+        border:red 1px solid;
+    }
+    .emailColor{
+        color: red;
+    }
+    .required{
+        color: red;
+    }
+    small{
+        color: red;
+    }
+    .myForm.INVALID{
+        border:red 1px solid;
+        box-shadow: 0 0 31px rgba(255,0,0,0.7 ) !important;
+    }
+    .myForm.VALID{
+        border:red 1px green;
+        box-shadow: 0 0 31px rgba(0,255,0,0.7 ) !important;
+    }
