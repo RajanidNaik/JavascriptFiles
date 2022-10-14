@@ -1,0 +1,151 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+
+
+
+
+<!--Angular material-->
+<h1>Angular material</h1>
+<h1>Button</h1>
+<button mat-button>Submit</button>
+<button mat-raised-button>Log-in</button>
+<button mat-stroked-button>click me</button>
+<!--circular button-->
+<button mat-icon-button>Submit</button>
+<button mat-fab>Submit</button>
+<button mat-mini-fab>Submit</button>
+<!--button colors-->
+<button color="accent" mat-stroked-button> clickMe</button>
+<button color="primary" mat-flat-button> clickMe</button>
+<button color="warn" mat-flat-button> clickMe</button>
+<button color="primary" mat-flat-button> clickMe</button><hr>
+
+
+<!--button toggle-->
+<h1>Button toggle</h1>
+<div>
+  <mat-button-toggle #toggle="matButtonToggle">Toggle</mat-button-toggle>
+</div>
+<div>{{toggle.checked}}</div>
+<!--group of button-->
+<div>
+  <mat-button-toggle-group #group="matButtonToggleGroup">
+    <mat-button-toggle value="angular">Angular</mat-button-toggle>
+    <mat-button-toggle value="javaScript">javaScript</mat-button-toggle>
+    <mat-button-toggle value="java">java</mat-button-toggle>
+  </mat-button-toggle-group>
+</div>
+<div>Selected value:{{group.value}}</div>
+
+
+<mat-button-toggle-group #groups="matButtonToggleGroup" multiple>
+  <mat-button-toggle value="left" > left</mat-button-toggle>
+  <mat-button-toggle value="center" > center
+  </mat-button-toggle>
+<mat-button-toggle value="right" >right</mat-button-toggle>
+  <mat-button-toggle value="top" disabled > top </mat-button-toggle>
+</mat-button-toggle-group>
+<div >Selected value: {{groups.value}}</div><hr>
+
+
+<!--Icons-->
+<h1>Icons</h1>
+<div>
+  <mat-icon color="accent">grade</mat-icon>
+  <mat-icon >home</mat-icon>
+  <mat-icon >bolt</mat-icon>
+  <mat-icon >key</mat-icon>
+</div><hr>
+<!--badges-->
+<h1>badges</h1>
+<div>
+  <span matBadge="5">Notification</span>
+</div>
+<div>
+  <span matBadge="5" matBadgePosition="below before" matBadgeSize="small" matBadgeColor="primary" matBadgeOverlap="false">Notification</span>
+</div>
+<div>
+  <span matBadge="5" matBadgePosition="below after" matBadgeSize="medium" matBadgeColor="accent" matBadgeOverlap="false">Notification</span>
+</div>
+<div>
+  <span matBadge="5" matBadgePosition="above before" matBadgeSize="large" matBadgeColor="warn" matBadgeOverlap="false" >Notification
+    
+  </span>
+  
+</div>
+<div>
+  <span [matBadge]="2" [matBadgeHidden]="notifications===0">Notification</span>
+    <button (click)="loadData()">load data</button>
+</div><hr>
+
+<!--Progress spinner-->
+<h1>Progress spinner</h1>
+<div>
+  <mat-progress-spinner value="50"></mat-progress-spinner>
+</div>
+<div>
+  <mat-spinner *ngIf="showSpinner" color="warn" ></mat-spinner>
+  <button (click)="loadData()">load data</button>
+</div><hr>
+
+<!--Progress bar-->
+<h1>Progress bar</h1>
+<div>
+  <mat-progress-bar mode="determinate" value="30"></mat-progress-bar>
+</div>
+<div>
+  <mat-progress-bar mode="indeterminate" value="40"></mat-progress-bar>
+</div>
+<div>
+  <mat-progress-bar mode="buffer" value="50"></mat-progress-bar>
+</div>
+<div>
+  <mat-progress-bar mode="query" value="60"></mat-progress-bar>
+
+</div>
+
+
+
+
+
+
+
+<!--typography-->
+<!-- <div class="mat-display-4">this is dispaly 4</div>
+<div class="mat-display-3">this is dispaly 3</div>
+<div class="mat-display-2">this is dispaly 2</div>
+<div class="mat-display-1">this is dispaly 1</div>
+
+<div class="mat-headline">this is heading for h1</div>
+<div class="mat-title">this is heading for h2</div>
+<div class="mat-subheading">this is heading for h3</div>
+<div class="mat-subheading-1">this is heading for h4</div>
+
+<div class="mat-body-1">this is body text</div>
+<div class="mat-body-2">this is bold body text</div>
+<div class="mat-caption">this is caption text</div>
+
+<div class="mat-typography">
+  <h1>this is heading for h1</h1>
+  <h2>this is heading for h2</h2>
+  <h3>this is heading for h3</h3>
+  <h4>this is heading for h4</h4>
+  
+</div> -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet></router-outlet>
