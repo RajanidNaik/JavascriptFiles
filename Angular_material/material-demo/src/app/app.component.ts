@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'material-demo';
   notifications=0;
   showSpinner=false;
+  opened=false;
 
   loadData(){
     this.showSpinner=true;

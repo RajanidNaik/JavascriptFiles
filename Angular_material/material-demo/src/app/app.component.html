@@ -110,7 +110,66 @@
 <div>
   <mat-progress-bar mode="query" value="60"></mat-progress-bar>
 
-</div>
+</div><hr>
+<!--Toolbar-->
+<h1>Toolbar</h1>
+<mat-toolbar color="primary" class="navbar">
+  <div>Navbar</div>
+  <div>
+    <span>Home</span>
+    <span>About</span>
+    <span>services</span>
+  </div>
+</mat-toolbar>
+
+<mat-toolbar>
+  <mat-icon>menu</mat-icon>
+  <span>Menu</span>
+  <div class="navbar">
+    <span>
+      <mat-icon>call</mat-icon>
+      <mat-icon>local_grocery_store</mat-icon>
+    </span>
+    
+  </div>
+    
+  
+</mat-toolbar>
+
+<!--sidenav-->
+<!-- <mat-sidenav-container>
+  <mat-sidenav opened>sidenav</mat-sidenav>
+  
+  <mat-sidenav-content>main</mat-sidenav-content>
+</mat-sidenav-container> -->
+<!--for opening and closing side nav-->
+<mat-sidenav-container>
+  <mat-sidenav [(opened)]="opened">sidenav</mat-sidenav>
+  
+  <mat-sidenav-content>main
+    <button mat-button (click)="opened=!opened">button</button>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!--using open and close method-->
+<mat-sidenav-container>
+  <mat-sidenav #sidenav opened>sidenav</mat-sidenav>
+  
+  <mat-sidenav-content>main
+    <button (click)="sidenav.open()">open</button>
+    <button (click)="sidenav.close()">close</button>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!--using toggle-->
+<mat-sidenav-container>
+  <mat-sidenav #sidenav opened>sidenav</mat-sidenav>
+  
+  <mat-sidenav-content>main
+    <button (click)="sidenav.toggle()">toggle</button>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
 
 
 

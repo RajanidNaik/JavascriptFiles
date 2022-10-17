@@ -7,3 +7,19 @@ h1{
 div{
     margin: 2rem;
 }
+.navbar{
+    justify-content: space-between;
+}
+span{
+    padding-right: 1rem;
+}
+mat-sidenav-container{
+    height: 50%;
+}
+mat-sidenav, mat-sidenav-content{
+    padding: 16px;
+}
+mat-sidenav{
+    background-color: lightcoral;
+    width: 200px;
+}
