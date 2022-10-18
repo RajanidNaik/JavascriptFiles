@@ -1,0 +1,18 @@
+<div class="parent">
+  
+  <h1>Parent component</h1>
+  <p>from child components: {{parentdata}}</p>
+  <!-- <ul>
+    <li *ngFor="let event of events">{{event}}</li>
+  </ul> -->
+  <app-child [childData]="currentParentData" (newChildEvent)="addEvent($event)"></app-child>
+  <button type="button" (click)="sendData()">sendDataFromParentToChild</button>
+  <!-- <app-child-second [item]="events"></app-child-second> -->
+  <app-child-second [item]="parentdata"></app-child-second>
+  <div class="viewChild">
+    <h4>viewChild</h4>
+  <h3>message from:{{message}}</h3>
+  </div>
+  
+</div>
+<router-outlet></router-outlet>
