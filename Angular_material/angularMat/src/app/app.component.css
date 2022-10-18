@@ -1,0 +1,28 @@
+.result{
+    margin: 25%;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}  
+.navbar{
+    justify-content: space-between;
+    
+    
+}
+
+span{
+    padding-right: 1rem;
+}
+.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('../assets/img/vtulogo.jpg');
+    background-size: cover;
+  }
+  .justify{
+    float:right
+  }

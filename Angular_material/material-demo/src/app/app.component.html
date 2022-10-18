@@ -122,16 +122,17 @@
   </div>
 </mat-toolbar>
 
-<mat-toolbar>
-  <mat-icon>menu</mat-icon>
-  <span>Menu</span>
-  <div class="navbar">
-    <span>
-      <mat-icon>call</mat-icon>
-      <mat-icon>local_grocery_store</mat-icon>
-    </span>
-    
+<mat-toolbar class="navbar">
+  <div >
+    <mat-icon>menu</mat-icon>
+  <span>Menu</span></div>
+  <div class="justify">
+    <mat-icon>call</mat-icon>
+    <mat-icon>local_grocery_store</mat-icon>
+  
   </div>
+   
+  
     
   
 </mat-toolbar>
@@ -169,6 +170,16 @@
     <button (click)="sidenav.toggle()">toggle</button>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
+<!--menu-->
+<h1>menu</h1>
+<mat-menu #appMenu="matMenu">
+  <button mat-menu-item>graduate</button>
+  <button mat-menu-item>sslc</button>
+  
+</mat-menu>
+<button mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button>
+
 
 
 

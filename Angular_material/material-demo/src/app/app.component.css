@@ -13,6 +13,12 @@ div{
 span{
     padding-right: 1rem;
 }
+    
+.justify{
+    float:right;
+    /* justify-content: space-between; */
+}
+
 mat-sidenav-container{
     height: 50%;
 }

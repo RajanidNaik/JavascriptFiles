@@ -1,0 +1,82 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div class="result">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Results</mat-card-title>
+      <mat-card-subtitle>2018-2022</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-toolbar class="navbar">
+        <div>My App</div>
+        <div>
+          <mat-icon>home</mat-icon>
+        </div>
+      </mat-toolbar> 
+    <mat-form-field floatLabel="never">
+      <mat-label>Studentname</mat-label>
+      <input matInput required>
+    </mat-form-field>
+    <mat-divider ></mat-divider>
+    
+    <mat-form-field floatLabel="never">
+      <mat-label>email</mat-label>
+      <input matInput required>
+    </mat-form-field>
+    <mat-divider></mat-divider>
+      <mat-menu #appMenu="matMenu">
+        <button  mat-menu-item [matMenuTriggerFor]="subMenu">engineering</button>
+        <button  mat-menu-item>Degree</button>
+        <button  mat-menu-item>Medical</button>
+    
+      </mat-menu>
+      <mat-menu #subMenu="matMenu">
+        <button mat-menu-item>computer science engineering</button>
+        <button mat-menu-item>electronics and communication engineering</button>
+        <button mat-menu-item>civil engineering</button>
+        <button mat-menu-item>Mechanical engineering</button>
+      </mat-menu>
+      <button mat-flat-button [matMenuTriggerFor]="appMenu">course</button>
+      <mat-divider></mat-divider>
+      <mat-form-field floatLabel="never">
+        <mat-label>usn</mat-label>
+        <input matInput required>
+      </mat-form-field>
+      <mat-divider></mat-divider>
+      <div>
+        <mat-spinner *ngIf="showSpinner" ></mat-spinner>
+        <button (click)="loadData()">load data</button>
+      </div>
+      <mat-divider></mat-divider>
+      <button mat-raised-button (click)="openDialog()">Result</button>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Download</button><mat-icon>save_alt</mat-icon>      
+          <div class="justify">
+            <button  mat-button>SHARE</button><mat-icon>share</mat-icon>
+          </div>
+      
+    </mat-card-actions>
+  </mat-card>
+  
+  
+  
+
+</div>
+  
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet></router-outlet>
