@@ -5,14 +5,26 @@
   <!-- <ul>
     <li *ngFor="let event of events">{{event}}</li>
   </ul> -->
-  <app-child [childData]="currentParentData" (newChildEvent)="addEvent($event)"></app-child>
+  <app-child [childData]="currentParentData" [numberTorecive]="number" (newChildEvent)="addEvent($event)"></app-child>
   <button type="button" (click)="sendData()">sendDataFromParentToChild</button>
+  <button (click)="changeParentData()">change</button>
+  <input type="number" placeholder="enter the value" [(ngModel)]="number">
+  
   <!-- <app-child-second [item]="events"></app-child-second> -->
   <app-child-second [item]="parentdata"></app-child-second>
   <div class="viewChild">
-    <h4>viewChild</h4>
-  <h3>message from:{{message}}</h3>
+    <h4>Using viewChild decorator</h4>
+  <p>message from second child to parent:{{message}}</p>
   </div>
-  
+  <div>
+    <app-child-three></app-child-three>
+    <p>parent message:{{messageToSend}}</p>
+    <button (click)="onClick()">send message from parent to child</button>
+  </div>
+  <div>
+    <app-child-four></app-child-four>
+  </div>
+  <app-child-five></app-child-five>
+  <app-child-six></app-child-six>
 </div>
 <router-outlet></router-outlet>

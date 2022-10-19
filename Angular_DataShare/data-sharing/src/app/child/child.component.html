@@ -2,7 +2,8 @@
 <div class="child">
     <h1>child component</h1>
     <p>Hello {{childData}}</p>
-    <label for="event-input">Add an event:</label>
+    <p> Recived from parent:{{numberTorecive}}</p>
+    <label for="event-input">Send to parent:</label>
 <input type="text" id="event-input" #newEvent>
 <button type="button" (click)="addNewEvent(newEvent.value);newEvent.value='' ">Add to parent's component</button>
 </div>
