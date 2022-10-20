@@ -1,0 +1,28 @@
+
+.form-wrap {
+    
+   padding: 30%;
+    background:linear-gradient(52.03deg,#7A7FC8 0%,#BD385B 100%);
+   
+} 
+.login{
+    height: 385px;
+    width:535px;
+    border-radius: 20px;
+    background-color: #fff;
+    
+}
+.form-wrap .form-group input {
+    width: 100%;
+    padding: 12px 20px;
+    border: #ddd 1px solid;
+    border-radius: 4px;
+    margin:8px 0;
+    box-sizing: border-box;
+    display: inline-block;
+    
+}
+.img{
+    height: 54px;
+    width:280px;
+  }

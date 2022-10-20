@@ -1,0 +1,23 @@
+
+<!-- <app-users></app-users> -->
+<h1>HTTP services in angular</h1>
+<div *ngIf="users.length>0; else nousers">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>email</th>
+    </tr>
+    <tr *ngFor="let user of users">
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+    </tr>
+  </table>
+</div>
+<ng-template #nousers>
+  <p class="error">{{errorMsg}}</p>
+</ng-template >
+<hr>
+<app-users></app-users>
+<router-outlet></router-outlet>

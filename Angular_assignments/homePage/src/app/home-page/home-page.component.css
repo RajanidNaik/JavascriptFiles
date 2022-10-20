@@ -1,0 +1,25 @@
+.home-head{
+    height: 100px;
+    width:1500px;
+    opacity: 0.98;
+    background-color: #fff;
+    box-shadow: 0 1px 12px 0 rgba(0,0,0,0.14);
+}
+.person-img{
+    border-radius: 50%;
+    height: 30px;
+    
+}
+
+  .img{
+    height: 54px;
+    width:280px;
+  }
+  .right{
+    padding-left: 500px;
+  }
+ .first .align{
+    
+    position:relative;
+  }
+  
