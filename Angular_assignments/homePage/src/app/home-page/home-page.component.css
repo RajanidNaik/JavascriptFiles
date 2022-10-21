@@ -1,4 +1,4 @@
-.first {
+/* .first {
   display: flex;
   justify-content: space-between;
 }
@@ -13,13 +13,29 @@
     border-radius: 50%;
     height: 30px;
     
-}
+} */
 
+mat-card{
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
+}
   .img{
     height: 54px;
     width:280px;
-    
+    padding-left:5%;
   }
-  
+  .person-img{
+    border-radius: 50%;
+    height: 30px;
+    float: right;
+    margin-right: 7%;
+    margin-bottom: 10%;
+   
+    
+} 
+.person{
+  margin-bottom: 50%;
+}
  
   
