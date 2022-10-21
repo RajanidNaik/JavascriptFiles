@@ -1,3 +1,7 @@
+.first {
+  display: flex;
+  justify-content: space-between;
+}
 .home-head{
     height: 100px;
     width:1500px;
@@ -14,12 +18,8 @@
   .img{
     height: 54px;
     width:280px;
-  }
-  .right{
-    padding-left: 500px;
-  }
- .first .align{
     
-    position:relative;
   }
+  
+ 
   

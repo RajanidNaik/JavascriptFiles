@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
+
 // import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { FormBuilder } from '@angular/forms';
+
 
 @Component({
   selector: 'app-login-page',
@@ -8,14 +7,14 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent implements OnInit {
- reactiveForm!:FormGroup;
-  constructor(private fb: FormBuilder) { }
+ 
+  constructor() { }
 
   ngOnInit(): void {
-    this.reactiveForm=this.fb.group({
-      username:[''],
-      password:['']
-    })
+    // this.reactiveForm=this.fb.group({
+    //   username:[''],
+    //   password:['']
+    // })
   }
 
 }
