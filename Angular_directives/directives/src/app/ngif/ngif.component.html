@@ -1,0 +1,50 @@
+<!--if-->
+<div *ngIf="true">Rajani</div>
+<hr>
+<!--if else-->
+<h2 *ngIf="displayName; else elseBlock">Rajani Naik</h2>
+<ng-template #elseBlock> 
+    <h2>name is hidden</h2>
+</ng-template>
+<hr>
+<!--nested if else-->
+<h4>ngIf example</h4>
+<label for="input">enter the age:</label>
+<input type="number" placeholder="enter the age" [(ngModel)]="age">
+<div *ngIf="age >=18 ; then trueBlock; else falseBlock"></div>
+<ng-template #trueBlock>
+    <h3>You can vote</h3>
+</ng-template>
+<ng-template #falseBlock> 
+    <h3>not eligible</h3>
+</ng-template>
+<hr>
+<!--ngSwitch-->
+<h4>ngSwitch example</h4>
+<label for="input">enter the color:</label>
+<input type="text"  [(ngModel)]="color">
+<div [ngSwitch]="color">
+<h3 *ngSwitchCase="'red'">You picked <span class="red">red</span> color</h3>
+<h3 *ngSwitchCase="'green'">You picked <span class="grn">green</span>  color</h3>
+<h3 *ngSwitchCase="'blue'">You picked  <span class="blue">blue</span> color</h3>
+<h3 *ngSwitchDefault>pick again</h3>
+</div>
+<hr>
+<h4>ngFor Example</h4>
+<div *ngFor="let language of languages; index as i" [ngClass]=" 'color' ">
+    <h3>{{i}}) {{language}}</h3>
+    <!-- <div *ngFor="let language of languages; even as e">
+        <h3>{{e}}) {{language}}</h3> -->
+</div>
+<hr>
+<h4>ngStyle</h4>
+<label for="input">enter the background-color you want:</label>
+<input [(ngModel)]="background">
+<div [ngStyle]="{'background-color':background}"> Welcome</div>
+<hr>
+<h4>ngClass</h4>
+<div [ngClass]="value>10? 'red': 'green' ">{{value}}</div>
+<div [ngClass]=" 'first second'  "> Happy Thougts</div>
+<hr>
+<h4>custom directives</h4>
+<div appHighlight>A warm smile is the universal language of kindness</div>

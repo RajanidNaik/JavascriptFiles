@@ -1,0 +1,23 @@
+h4{
+    text-align: center;
+    text-decoration: underline;
+}
+.red{
+    color: red;
+}
+.grn{
+    color:green;
+}
+.blue{
+    color:blue;
+}
+.first{
+    background-color: lightcoral;
+}
+.second{
+    font-size: 30px;
+    padding: 10px;
+}
+.color{
+    color: lawngreen;
+}
