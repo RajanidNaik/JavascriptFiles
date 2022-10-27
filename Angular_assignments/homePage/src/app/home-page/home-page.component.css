@@ -69,3 +69,6 @@ mat-card{
   display: flex;
   justify-content: space-between;
 }
+.color{
+  color:#d92756 ;
+}
