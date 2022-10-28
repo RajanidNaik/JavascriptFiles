@@ -1,26 +1,64 @@
-<div class="first">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<div class="home">
+<div class="first">
   <mat-card>
-    
-    <div>
+    <div class="image">
       <img  class="img" mat-card-image src="../assets/Robosoft_logo_horizontal.png" alt="logo">
     </div>
-    <div>
-     
-    </div>
     <div class="person" >
-      <p>rajani <span> <img class="person-img" src="/assets/img/person.jpg" alt="person" ></span></p>
-     
+      <div>rajani </div>
+      <div>
+        <img class="person-img" src="/assets/img/person.jpg" alt="person" >
+      </div>
     </div>
-      
-      
-
   </mat-card>
-  
-  
 </div>
-<div>
-  <form class="form1">
+
+<div class="policy">
+<!--your questionnaires-->
+<div class="your-questionnaries">
+  <div class="upword">
+    <div class="paragraph">
+      <p>Your</p>
+  <p>Questionnaires</p>
+    </div>
+  
+  <div>
+    <button class="btn" mat-raised-button color="accent" type="submit" >NEW QUESTIONNAIRES</button>
+  
+  </div>
+  </div>
+ <div class="downword">
+  <div >
+    <button class="downbtn" mat-raised-button  type="submit" >Secure coding Guidelines</button>
+  </div>
+  <div class="option">
+    <span >ISMS Questionnaire</span>
+    <button class="align" mat-icon-button >
+      <mat-icon >arrow_forward_ios</mat-icon>
+    </button>
+  </div>
+  <div class="option">
+    <span >PA Questionnaire</span>
+    <button class="align" mat-icon-button >
+      <mat-icon >arrow_forward_ios</mat-icon>
+    </button>
+  </div>
+  <div class="option">
+    <span >Process Guidelines</span>
+    <button class="align" mat-icon-button >
+      <mat-icon >arrow_forward_ios</mat-icon>
+    </button>
+  </div>
+ </div>
+
+</div>
+
+<!--form-->
+<div class="form">
+  <div class="form1">
+  <form >
     <h2>Questionnaire</h2>
     <div>
       <mat-form-field appearance="outline">
@@ -54,8 +92,11 @@
     <h2>Additional Details</h2>
     <div class="date">
       <mat-form-field appearance="outline">
-        <mat-label>Select start date</mat-label>
         <input type="date" matInput placeholder="select start date">
+        <!-- <input matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+       <mat-datepicker #picker></mat-datepicker> -->
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>select end date</mat-label>
@@ -70,12 +111,12 @@
       <mat-form-field appearance="outline">
         <mat-label>Select content ppt file</mat-label>
         <input matInput placeholder="Enter ppt">
-        <mat-icon matSuffix>backup</mat-icon>
+        <mat-icon color="accent" matSuffix>backup</mat-icon>
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Select participant X1 sheet</mat-label>
         <input matInput placeholder="Enter ppt">
-        <mat-icon matSuffix>backup</mat-icon>
+        <mat-icon color="accent" matSuffix>backup</mat-icon>
       </mat-form-field>
     </div>
     <div>
@@ -85,9 +126,14 @@
       </mat-form-field>
     </div>
   </form>
+ 
 </div>
-<div>
-<div>
+
+<div class="line">
+
+<!--icons-->
+<div class="icons">
+<div >
   <mat-toolbar>
     <button mat-icon-button >
       <mat-icon color="accent">save</mat-icon>
@@ -95,7 +141,7 @@
     <span class="color">SAVE</span>
   </mat-toolbar>
 </div>
-<div>
+<div >
   <mat-toolbar>
     <button mat-icon-button >
       <mat-icon color="accent">preview</mat-icon>
@@ -114,9 +160,36 @@
 <div>
   <mat-toolbar>
     <button mat-icon-button >
-      <mat-icon color="accent">ic_remind</mat-icon>
+      <mat-icon color="accent">add_alert</mat-icon>
     </button>
     <span class="color">REMIND</span>
   </mat-toolbar>
 </div>
+<div>
+  <mat-toolbar>
+    <button mat-icon-button >
+      <mat-icon color="accent">article</mat-icon>
+    </button>
+    <span class="color">GENRATE REPORT</span>
+  </mat-toolbar>
 </div>
+</div>
+<div class="add">
+  <button  mat-fab color="accent">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
+</div>
+
+</div>
+</div>
+
+<footer>
+  <div class="copyright">
+    
+    Robosoft.Copyright &copy; 2020. All rigths reserved
+  </div>
+</footer>
+</div>
+
+

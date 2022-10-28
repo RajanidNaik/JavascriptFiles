@@ -6,9 +6,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
-
-const materialComponents=[MatButtonModule,MatCardModule,MatFormFieldModule,MatInputModule,MatIconModule,MatToolbarModule];
+const materialComponents=[MatButtonModule,MatCardModule,MatFormFieldModule,MatInputModule,MatIconModule,MatToolbarModule,MatDatepickerModule];
 @NgModule({
   // declarations: [],
   imports: [materialComponents
