@@ -1,0 +1,19 @@
+.form{
+    border:1px solid brown;
+    margin: 5%;
+    padding: 3%;
+}
+h3{
+    text-align: center;
+}
+h2{
+    text-align: center;
+    text-decoration: underline;
+}
+.store{
+    margin: 5%;
+}
+button{
+    margin-right: 0%;
+border-radius: 20px;
+}

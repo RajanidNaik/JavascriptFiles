@@ -10,10 +10,11 @@ import { SharedEmployee } from '../shared-employee';
 export class StudentCreateComponent implements OnInit {
 
   constructor(private server:ServerService) { }
-users:any=[];
+users:any;
   ngOnInit(): void {
     this.server.getEmployees().subscribe((data)=>{
       this.users=data;
+      console.log(data);
       
     },
     (error)=>{

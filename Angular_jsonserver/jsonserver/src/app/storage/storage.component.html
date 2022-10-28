@@ -1,0 +1,38 @@
+<div class="form">
+<h2>Local storage and session storage</h2>
+<div>
+    <h3>store the data </h3>
+<div class="store">
+    <label>Enter the key:</label>
+    <input type="text" [(ngModel)]="key" >
+</div>
+<div class="store">
+    <label>Enter the value:</label>
+    <input type="text" [(ngModel)]="value" >
+</div>
+<button (click)="save()">store</button>
+</div>
+<hr>
+<h3>retrive the data</h3>
+<div>
+    <div class="store">
+        <label>Enter the key:</label>
+        <input type="text" [(ngModel)]="key" >
+    </div>
+    <button (click)="retrive()">Retrive</button>
+    <h4>{{session}}</h4>
+    <h4>{{local}}</h4>
+    <h4>{{cookieName}}</h4>
+    <h4>{{allCookie | json}}</h4>
+</div>
+<hr>
+<h3>remove data</h3>
+<div class="store">
+    <label>Enter the key:</label>
+    <input type="text" [(ngModel)]="key" >
+</div>
+<button (click)="remove()">Remove</button>
+<hr>
+<h3>clear all data</h3>
+<button (click)="clearAll()">Clear</button>
+</div>

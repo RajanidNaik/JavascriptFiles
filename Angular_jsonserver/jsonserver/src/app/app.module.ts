@@ -5,18 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StudentCreateComponent } from './student-create/student-create.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ServerService } from './server.service'
+import { ServerService } from './server.service';
+import { StorageComponent } from './storage/storage.component'
+import { FormsModule } from '@angular/forms';
+import { CookieService } from 'ngx-cookie-service';
 @NgModule({
   declarations: [
     AppComponent,
-    StudentCreateComponent
+    StudentCreateComponent,
+    StorageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [ServerService],
+  providers: [ServerService,CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
