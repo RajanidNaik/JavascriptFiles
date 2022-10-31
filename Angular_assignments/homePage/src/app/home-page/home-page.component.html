@@ -92,15 +92,18 @@
     <h2>Additional Details</h2>
     <div class="date">
       <mat-form-field appearance="outline">
-        <input type="date" matInput placeholder="select start date">
-        <!-- <input matInput [matDatepicker]="picker">
-        <mat-hint>MM/DD/YYYY</mat-hint>
+        <!-- <input type="date" matInput placeholder="select start date"> -->
+        <mat-label>select start date</mat-label>
+        <input matInput [matDatepicker]="picker" matInput placeholder="dd/mm/yyyy">
        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-       <mat-datepicker #picker></mat-datepicker> -->
+       <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>select end date</mat-label>
-        <input type="date" matInput placeholder="select end date">
+        <!-- <input type="date" matInput placeholder="select end date"> -->
+        <input matInput [matDatepicker]="picker2" matInput placeholder="dd/mm/yyyy">
+       <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+       <mat-datepicker #picker2></mat-datepicker>
       </mat-form-field>
       <mat-form-field class="auto" appearance="outline">
         <mat-label>Auto reminder</mat-label>
@@ -174,10 +177,38 @@
   </mat-toolbar>
 </div>
 </div>
+
+
+  
+</div>
 <div class="add">
-  <button  mat-fab color="accent">
+  <!-- <button (click)="openDialog()" mat-fab color="accent">
     <mat-icon>add</mat-icon>
+  </button> -->
+  <div class="addRemove">
+    <ng-container  *ngIf="dis ">
+        <button class="addbtn" mat-raised-button color="accent" type="submit" routerLink="/changePassword">
+          <span class="extra">Change Password</span> 
+         </button>
+        <button class="addbtn" mat-raised-button color="accent" type="submit" >
+          <span class="extra" >Add/Remove Super Admins </span> 
+         </button>
+        <button class="addbtn" mat-raised-button color="accent" type="submit" >
+        <span class="extra">Add/Remove Admins</span> 
+       </button>
+    </ng-container> 
+  <button  (click)="onClick()" mat-fab color="accent">
+    <ng-container *ngIf="select else elseBlock">
+      <mat-icon>add</mat-icon>
+    </ng-container>
+    <ng-template #elseBlock >
+      <mat-icon>close</mat-icon>
+    </ng-template>
+   
   </button>
+  
+  
+  
 </div>
 </div>
 

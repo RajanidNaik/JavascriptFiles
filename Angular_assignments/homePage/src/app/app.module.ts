@@ -9,7 +9,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CheckEmailComponent } from './check-email/check-email.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
-
+import { HomedialogComponent } from './homedialog/homedialog.component';
+import { HttpClientModule } from '@angular/common/http';
 // import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
@@ -18,16 +19,19 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     routingComponents,
     LoginPageComponent,
     CheckEmailComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    HomedialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[HomedialogComponent]
 })
 export class AppModule { }
