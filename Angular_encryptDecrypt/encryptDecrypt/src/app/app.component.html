@@ -1,0 +1,24 @@
+<div class="form">
+<div class="form-input">
+  <h2>Encryption and Decryption</h2>
+  <div class="inside">
+    <input type="text" placeholder="enter the plain text" [(ngModel)]="message">
+  </div>
+  <div class="inside">
+    <input placeholder="enter the key" [(ngModel)]="keyword">
+  </div>
+  
+  <button (click)="encrypt()" type="submit">Encrypt</button>
+  <div>
+    <textarea class="inside">{{encryptedMessage}}</textarea>
+  </div>
+  <button (click)="decrypt()">Decrypt</button>
+  <div>
+    <textarea class="inside">{{decryptedMessage}}</textarea>
+  </div>
+</div>
+  
+</div>
+
+
+<router-outlet></router-outlet>

@@ -5,6 +5,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { CheckEmailComponent } from './check-email/check-email.component';
 import { ChangePasswordComponent } from './change-password/change-password.component'
 const routes: Routes = [
+  { path:'',redirectTo:'homepage',pathMatch:'full'},
   { path:'homepage',component:HomePageComponent},
   { path:'loginpage',component:LoginPageComponent},
   { path:'checkemail',component:CheckEmailComponent},

@@ -1,0 +1,19 @@
+h2{
+    text-align: center;
+    text-decoration: underline;
+}
+.form-input{
+    border: 1px solid black;
+    margin: 30%;
+    padding: 5%;
+    margin-left: 35%;
+    background-color: lightcyan;
+}
+.inside{
+    margin:5%;
+    padding:10%;
+    
+}
+button{
+    margin-left: 35%;
+}
