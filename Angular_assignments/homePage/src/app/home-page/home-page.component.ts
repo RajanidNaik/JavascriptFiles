@@ -21,17 +21,15 @@ select=true;
   onClick(){
 this.dis=true;
 this.select=false;
-
+this.openDialog();
   }
   
-  // openDialog(){
-  //   const dialogConfig = new MatDialogConfig();
-  //   dialogConfig.disableClose = true;
-  //       dialogConfig.autoFocus = true;
-  //   this.dialog.open(HomedialogComponent,{panelClass:'my-Class',position:{top:'33%',right:'21%'}})
-  // }
-  // onclose(){
-  //   this.dialog.closeAll();
-  // }
+  openDialog(){
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+        dialogConfig.autoFocus = true;
+    this.dialog.open(HomedialogComponent,{panelClass:'my-Class',position:{top:'30%',right:'21%'}})
+  }
+  
 }
 

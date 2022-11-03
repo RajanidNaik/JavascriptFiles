@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { MatDialogRef } from '@angular/material/dialog';
 
 
 @Component({
@@ -9,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomedialogComponent implements OnInit {
   
-  constructor() { }
+  constructor(private matdialogRef:MatDialogRef<HomedialogComponent>) { }
 
   ngOnInit(): void {
   }
   
-
+onClose(){
+  this.matdialogRef.close();
+}
 }

@@ -9,8 +9,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MatNativeDateModule } from '@angular/material/core';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
-const materialComponents=[MatButtonModule,MatCardModule,MatFormFieldModule,MatInputModule,MatIconModule,MatToolbarModule,MatDatepickerModule,MatDialogModule];
+const materialComponents=[MatButtonModule,MatCardModule,MatFormFieldModule,MatInputModule,MatIconModule,MatToolbarModule,MatDatepickerModule,MatDialogModule,MatCheckboxModule];
 @NgModule({
   // declarations: [],
   imports: [materialComponents,MatNativeDateModule

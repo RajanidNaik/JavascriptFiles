@@ -1,0 +1,61 @@
+
+<div class="form">
+<div class="form1">
+  <h1>{{ title }}</h1>
+<div class="inside">
+  <h3>To find 10Th prime number</h3><button (click)="find10thPrimeNumber()">Click here</button>
+  <div>The 10<sup>th</sup> prime number is {{ prime10 }}</div> <br/>
+</div>
+<div class="inside">
+  <h3>To find 10000Th prime number</h3><button (click)="find10000thPrimeNumber()">Click here</button>
+  <div>The 10000<sup>th</sup> prime number is {{ prime10000 }}</div> <br/>
+</div >
+<div class="inside">
+  <input placeholder="enter the name">
+</div>
+</div>
+
+
+
+<div class="form2">
+  <h1>without using web worker</h1>
+  <div class="inside">
+    <h3>To find 10Th prime number</h3><button (click)="find10thPrimeNumber()">Click here</button>
+    <div>The 10<sup>th</sup> prime number is {{ prime10 }}</div> <br/>
+  </div>
+  <div class="inside">
+    <h3>To find 10000Th prime number</h3><button (click)="find10000thPrimeNumber()">Click here</button>
+    <div>The 10000<sup>th</sup> prime number is {{ prime10000 }}</div> <br/>
+  </div>
+  <div class="inside">
+    <input placeholder="enter the name">
+  </div>
+</div>
+</div>
+
+<div class="fact">
+  <h2>Factorial and prime number</h2>
+  <div >
+    <div class="inside">
+      <label>enter the number to get prime number:</label>
+      <input placeholder="enter the number" [(ngModel)]="primenum">
+      <h3>prime number is {{ prime10000 }}</h3>
+    </div>
+    <div class="inside">
+      <label>enter the number to get factorial:</label>
+      <input placeholder="enter the number" [(ngModel)]="number">
+      <h3> factorial of number:{{factNthnum}}</h3>
+    </div>
+    
+    <!-- <button (click)="findFactnumber()">click here</button>
+    <div>factorial of number:{{factnum}}</div> -->
+  </div>
+ 
+ <div class="inside">
+  <button (click)="findNthfactnumber()">click here</button>
+  
+ </div>
+  
+</div>
+
+<router-outlet></router-outlet>

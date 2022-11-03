@@ -1,0 +1,28 @@
+.form{
+    display: flex;
+    justify-content: space-evenly;
+}
+.form1{
+    border: 1px solid black;
+    margin:10%;
+    padding:5%;
+    background-color: lightcyan;
+}
+.form2{
+    border: 1px solid black;
+   margin: 10%;
+   padding: 3%;
+   background-color: lightcyan;
+}
+.inside{
+    margin-left: 25%;
+    padding: 3%;
+}
+h1{
+    text-align:center ;
+    text-decoration: underline;
+}
+.fact{
+    border: 1px solid black;
+    padding: 5%;
+}
