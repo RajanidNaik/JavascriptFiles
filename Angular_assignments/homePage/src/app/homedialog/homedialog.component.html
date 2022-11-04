@@ -3,11 +3,14 @@
     <button (click)="onClose()" class="btn"  mat-raised-button color="accent" type="submit" routerLink="/changePassword">
        <span>Change Password</span> 
       </button>
-      <button class="btn" mat-raised-button color="accent" type="submit" >
+      <button class="btn" (click)="openDialogAddSuper()" mat-raised-button color="accent" type="submit" >
         <span>Add/Remove Super Admins </span> 
        </button>
-       <button class="btn" mat-raised-button color="accent" type="submit" >
+       <button class="btn" (click)="openDialogAdd()" mat-raised-button color="accent" type="submit" >
         <span>Add/Remove Admins</span> 
        </button>
-       <mat-dialog-actions mat-dialog-close></mat-dialog-actions>
+       <button class="closebtn"  mat-fab color="accent" mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button> 
+       <mat-dialog-actions ></mat-dialog-actions>
 </div>

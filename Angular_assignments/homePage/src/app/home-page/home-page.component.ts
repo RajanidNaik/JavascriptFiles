@@ -11,7 +11,7 @@ import { HomedialogComponent } from '../homedialog/homedialog.component';
 })
 export class HomePageComponent implements OnInit {
 
-dis=false;
+// dis=false;
 select=true;
   constructor(private dialog:MatDialog) { }
 
@@ -19,16 +19,22 @@ select=true;
     
   }
   onClick(){
-this.dis=true;
-this.select=false;
+// this.dis=true;
 this.openDialog();
+this.select=!this.select;
+
   }
   
   openDialog(){
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
         dialogConfig.autoFocus = true;
-    this.dialog.open(HomedialogComponent,{panelClass:'my-Class',position:{top:'30%',right:'21%'}})
+     let dialogRef = this.dialog.open(HomedialogComponent,{panelClass:'my-Class',position:{top:'30%',right:'16%'}});
+    dialogRef.afterClosed().subscribe(()=>{
+      this.select=true;
+    })
+      
+    
   }
   
 }

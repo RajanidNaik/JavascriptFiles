@@ -1,0 +1,64 @@
+.addRemoveSuper{
+    height: 584px;
+    width: 1033px;
+    /* border-radius: 50%; */
+    background-color: #fff;
+}
+.closebtn{
+    margin-right: 0%;
+    margin-left: 97%;
+}
+.head{
+    height: 28px;
+    width:297px;
+    color: black;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 28px;
+}
+.row1{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.mail{
+    width:305px;
+}
+.line{
+    box-sizing: border-box;
+    height: 2px;
+    width: 1030px;
+    border: 1px dashed #a2a2a2;
+    opacity: 0.6;
+    margin: 2%;
+}
+.icon{
+    display: flex;
+    justify-content: space-between;
+    width:15%;
+}
+.row2{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 3%;
+    
+}
+.btn{
+    margin-left: 35%;
+   width: 149px;
+   height: 49px;
+   box-shadow: 0 0 11px 0 rgba(0,0,0,0.2);
+   border-radius: 30px;
+   font-size: 14px;
+   line-height: 16px;
+   text-align: center;
+   font-weight: 500;
+   letter-spacing: 1.25px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left:30%;
+    margin-right: 20%;
+}

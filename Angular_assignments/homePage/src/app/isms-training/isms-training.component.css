@@ -90,5 +90,35 @@ p{
     line-height: 17px;
     text-align: center;
     margin-left: 45%;
-    margin-top: 5%;
+    margin-top: 2%;
   }
+  .terms{
+    display: flex;
+    justify-content: space-evenly;
+    height: 60px;
+    width:522px;
+    opacity: 0.2;
+    border-radius: 4px;
+    background-color: #36b834;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.22);
+    margin:2%;
+    padding-top: 3.5%;
+    margin-left: 20%;
+    margin-top: 25%;
+    
+  }
+  .line{
+    height: 20px;
+    width:333px;
+    color:#000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 20px;
+    text-align: center;
+  }
+  .round{
+    height: 30px;
+    width: 30px;
+  }
+  
+  

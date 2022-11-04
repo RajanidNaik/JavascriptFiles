@@ -23,23 +23,31 @@
 </div>
 </div>
 <div>
-    <div class="ppt"></div>
-    <ng-container>
-        <mat-toolbar>
-            <button mat-mini-fab >
-              <mat-icon>check</mat-icon>
-            </button>
-            <span>Thankyou for accepting Terms & conditions</span>
-            <span class="example-spacer"></span>
-            <button mat-icon-button >
-              <mat-icon>favorite</mat-icon>
-            </button>
-          </mat-toolbar>
-    </ng-container>
+    <div class="ppt">
+      <ng-container *ngIf="checked">
+        <div class="top">
+        <div class="terms">
+          <div  >
+            <img class="round" src="../assets/img/correct.png">
+            <!-- <mat-icon>check</mat-icon> -->
+          
+        </div>
+              <div>
+                <div class="line">Thankyou for accepting Terms & conditions</div>
+                </div>
+             <div> 
+              <!-- <mat-icon>cross</mat-icon> -->
+              <img class="round" src="../assets/img/close.png" (click)="onCross()">
+            </div>      
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    
 </div>
 
 <div class="check">
-    <mat-checkbox >I have read all the Terms & Conditions</mat-checkbox>
+    <mat-checkbox [(ngModel)]="checked">I have read all the Terms & Conditions</mat-checkbox>
 </div>
 <div class="condition">
     By clicking 'I Agree' button you hereby agree to follow all the guidelines mentioned above.

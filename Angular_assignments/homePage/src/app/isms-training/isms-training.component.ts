@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./isms-training.component.css']
 })
 export class IsmsTrainingComponent implements OnInit {
-
+  checked = false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+  onCross(){
+    this.checked=false;
   }
 
 }

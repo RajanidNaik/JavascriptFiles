@@ -1,0 +1,73 @@
+<div class="addRemoveAdmin">
+    <button class="closebtn" mat-dialog-close >
+        <mat-icon>close</mat-icon>
+      </button> 
+<h1 class="head">Add/Remove Admins</h1>
+<div class="row1">
+    <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Enter Name</mat-label>
+          <input matInput placeholder="Enter Name">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Enter Employee Code</mat-label>
+          <input matInput placeholder="Enter Employee Code">
+        </mat-form-field>
+      </div>
+      <div >
+        <mat-form-field appearance="outline" class="mail">
+          <mat-label>Enter Mail ID</mat-label>
+          <input matInput placeholder="Enter Mail ID">
+        </mat-form-field>
+      </div>
+      <div>
+        <button (click)="addAdmin()" mat-fab color="accent">
+            <mat-icon>add</mat-icon>
+          </button>
+      </div>
+</div>
+<div class="line"></div>
+<div *ngIf="add" class="row2">
+    <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Enter Name</mat-label>
+          <input matInput >
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Enter Employee Code</mat-label>
+          <input matInput >
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" class="mail">
+          <mat-label>Enter Mail ID</mat-label>
+          <input matInput >
+        </mat-form-field>
+      </div>
+      <div class="icon">
+        <div>
+            <button  mat-fab color="accent">
+                <mat-icon>edit</mat-icon>
+              </button>
+          </div>
+          <div>
+            <button (click)="onDelete()" mat-fab color="accent">
+                <mat-icon>delete</mat-icon>
+              </button>
+          </div>
+      </div>
+</div>
+<div class="buttons">
+    <div>
+        <button class="btn" mat-raised-button color="accent" type="submit" >Update</button>
+    </div>
+    <div>
+        <button class="btn" mat-raised-button color="accent" type="submit" >Cancel</button>
+    </div>
+</div>
+</div>
+
