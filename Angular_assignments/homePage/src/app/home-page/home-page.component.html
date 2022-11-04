@@ -197,13 +197,13 @@
         <span class="extra">Add/Remove Admins</span> 
        </button>
     </ng-container>  -->
-  <button  (click)="onClick()" mat-fab color="accent">
-    <ng-container *ngIf="select else elseBlock">
+  <button *ngIf="select" (click)="onClick()" mat-fab color="accent">
+    <ng-container >
       <mat-icon>add</mat-icon>
     </ng-container>
-    <ng-template #elseBlock >
+    <!-- <ng-template #elseBlock >
       <mat-icon>close</mat-icon>
-    </ng-template>
+    </ng-template> -->
    
   </button>
   

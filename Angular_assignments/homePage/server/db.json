@@ -1,12 +1,20 @@
 {
-    "users":[{
-      
+  "users": [
+    {
       "name": "Tony",
       "email": "123"
-      
     },
-{
-    "name":"Black",
-    "email":"456"
-}]
-  }
+    {
+      "name": "Black",
+      "email": "456"
+    }
+  ],
+  "superAdmin": [
+    {
+      "name": "asdf",
+      "empCode": "asfd",
+      "emailId": "adfa@sdfg.cgh",
+      "id": 2
+    }
+  ]
+}
