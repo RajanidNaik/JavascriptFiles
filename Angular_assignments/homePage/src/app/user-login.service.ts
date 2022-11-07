@@ -16,4 +16,7 @@ export class UserLoginService {
   getAllUser():Observable<login[]>{
     return this.http.get<login[]>("http://localhost:3000/users");
   }
+  updateUser(body:any,id:any):Observable<login[]>{
+return this.http.put<login[]>("http://localhost:3000/users/"+id,body);
+  }
 }

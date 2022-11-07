@@ -10,6 +10,7 @@ export class AddRemoveSuperAdminComponent implements OnInit {
  add:boolean=false;
  adminForm!:FormGroup;
  adminDetails:any;
+//  updateForm !:FormGroup;
 //  form = this.fb.group({
   
 //   superAdmins:this.fb.array([])
@@ -17,6 +18,7 @@ export class AddRemoveSuperAdminComponent implements OnInit {
 
   constructor(private fb:FormBuilder,private adminService:SuperAdminService) { }
     
+
 
 // get superAdmin(){
 //   return this.form.controls["superAdmins"] as FormArray;
@@ -37,6 +39,12 @@ export class AddRemoveSuperAdminComponent implements OnInit {
     this.adminService.getSuperAdmins().subscribe((data)=>{
       this.adminDetails=data;
     })
+    // this.updateForm=this.fb.group({
+    //   name:['',Validators.required],
+    //   employeeCode:['',Validators.required],
+    //   emailId:['',[Validators.required,Validators.email]],
+    //   id:['']
+    // })
   }
 // onDelete(empIndex:number){
 //   this.superAdmin.removeAt(empIndex);
@@ -78,9 +86,13 @@ deleteSuperAdmins(id:any){
     })
   })
 }
-editSuperAdmin(id:any){
-  this.adminService.updateSuperAdmin(id).subscribe(()=>{
-    alert("Super Admin Edited");
+
+updateSuperAdmin(id:any,name:any,empCode:any,emailId:any){
+  
+  let updatedAdmin = {name:name,empCode:empCode,emailId:emailId}
+  
+  this.adminService.updateSuperAdmin(updatedAdmin,id).subscribe(()=>{
+    alert("Super Admin updated");
     this.adminService.getSuperAdmins().subscribe((data)=>{
       this.adminDetails=data;
     })

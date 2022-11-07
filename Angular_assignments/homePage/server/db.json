@@ -2,11 +2,13 @@
   "users": [
     {
       "name": "Tony",
-      "email": "123"
+      "email": "456",
+      "id": 1
     },
     {
       "name": "Black",
-      "email": "456"
+      "email": "456",
+      "id": 2
     }
   ],
   "superAdmin": [
@@ -15,6 +17,20 @@
       "empCode": "asfd",
       "emailId": "adfa@sdfg.cgh",
       "id": 2
+    },
+    {
+      "name": "rajaniNaik",
+      "empCode": "36788",
+      "emailId": "raj@12.com",
+      "id": 3
+    }
+  ],
+  "admins":[
+    {
+      "name":"raj",
+      "empCode":"123",
+      "emailId":"raj@12.com",
+      "id":1
     }
   ]
 }

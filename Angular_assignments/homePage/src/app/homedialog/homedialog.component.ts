@@ -24,13 +24,13 @@ openDialogAddSuper(){
   const dialogConfig = new MatDialogConfig();
   dialogConfig.disableClose = true;
       dialogConfig.autoFocus = true;
-  this.dialog.open(AddRemoveSuperAdminComponent)
+  this.dialog.open(AddRemoveSuperAdminComponent, dialogConfig)
 }
 openDialogAdd(){
   this.onClose();
   const dialogConfig = new MatDialogConfig();
   dialogConfig.disableClose = true;
       dialogConfig.autoFocus = true;
-  this.dialog.open(AddRemoveAdminComponent)
+  this.dialog.open(AddRemoveAdminComponent, dialogConfig)
 }
 }

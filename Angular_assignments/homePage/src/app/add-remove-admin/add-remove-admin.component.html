@@ -3,23 +3,23 @@
         <mat-icon>close</mat-icon>
       </button> 
 <h1 class="head">Add/Remove Admins</h1>
-<div class="row1">
+<div class="row1" [formGroup]="adminForm">
     <div>
         <mat-form-field appearance="outline">
           <mat-label>Enter Name</mat-label>
-          <input matInput placeholder="Enter Name">
+          <input matInput placeholder="Enter Name" formControlName="name">
         </mat-form-field>
       </div>
       <div>
         <mat-form-field appearance="outline">
           <mat-label>Enter Employee Code</mat-label>
-          <input matInput placeholder="Enter Employee Code">
+          <input matInput placeholder="Enter Employee Code" formControlName="employeeCode">
         </mat-form-field>
       </div>
       <div >
         <mat-form-field appearance="outline" class="mail">
           <mat-label>Enter Mail ID</mat-label>
-          <input matInput placeholder="Enter Mail ID">
+          <input matInput placeholder="Enter Mail ID" formControlName="emailId">
         </mat-form-field>
       </div>
       <div>
@@ -29,33 +29,33 @@
       </div>
 </div>
 <div class="line"></div>
-<div *ngIf="add" class="row2">
+<div  class="row2" *ngFor="let admin of adminDetails;index as i">
     <div>
         <mat-form-field appearance="outline">
-          <mat-label>Enter Name</mat-label>
-          <input matInput >
+         
+          <input matInput value="{{admin.name}}" #name>
         </mat-form-field>
       </div>
       <div>
         <mat-form-field appearance="outline">
-          <mat-label>Enter Employee Code</mat-label>
-          <input matInput >
+          
+          <input matInput value="{{admin.empCode}}" #empCode>
         </mat-form-field>
       </div>
       <div>
         <mat-form-field appearance="outline" class="mail">
-          <mat-label>Enter Mail ID</mat-label>
-          <input matInput >
+          
+          <input matInput value="{{admin.emailId}}" #emailId >
         </mat-form-field>
       </div>
       <div class="icon">
         <div>
-            <button  mat-fab color="accent">
+            <button  mat-fab color="accent" (click)="updateAdmin(admin.id,name.value,empCode.value,emailId.value)">
                 <mat-icon>edit</mat-icon>
               </button>
           </div>
           <div>
-            <button (click)="onDelete()" mat-fab color="accent">
+            <button (click)="deleteAdmins(admin.id)" mat-fab color="accent">
                 <mat-icon>delete</mat-icon>
               </button>
           </div>

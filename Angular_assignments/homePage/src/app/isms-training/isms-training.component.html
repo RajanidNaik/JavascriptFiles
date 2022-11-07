@@ -24,8 +24,10 @@
 </div>
 <div>
     <div class="ppt">
-      <ng-container *ngIf="checked">
-        <div class="top">
+      <div class="show">
+      <iframe src="https://onedrive.live.com/embed?cid=71384A13DA89F31B&resid=71384A13DA89F31B%21199489&authkey=ANmFk7GGLgXY8A4&em=2" width="843" height="492" frameborder="0" scrolling="no"></iframe>
+    </div>
+      <div *ngIf="checked">
         <div class="terms">
           <div  >
             <img class="round" src="../assets/img/correct.png">
@@ -40,8 +42,8 @@
               <img class="round" src="../assets/img/close.png" (click)="onCross()">
             </div>      
           </div>
-        </div>
-      </ng-container>
+        
+      </div>
     </div>
     
 </div>
@@ -53,7 +55,7 @@
     By clicking 'I Agree' button you hereby agree to follow all the guidelines mentioned above.
 </div>
 <div>
-    <button>I Agree</button>
+    <button routerLink="/homepage">I Agree</button>
 </div>
 <div class="footer">
     Robosoft Technologies 1996-2020
