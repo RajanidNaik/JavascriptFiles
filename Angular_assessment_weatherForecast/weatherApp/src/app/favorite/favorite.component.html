@@ -1,6 +1,20 @@
 <div class="container">
-<app-home-page></app-home-page>
-<!-- <div class="no-favorite">
+    <div class="header">
+        <app-home-page></app-home-page>
+    </div>
+
+<div class="mobileView">
+    <div class="back">
+        <div>
+            <mat-icon routerLink="/home">keyboard_backspace</mat-icon>
+        </div >
+        <div class="fav">Favourite</div>
+    </div>
+    <div>
+        <mat-icon>search</mat-icon>
+    </div>
+</div>
+<div *ngIf="favourite; else elseBlock" class="no-favorite">
     <div class="img">
         <img  src="/assets/icon_nothing.png">
     </div>
@@ -8,27 +22,28 @@
         No Favourites added
     </div>
    
-</div> -->
-
-<div class="favorite">
+</div>
+<ng-template #elseBlock>
+<div class="favorite" >
 <div class="tableContent">
     <div class="count">
-        <p>6 City added as favorite</p>
+        <p>{{count}} City added as favorite</p>
     </div>
     <div class="removeBtn">
-        <button>Remove All</button>
+        <button (click)="openDialog()">Remove All</button>
     </div>
 </div>
 <div class="table">
-<table>
+<table *ngFor="let fav of favourites;index as i ">
     <tr>
-        <td>Udupi,Karnataka</td>
-        <td><img src="/assets/icon_mostly_sunny_small.png"></td>
-        <td>31&#176;</td>
-        <td>Mostly Sunny</td>
+        <td>{{fav[0]}},Karnataka</td>
+        <!-- <td><img src="/assets/icon_mostly_sunny_small.png"></td> -->
+        <td><img class="weatherimg" [src]="fav[3]"></td>
+        <td>{{fav[1]}}&#176;</td>
+        <td>{{fav[2]}}</td>
         <td><mat-icon class="color">favorite </mat-icon></td>
     </tr>
-    <tr>
+    <!-- <tr>
         <td>Bengaluru,Karnataka</td>
         <td><img src="/assets/icon_rain_small.png"></td>
         <td>29&#176;</td>
@@ -62,9 +77,91 @@
         <td>24&#176;</td>
         <td>Clear Night</td>
         <td><mat-icon class="color">favorite </mat-icon></td>
-    </tr>
+    </tr> -->
 </table>
-</div>
 
 </div>
+<table class="mediaTable" *ngFor="let fav of favourites;index as i ">
+    <div class="table-1">
+    <div>{{fav[0]}},Karnataka</div>
+    <div class="tableimg">
+    <div class="info">
+        <div><img class="weatherimg"[src]="fav[3]"></div>
+        <div>{{fav[1]}}&#176;</div>
+        <div class="weatherinfo">{{fav[2]}}</div>
+    </div>
+    <div>
+        <mat-icon class="color">favorite </mat-icon>
+    </div>
+</div>
+</div>
+<!-- <div class="table-1">
+<div>Bengaluru,Karnataka</div>
+    <div class="tableimg">
+    <div class="info">
+        <div><img src="/assets/icon_rain_small.png"></div>
+        <div>29&#176;</div>
+        <div class="weatherinfo">Rain</div>
+    </div>
+    <div>
+        <mat-icon class="color">favorite </mat-icon>
+    </div>
+</div>
+</div>
+<div class="table-1">
+<div>Mumbai,Maharashtra</div>
+    <div class="tableimg">
+    <div class="info">
+        <div><img src="/assets/icon_mostly_cloudy_small.png"></div>
+        <div>32&#176;</div>
+        <div class="weatherinfo">MostlyCloudy</div>
+    </div>
+    <div>
+        <mat-icon class="color">favorite </mat-icon>
+    </div>
+</div>
+</div>
+<div class="table-1">
+<div>Kolkatta,West Bengal</div>
+    <div class="tableimg">
+    <div class="info">
+        <div><img src="/assets/icon_partly_cloudy_small.png"></div>
+        <div>30&#176;</div>
+        <div class="weatherinfo">PartlyCloudy</div>
+    </div>
+    <div>
+        <mat-icon class="color">favorite </mat-icon>
+    </div>
+</div>
+</div>
+<div class="table-1">
+<div>Panaji,Goa</div>
+    <div class="tableimg">
+    <div class="info">
+        <div><img src="/assets/icon_thunderstorm_small.png"></div>
+        <div>31&#176;</div>
+        <div class="weatherinfo">Thunderstorm</div>
+    </div>
+    <div>
+        <mat-icon class="color">favorite </mat-icon>
+    </div>
+</div>
+</div>
+<div class="table-1">
+<div>Newyork,United States</div>
+    <div class="tableimg">
+    <div class="info">
+        <div><img src="/assets/icon_clear_night_small.png"></div>
+        <div>24&#176;</div>
+        <div class="weatherinfo">ClearNight</div>
+    </div>
+    <div>
+        <mat-icon class="color">favorite </mat-icon>
+    </div>
+</div>
+</div> -->
+</table>
+
+</div>
+</ng-template>
 </div>

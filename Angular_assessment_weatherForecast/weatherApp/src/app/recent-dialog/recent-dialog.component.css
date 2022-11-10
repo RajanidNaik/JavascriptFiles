@@ -1,0 +1,53 @@
+.dialogPara{
+    height: 2.62%;
+    width:80%;
+    padding: 10%;
+    color:#000;
+    font-family:'Roboto';
+    font-size: 1rem;
+    letter-spacing: 0;
+    line-height: 1.2rem;
+    text-align: center;
+}
+
+.btn{
+    /* height: 5.09%;
+    width:8.83%; */
+    border-radius: 2px;
+    background-color: #f76b1c;
+    margin-left: 50%;
+    margin-left: 30%;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+@media  screen and (max-width:480px){
+.dialogPara{
+    height: 7.5%;
+    width:80%;
+    color:rgba(0,0,0,0.54);
+    font-family: 'Roboto';
+    font-size: 1rem;
+    letter-spacing: 0;
+    line-height: 1.5rem;
+}
+.btn{
+    color:#673ab7;
+    font-family: 'Roboto';
+    font-size:0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 1rem;
+    text-align:center;
+    background-color:#fff;
+   
+}
+.buttons{
+    display: flex;
+    width:80%;
+    
+}
+}

@@ -1,36 +1,19 @@
 <div class="container">
-    <div class="header">
-        <div class="logo">
-            <img class="weather-img" src="/assets/logo_web.png">
-        </div>
-        <div class="searchbar" >
-            <mat-form-field appearance="outline">
-                <input class="searchField" type="text" matInput placeholder=" Search city">
-                <mat-icon matSuffix class="searchIcon">search</mat-icon>
-              </mat-form-field>
-        </div>
-    </div>
-    <div class="components">
-        <div class="list">
-        <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">FAVORITE</a></li>
-            <li><a href="#">RECENTSEARCH</a></li>
-        </ul>
-    </div>
-    <div class="date">
-        <h3>{{date| date:'ccc'}},{{date|date:'dd MMM YYYY HH:mm:ss a'}}</h3>
-    </div>
-    </div>
-    <div class="line"></div>
+    <app-home-page></app-home-page>
     <!--home Content-->
     <div>
-        <h2 class="location">Udupi,Karnataka</h2>
+        <h2 class="location">{{cityName}},Karnataka</h2>
     </div>
     <div class="favorite">
-        <div>
-            <mat-icon>favorite_border </mat-icon>
+       
+        <div *ngIf="!color;else elseBlock">
+            <mat-icon (click)="onClickFav()">favorite_border </mat-icon>
         </div>
+        <ng-template #elseBlock>
+        <div class="onFav" >
+            <mat-icon>favorite</mat-icon>
+        </div>
+    </ng-template>
         <div>
             <h3>Add to favorite</h3>
         </div>
@@ -39,19 +22,20 @@
         <!-- <h3>&#9825; Add to fav0urite</h3> -->
     </div>
     <div class="weatherimg">
-        <img src="/assets/icon_mostly_sunny.png">
+        <!-- <img src="/assets/icon_mostly_sunny.png"> -->
+        <img [src]= "weatherIcon">
     </div>
     <div class="weatherTemp">
         <div class="temp">
-            <h1>87</h1>
+            <h1>{{temp}}</h1>
         </div>
         <div class="tempBtn">
-            <button>&#8451;</button>
-            <button>&#8457;</button>
+            <button (click)="tempConvert()" >&#8451;</button>
+            <button (click)="tempFara()" >&#8457;</button>
         </div>
     </div>
     <div class="report">
-        <h2>Mostly Sunny</h2>
+        <h2>{{weatherInfo | titlecase}}</h2>
     </div>
     <div class="line-copy"></div>
 <!--footer-->
@@ -62,7 +46,7 @@
         </div>
         <div class="castDetail">
             <h2>Min-Max</h2>
-            <h1>75&#176;-90&#176;</h1>
+            <h1>{{temp_max}}&#176;-{{temp_min}}&#176;</h1>
         </div>
         
     </div>
@@ -71,8 +55,8 @@
             <img src="/assets/icon_precipitation_info.png">
         </div>
         <div class="castDetail">
-            <h2>Precipitation</h2>
-            <h1>0%</h1>
+            <h2>Pressure</h2>
+            <h1>{{pressure}}hPa</h1>
         </div>
         
     </div>
@@ -82,7 +66,7 @@
         </div>
         <div class="castDetail">
             <h2>Humidity</h2>
-            <h1>47%</h1>
+            <h1>{{humidity}}%</h1>
         </div>
         
     </div>
@@ -92,7 +76,7 @@
         </div>
         <div class="castDetail">
             <h2>Wind</h2>
-            <h1>4mph</h1>
+            <h1>{{wind}}mph</h1>
         </div>
         
     </div>
@@ -102,7 +86,7 @@
         </div>
         <div class="castDetail">
             <h2>Visibility</h2>
-            <h1>12mph</h1>
+            <h1>{{visibility}}mph</h1>
         </div>
         
     </div>

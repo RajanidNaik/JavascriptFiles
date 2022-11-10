@@ -1,21 +1,29 @@
 <div class="container">
     <div class="header">
+        <div class="menubar">
+            <mat-icon (click)="openMenu()">menu</mat-icon>
+        </div>
         <div class="logo">
             <img class="weather-img" src="/assets/logo_web.png">
         </div>
+        
         <div class="searchbar" >
             <mat-form-field appearance="outline">
-                <input class="searchField" type="text" matInput placeholder=" Search city">
-                <mat-icon matSuffix class="searchIcon">search</mat-icon>
+                <input class="searchField" type="text" matInput placeholder=" Search city" #searchCity [(ngModel)]="cityName">
+                <mat-icon matSuffix class="searchIcon" (click)="onSearchCity(searchCity)">search</mat-icon>
               </mat-form-field>
         </div>
+        <div class="menubar" (click)="openSearch()">
+            <mat-icon>search</mat-icon>
+        </div>
     </div>
+    <div *ngIf="display">
     <div class="components">
-        <div class="list">
+        <div class="list" [class.menuClass]="menuVarialbe">
         <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">FAVORITE</a></li>
-            <li><a href="#">RECENTSEARCH</a></li>
+            <li><a routerLink="/home">HOME</a></li>
+            <li><a routerLink="/favourite">FAVORITE</a></li>
+            <li><a routerLink="/recent">RECENTSEARCH</a></li>
         </ul>
     </div>
     <div class="date">
@@ -23,5 +31,17 @@
     </div>
     </div>
     <div class="line"></div>
+</div>
 
+    <div class="mediaSearch" [class.serachClass]="serachVariable">
+        <div>
+            <mat-icon (click)="openSearch()">keyboard_backspace</mat-icon>
+        </div>
+        <div >
+            <input class="input" matInput placeholder=" Search city" #searchCity [(ngModel)]="cityName">
+        </div>
+        <div class="clear">
+            <mat-icon (click)="onSearchCity(searchCity)">search</mat-icon>
+        </div>
+    </div>
 </div>

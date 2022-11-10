@@ -1,91 +1,3 @@
-*{
-    box-sizing: border-box;
-    margin:0;
-    padding: 0;
-}
-.container{
-    width:100%;
-    height: 100%;
-    background-color:rgba(136,81,204,0.68);
-    background:  url('../../assets/background.png') no-repeat center center/cover ;
-}
- .header{
-    padding: 5%;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-bottom: 1%;
-    display: flex;
-    justify-content: space-between;
-    
-    
-} 
-
-.searchbar{
-     height: 6.54%;
-    
-    
-}
-::placeholder { 
-    color: white;
-    opacity: 1; 
-  }
-.searchField{
-    color: #fff;
-}
-.searchIcon{
-    color: #fff;
-}
-.list ul{
-    display:flex;
-    list-style: none;
-    justify-content:stretch;
-}
-.list ul li {
-    padding: 10%;
-    
-}
-.list ul li a{
-    font-family: 'Roboto';
-    color:#fff;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 0;
-    font-size: 0.9rem;
-    line-height: 1rem;
-   
-}
-.list ul li a:hover{
-    color:#ffd639;
-    border-bottom:2px solid #ffd639;
-}
-.components{
-    display: flex;
-    justify-content:space-between;
-    padding-left:10%;
-    padding-right: 10%;
-    
-}
-.date{
-    margin-bottom: 0%;
-    padding: 0%;
-    height: 2.33%;
-    width:18%;
-    font-size:1rem;
-    letter-spacing: 0;
-    line-height: 1rem;
-    text-align: right;
-    color:#fff
-}
-.line{
-    margin-left:10%;
-    padding: 0%;
-    margin-top:-1.5%;
-    box-sizing: border-box;
-    height: 0.15%;
-    width:80%;
-    border: 1px solid #fff;
-    opacity: 0.3;
-}
 
 /*home-content*/
 .location{
@@ -111,6 +23,9 @@
     font-family: 'Roboto';
     margin-left: 11%;
 }
+.onFav{
+    color:#ffd639;
+}
 .weatherimg{
     margin-top: 2%;
     margin-left: 50%;
@@ -130,11 +45,20 @@
     line-height: 4.7rem;
 }
 .tempBtn button{
-    margin-top: 20%;
+    margin-top: 10%;
     cursor: pointer;
    
     
 }
+.tempBtn button:active{
+    color:red;
+    background-color: #fff;
+}
+button:visited {
+    background-color: #fff;
+    border-color: red;
+    color:red;
+  }
 .report{
     height: 3.63%;
     width: 11%;
@@ -144,7 +68,7 @@
     letter-spacing: 0;
     line-height: 1.6rem;
     text-align: center;
-    margin-left: 47%;
+    margin-left: 49%;
 }
 
 /*footer*/
@@ -169,7 +93,8 @@
     letter-spacing: 0;
     line-height: 1.2rem;
     margin: 1%;
-    padding: 2%;
+    padding: 3%;
+    
 }
 .castDetail h1{
     color: #fff;
@@ -182,4 +107,40 @@
     display: flex;
     justify-content: space-evenly;
    
+}
+@media  screen and (max-width:480px){
+    .location{
+        margin-left: 30%;
+    }
+    .favorite{
+        margin-left: 30%;
+    }
+    .weatherimg{
+        margin-left: 35%;
+    }
+    .weatherTemp{
+        margin-left: -35%;
+    }
+    .tempBtn button{
+         margin-top:10%
+    }
+    .report{
+        width: 30%;
+        margin-left: 28%;
+    }
+    .line-copy{
+        width: 100%;
+        margin-left: 0%;
+    }
+    .cast{
+        width: 50%;
+        margin:5%;
+    }
+     
+    .footer{
+        overflow: auto;
+    }
+    .footer::-webkit-scrollbar {
+        display: none;
+    }
 }
