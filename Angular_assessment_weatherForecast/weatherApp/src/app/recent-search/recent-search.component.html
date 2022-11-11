@@ -35,52 +35,38 @@
         </div>
     </div>
     <div class="table">
-    <table *ngFor="let recent of recentSearchHistory;index as i">
+    <table >
         <tr>
+            <td>{{cityName}},Karnataka</td>
+            <td><img class="weatherImg" [src]="weatherImg" ></td>
+            <td>{{temp}}&#176;</td>
+            <td>{{weatherInfo}}</td>
+            <td><mat-icon class="color">favorite </mat-icon></td>
+        </tr>
+        <!-- <tr>
             <td>{{recent[0]}},Karnataka</td>
             <td><img class="weatherImg" [src]="recent[3]"></td>
             <td>{{recent[1]}}&#176;</td>
             <td>{{recent[2]}}</td>
             <td><mat-icon class="color">favorite </mat-icon></td>
-        </tr>
-        <!-- <tr>
-            <td>Coorg,Karnataka</td>
-            <td><img src="/assets/icon_rain_small.png"></td>
-            <td>29&#176;</td>
-            <td>Rain</td>
-            <td><mat-icon class="color">favorite </mat-icon></td>
-        </tr>
-        <tr>
-            <td>Mumbai,Maharashtra</td>
-            <td><img src="/assets/icon_mostly_cloudy_small.png"></td>
-            <td>32&#176;</td>
-            <td>Mostly Cloudy</td>
-            <td><mat-icon class="color">favorite </mat-icon></td>
-        </tr>
-        <tr>
-            <td>Manipal,Karnataka</td>
-            <td><img src="/assets/icon_partly_cloudy_small.png"></td>
-            <td>30&#176;</td>
-            <td>Partly Cloudy</td>
-            <td><mat-icon class="color">favorite </mat-icon></td>
-        </tr>
-        <tr>
-            <td>Panaji,Goa</td>
-            <td><img src="/assets/icon_thunderstorm_small.png"></td>
-            <td>31&#176;</td>
-            <td>Thunderstorm</td>
-            <td><mat-icon class="color">favorite </mat-icon></td>
-        </tr>
-        <tr>
-            <td>Newyork,United States</td>
-            <td><img src="/assets/icon_clear_night_small.png"></td>
-            <td>24&#176;</td>
-            <td>Clear Night</td>
-            <td><mat-icon class="color">favorite </mat-icon></td>
         </tr> -->
     </table>
     </div>
-    <table class="mediaTable" *ngFor="let recent of recentSearchHistory;index as i">
+    <table class="mediaTable" >
+        <div class="table-1">
+        <div>{{cityName}},Karnataka</div>
+        <div class="tableimg">
+        <div class="info">
+            <div><img class="weatherImg" [src]="weatherImg"></div>
+            <div>{{temp}}&#176;</div>
+            <div class="weatherinfo">{{weatherInfo}}</div>
+        </div>
+        <div>
+            <mat-icon class="color">favorite </mat-icon>
+        </div>
+    </div>
+    </div>
+    <!-- <table class="mediaTable" *ngFor="let recent of recentSearchHistory;index as i">
         <div class="table-1">
         <div>{{recent[0]}},Karnataka</div>
         <div class="tableimg">
@@ -93,72 +79,7 @@
             <mat-icon class="color">favorite </mat-icon>
         </div>
     </div>
-    </div>
-    <div class="table-1">
-    <div>Bengaluru,Karnataka</div>
-        <div class="tableimg">
-        <div class="info">
-            <div><img src="/assets/icon_rain_small.png"></div>
-            <div>29&#176;</div>
-            <div class="weatherinfo">Rain</div>
-        </div>
-        <div>
-            <mat-icon class="color">favorite </mat-icon>
-        </div>
-    </div>
-    </div>
-    <div class="table-1">
-    <div>Mumbai,Maharashtra</div>
-        <div class="tableimg">
-        <div class="info">
-            <div><img src="/assets/icon_mostly_cloudy_small.png"></div>
-            <div>32&#176;</div>
-            <div class="weatherinfo">Mostly Cloudy</div>
-        </div>
-        <div>
-            <mat-icon class="color">favorite </mat-icon>
-        </div>
-    </div>
-    </div>
-    <div class="table-1">
-    <div>Kolkatta,West Bengal</div>
-        <div class="tableimg">
-        <div class="info">
-            <div><img src="/assets/icon_partly_cloudy_small.png"></div>
-            <div>30&#176;</div>
-            <div class="weatherinfo">Partly Cloudy</div>
-        </div>
-        <div>
-            <mat-icon class="color">favorite </mat-icon>
-        </div>
-    </div>
-    </div>
-    <div class="table-1">
-    <div>Panaji,Goa</div>
-        <div class="tableimg">
-        <div class="info">
-            <div><img src="/assets/icon_thunderstorm_small.png"></div>
-            <div>31&#176;</div>
-            <div class="weatherinfo">Thunderstorm</div>
-        </div>
-        <div>
-            <mat-icon class="color">favorite </mat-icon>
-        </div>
-    </div>
-    </div>
-    <div class="table-1">
-    <div>Newyork,United States</div>
-        <div class="tableimg">
-        <div class="info">
-            <div><img src="/assets/icon_clear_night_small.png"></div>
-            <div>24&#176;</div>
-            <div class="weatherinfo">Clear Night</div>
-        </div>
-        <div>
-            <mat-icon class="color">favorite </mat-icon>
-        </div>
-    </div>
-    </div>
+    </div> -->
     </table>
     
     </div>

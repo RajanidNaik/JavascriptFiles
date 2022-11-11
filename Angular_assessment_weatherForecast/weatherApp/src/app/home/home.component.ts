@@ -33,7 +33,6 @@ color:boolean=false;
   ngOnInit(): void {
     this.weatherDetails = localStorage.getItem('weatherDeatail');
     this.finalDetails=JSON.parse(this.weatherDetails);
-    console.log(this.finalDetails);
     this.temp=(this.finalDetails['main'].temp);
     this.cityName = this.finalDetails['name'];
     this.weatherInfo = this.finalDetails['weather'][0].description;
@@ -44,7 +43,6 @@ color:boolean=false;
     this.temp_max = ((this.finalDetails['main'].temp_max)-273.15).toFixed(0);
     this.temp_min = ((this.finalDetails['main'].temp_min)-273.15).toFixed(0);
     this.icons = this.finalDetails['weather'][0];
-    // this.weatherIcon =this.icons.icon;
     this.weatherIcon = `http://openweathermap.org/img/wn/${this.icons.icon}@2x.png`;
     
   }
@@ -56,7 +54,7 @@ tempFara(){
   this.temp=((1.8*((this.finalDetails['main'].temp)-273.15))+32).toFixed(2);
 }
 onClickFav(){
-  this.color=true;
+  this.color =! this.color;
   this.service.getData(this.cityName).subscribe((result)=>{
     localStorage.setItem('favouriteDeatail',JSON.stringify(result));
     this.router.navigate(['home']).then(() => {

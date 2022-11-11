@@ -12,7 +12,8 @@ export class RecentDialogComponent implements OnInit {
   ngOnInit(): void {
   }
   onClear(){
-    localStorage.removeItem('weatherDetail');
+    localStorage.removeItem('recentSearch');
+    localStorage.removeItem('weatherDeatail');
   }
 
 }

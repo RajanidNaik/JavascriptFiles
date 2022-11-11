@@ -12,4 +12,5 @@ export class WeatherService {
    return this.http.get(`${API_URL}/weather?q=${cityName}&appid=${API_KEY}`);
   }
   
+  
 }

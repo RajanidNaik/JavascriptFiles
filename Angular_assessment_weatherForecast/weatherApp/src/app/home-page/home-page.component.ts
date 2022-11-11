@@ -12,11 +12,11 @@ display:boolean=true;
 menuVarialbe:boolean=false;
 serachVariable:boolean=false;
 cityName:any;
-mobileMedia:any = window.matchMedia("(max-width:480px)")
+
   constructor(public service:WeatherService , public router:Router) { }
 
   ngOnInit(): void {
-   
+  
   }
 openMenu(){
   this.menuVarialbe =! this.menuVarialbe;
@@ -28,9 +28,7 @@ onSearchCity(cityname:any){
   this.service.getData(this.cityName).subscribe((result)=>{
     localStorage.setItem('weatherDeatail',JSON.stringify(result));
     this.router.navigate(['home']).then(() => {
-
       window.location.reload();
-
     });
   })
 }
