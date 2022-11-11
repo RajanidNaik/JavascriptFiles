@@ -8,6 +8,7 @@ import { FavoriteDialogComponent } from '../favorite-dialog/favorite-dialog.comp
 })
 export class FavoriteComponent implements OnInit {
       favourite:boolean=false;
+      color:boolean=false;
       favouriteDetails:any;
       favWeatherDetails:any;
       count:number=0;
@@ -21,22 +22,21 @@ export class FavoriteComponent implements OnInit {
 
   ngOnInit(): void {
     this.favouriteDetails = localStorage.getItem('favouriteDeatail');
-    this.favWeatherDetails=JSON.parse(this.favouriteDetails);
+    this.favWeatherDetails=JSON.parse(this.favouriteDetails) ;
     console.log(this.favWeatherDetails);
-    // if(this.favWeatherDetails != null){
+    if(this.favWeatherDetails != null){
     this.cityName = this.favWeatherDetails['name'];
     this.imgId = this.favWeatherDetails['weather'][0];
     this.weatherImg = `http://openweathermap.org/img/wn/${this.imgId.icon}@2x.png`;
     this.temp = ((this.favWeatherDetails['main'].temp)-273.15).toFixed(0);
     this.weatherInfo = this.favWeatherDetails['weather'][0].description;
-    //}
+    }else{
+      this.favourite=true;
+    }
     this.favourites.push([this.cityName,this.temp,this.weatherInfo,this.weatherImg]);
     console.log(this.favourites);
     this.count = this.favourites.length;
     console.log(this.favourites.length)
-    if(this.favourites.length === 0){
-      this.favourite=true;
-    }
   }
   
 
@@ -50,5 +50,7 @@ export class FavoriteComponent implements OnInit {
       
     )   
   }
-
+onFav(){
+this.color = !this.color;
+}
 }

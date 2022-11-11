@@ -108,25 +108,48 @@ button:visited {
     justify-content: space-evenly;
    
 }
+@media  screen and (max-width:280px){
+    .report h2{
+        height: 3.63%;
+        width: 50%;
+        color: #fff;
+        font-family: 'Roboto';
+        font-size: 1.4rem;
+        letter-spacing: 0;
+        line-height: 1.6rem;
+        text-align: center;
+        margin-left: 60%;
+    }
+}
+@media  screen and (max-width:360px){
+    h2.location{
+        margin-right: 0%;
+        margin-left: 23%;
+    }
+    .favorite div {
+        margin-left: -1%;
+    }
+
+}
 @media  screen and (max-width:480px){
     .location{
         margin-left: 30%;
     }
     .favorite{
-        margin-left: 30%;
+        margin-left: 37%;
     }
     .weatherimg{
-        margin-left: 35%;
+        margin-left: 38%;
     }
     .weatherTemp{
-        margin-left: -35%;
+        margin-left: -30%;
     }
     .tempBtn button{
          margin-top:10%
     }
     .report{
         width: 30%;
-        margin-left: 28%;
+        margin-left: 35%;
     }
     .line-copy{
         width: 100%;
@@ -142,5 +165,17 @@ button:visited {
     }
     .footer::-webkit-scrollbar {
         display: none;
+    }
+}
+@media  screen and (max-width:700px) and (min-width:480px){
+    .footer{
+        overflow: auto;
+    }
+    .footer::-webkit-scrollbar {
+        display: none;
+    }
+    .cast{
+        width:50%;
+        margin:3%;
     }
 }
