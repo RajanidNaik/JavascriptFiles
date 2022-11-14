@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="header">
+            <div class="logo">
+                <img class="weather-img" src="/assets/logo_web.png">
+            </div>
+            <div class="searchbar" >
+                <mat-form-field appearance="outline">
+                    <input class="searchField" type="text" matInput placeholder=" Search city">
+                    <mat-icon matSuffix class="searchIcon" >search</mat-icon>
+                  </mat-form-field>
+            </div>
+    </div>
+    <div class="components">
+        <nav class="menubar">
+            <ul>
+                <li><a routerLink="/home">HOME</a></li>
+                <li><a routerLink="/favourite">FAVOURITE</a></li>
+                <li><a routerLink="/recent">RECENT&nbsp;SEARCH</a></li>
+            </ul>
+        </nav>
+        <div class="date">
+            <h3>{{date| date:'ccc'}},{{date|date:'dd MMM YYYY HH:mm a'}}</h3>
+        </div>
+    </div>
+    
+</div>

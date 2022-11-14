@@ -1,0 +1,33 @@
+.searchbar{
+   display: flex;
+}
+::placeholder { 
+   color: white;
+   opacity: 1; 
+ }
+.searchField{
+   color: #fff;
+  
+}
+.searchIcon{
+   color: #fff;
+}
+.header{
+   display: flex;
+   justify-content: space-between;
+   padding: 3%;
+   padding-left: 10%;
+   padding-right: 10%;
+   padding-bottom: 1%;
+}
+.menubar a{
+   color:#fff;
+}
+.menubar ul{
+   list-style: none;
+}
+.menubar ul li a{
+   display: block;
+   text-align: center;
+   color: #fff;
+}
