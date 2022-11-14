@@ -15,8 +15,6 @@
     padding-bottom: 1%;
     display: flex;
     justify-content: space-between;
-    
-    
 } 
 
 .mediaSearch{
@@ -45,7 +43,7 @@
     
     
 }
-::placeholder { 
+.searchbar ::placeholder{ 
     color: white;
     opacity: 1; 
   }
@@ -59,10 +57,11 @@
 .list ul{
     display:flex;
     list-style: none;
-    justify-content:stretch;
+   gap:1rem;
 }
 .list ul li {
     padding-left: 10%;
+    margin-bottom: 0%;
     
 }
 .list ul li a{
@@ -77,12 +76,12 @@
 }
 .list ul li a:hover{
     color:#ffd639;
-    border-bottom:2px solid #ffd639;
+    border-bottom:1.5px solid #ffd639;
 }
 .components{
     display: flex;
     justify-content:space-between;
-    padding-left:10%;
+    padding-left:8.5%;
     padding-right: 10%;
     
 }
@@ -91,7 +90,7 @@
     padding: 0%;
     height: 2.33%;
     width:30%;
-    font-size:14px;
+    font-size:0.9rem;
     letter-spacing: 0;
     line-height: 1rem;
     text-align: right;
@@ -100,15 +99,39 @@
 .line{
     margin-left:10%;
     padding: 0%;
-    margin-top:-1.5%;
+    margin-top:-2.6%;
     box-sizing: border-box;
     height: 0.15%;
     width:80%;
     border: 1px solid #fff;
     opacity: 0.3;
 }
+@media screen and (max-width:360px) {
+    .date{
+       
+        margin-left:-10%;
+        
+        
+    }
+}
+@media screen and (max-width:670px) {
+    
+    .list ul li {
+        padding-left: 1rem;
+        margin: 0%;
+        
+    }
+   
+}
+@media screen and (max-width:850px){
+    .date{
+        width:50%;
+    }
+    .line{
+        margin-top:-3%;
+    }
 
-
+}
     
 
 @media  screen and (max-width:480px) {
@@ -125,18 +148,38 @@
     
     .mediaSearch{
         display:flex;
+        position: fixed;
         background-color: #fff;
         padding: 3%;
         width:100vw;
         z-index: 1;
-        height: 90vh;
-        margin-top:10%;
+        height: 100vh;
+        margin-top:-26%;
+        color:rgba(0,0,0,0.3);
+        font-family: 'Roboto';
+        font-size:0.875rem;
+        line-height: 2rem;
+        transition: all 0.5s ease-in-out;
        display:none;
         
       
     }
     .serachClass{
         display: flex;
+        padding: 5%;
+        transition: all 0.5s ease-in-out;
+    }
+    .list {
+        position: fixed;
+        z-index: 1;
+        height: 100% ;
+        width:70%;
+        padding: 10%;
+        margin-top: -20%;
+        margin-left: -8.5%;
+        background-color: #fff;
+        transition: all 0.5s ease-in-out;
+        display: none;
         
     }
     .list ul{
@@ -147,32 +190,20 @@
         display:flex;
         margin:0;
         text-align:left;
-        padding: 10px 0 10px 26px;
         background-color: #fff;
-        z-index:10;
-        padding: 20%;
+        padding: 5%;
     }
     .list ul li a{
         text-align: left;
         color:#707070;
         text-transform: lowercase;  
-       
-        
     }
-    .list {
-        display:none;
-        height: 98% ;
-        width:75%;
-        background-color: #fff;
-        padding: 10%;
-        
-       
+    .list ul li a::first-letter{
+        text-transform: uppercase;
     }
     .menuClass{
         display: block;
-        transition:0.4s ease-in-out;
-        
-        
+        transition: all 0.5s ease-in-out;
     }
     .list ul li a:hover{
         color:#000;
@@ -180,22 +211,49 @@
     }
     .components{
         display: block;
+        text-transform: uppercase;
     }
-    .date{
-        width: 90%;
+    .date h3{
+        width: 15rem;
         color:#fff;
         opacity:0.6;
         font-family: 'Roboto';
-        font-size:0.8rem;
+        font-size:0.8125rem;
         letter-spacing: 1.5px;
-        line-height: 1rem;
+        line-height: 0.9375rem;
         text-align:center;
-        margin-top:10% ;
-        margin-left: 5%;
+        margin: 5%;
+        margin-left: 30%;
+       padding: 5%;
+        
     }
     .line{
         display: none;
     }
    
 
+}
+@media screen and (min-width:980px) and (max-width:1100) {
+    .line{
+        margin-left:10%;
+        padding: 0%;
+        margin-top:-2.2%;
+        box-sizing: border-box;
+        height: 0.15%;
+        width:80%;
+        border: 1px solid #fff;
+        opacity: 0.3;
+    }
+}
+@media screen and (min-width:1200px) {
+    .line{
+        margin-left:10%;
+        padding: 0%;
+        margin-top:-2%;
+        box-sizing: border-box;
+        height: 0.15%;
+        width:80%;
+        border: 1px solid #fff;
+        opacity: 0.3;
+    }
 }

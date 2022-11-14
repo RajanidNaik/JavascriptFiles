@@ -33,12 +33,12 @@ color:boolean=false;
   ngOnInit(): void {
     this.weatherDetails = localStorage.getItem('weatherDeatail');
     this.finalDetails=JSON.parse(this.weatherDetails);
-    this.temp=(this.finalDetails['main'].temp);
+    this.temp=(this.finalDetails['main'].temp).toFixed(0);
     this.cityName = this.finalDetails['name'];
     this.weatherInfo = this.finalDetails['weather'][0].description;
     this.humidity = this.finalDetails['main'].humidity;
     this.wind = this.finalDetails['wind'].speed;
-    this.visibility = ((this.finalDetails['visibility'])*2.236936).toFixed(2);
+    this.visibility = ((this.finalDetails['visibility'])/1000).toFixed(0);
     this.pressure = this.finalDetails['main'].pressure;
     this.temp_max = ((this.finalDetails['main'].temp_max)-273.15).toFixed(0);
     this.temp_min = ((this.finalDetails['main'].temp_min)-273.15).toFixed(0);
@@ -48,10 +48,10 @@ color:boolean=false;
   }
 
 tempConvert(){
-   this.temp =((this.finalDetails['main'].temp-273.15).toFixed(2));
+   this.temp =((this.finalDetails['main'].temp-273.15).toFixed(0));
 }
 tempFara(){
-  this.temp=((1.8*((this.finalDetails['main'].temp)-273.15))+32).toFixed(2);
+  this.temp=((1.8*((this.finalDetails['main'].temp)-273.15))+32).toFixed(0);
 }
 onClickFav(){
   this.color =! this.color;

@@ -56,8 +56,11 @@
         <div>{{fav[1]}}&#176;</div>
         <div class="weatherinfo">{{fav[2]}}</div>
     </div>
-    <div>
-        <mat-icon class="color">favorite </mat-icon>
+    <div *ngIf="!color">
+        <mat-icon class="color" (click)="onFav()">favorite </mat-icon>
+    </div>
+    <div *ngIf="color">
+        <mat-icon >favorite_border </mat-icon>
     </div>
 </div>
 </div>

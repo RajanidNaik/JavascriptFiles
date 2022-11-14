@@ -52,5 +52,6 @@ export class FavoriteComponent implements OnInit {
   }
 onFav(){
 this.color = !this.color;
+localStorage.removeItem('favouriteDeatail');
 }
 }

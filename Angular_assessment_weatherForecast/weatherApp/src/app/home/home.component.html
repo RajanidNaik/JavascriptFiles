@@ -6,7 +6,7 @@
     </div>
     <div class="favorite">
        
-        <div *ngIf="!color;else elseBlock">
+        <div *ngIf="!color;else elseBlock" class="fav">
             <mat-icon (click)="onClickFav()">favorite_border </mat-icon>
         </div>
         <ng-template #elseBlock>
@@ -18,6 +18,7 @@
             <h3>Add to favorite</h3>
         </div>
     </div>
+ <div class="center">
     <div class="weatherimg">
         <!-- <img src="/assets/icon_mostly_sunny.png"> -->
         <img [src]= "weatherIcon">
@@ -27,13 +28,17 @@
             <h1>{{temp}}</h1>
         </div>
         <div class="tempBtn">
-            <button (click)="tempConvert()" >&#8451;</button>
-            <button (click)="tempFara()" >&#8457;</button>
+            <div class="tBtn">
+                <button (click)="tempConvert()" >&#8451;</button>
+                <button (click)="tempFara()" >&#8457;</button>
+            </div>
+           
         </div>
     </div>
     <div class="report">
         <h2>{{weatherInfo | titlecase}}</h2>
     </div>
+ </div>
     <div class="line-copy"></div>
 <!--footer-->
 <div class="footer">
@@ -83,7 +88,7 @@
         </div>
         <div class="castDetail">
             <h2>Visibility</h2>
-            <h1>{{visibility}}mph</h1>
+            <h1>{{visibility}}km</h1>
         </div>
         
     </div>
