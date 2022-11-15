@@ -34,13 +34,13 @@
             <button (click)="openDialog()">Clear All</button>
         </div>
     </div>
-    <div class="table">
+    <div class="table" >
     <table >
-        <tr>
-            <td>{{cityName}},Karnataka</td>
-            <td><img class="weatherImg" [src]="weatherImg" ></td>
-            <td>{{temp}}&#176;</td>
-            <td>{{weatherInfo}}</td>
+        <tr *ngFor="let recent of recentHistory;index as i">
+            <td >{{recent.cityName}},Karnataka</td>
+            <td><img class="weatherImg" [src]="recent.image" ></td>
+            <td>{{((recent.temp)-273.15).toFixed(0)}}&#176;</td>
+            <td>{{recent.info | titlecase}}</td>
             <td><mat-icon class="color">favorite </mat-icon></td>
         </tr>
         <!-- <tr>
@@ -52,34 +52,34 @@
         </tr> -->
     </table>
     </div>
-    <table class="mediaTable" >
+    <!-- <table class="mediaTable" >
         <div class="table-1">
-        <div>{{cityName}},Karnataka</div>
+        <div class="name">{{cityName}},Karnataka</div>
         <div class="tableimg">
         <div class="info">
             <div><img class="weatherImg" [src]="weatherImg"></div>
-            <div>{{temp}}&#176;</div>
-            <div class="weatherinfo">{{weatherInfo}}</div>
-        </div>
-        <div>
-            <mat-icon class="color">favorite </mat-icon>
-        </div>
-    </div>
-    </div>
-    <!-- <table class="mediaTable" *ngFor="let recent of recentSearchHistory;index as i">
-        <div class="table-1">
-        <div>{{recent[0]}},Karnataka</div>
-        <div class="tableimg">
-        <div class="info">
-            <div><img class="weatherImg" [src]="recent[3]"></div>
-            <div>{{recent[1]}}&#176;</div>
-            <div class="weatherinfo">{{recent[2]}}</div>
+            <div class="tempinfo">{{temp}}&#176;</div>
+            <div class="weatherinfo">{{weatherInfo | titlecase}}</div>
         </div>
         <div>
             <mat-icon class="color">favorite </mat-icon>
         </div>
     </div>
     </div> -->
+    <table class="mediaTable" >
+        <div class="table-1" *ngFor="let recent of recentHistory;index as i">
+        <div class="name">{{recent.cityName}},Karnataka</div>
+        <div class="tableimg">
+        <div class="info">
+            <div><img class="weatherImg" [src]="recent.image"></div>
+            <div class="tempinfo">{{((recent.temp)-273.15).toFixed(0)}}&#176;</div>
+            <div class="weatherinfo">{{recent.info | titlecase}}</div>
+        </div>
+        <div>
+            <mat-icon class="color">favorite </mat-icon>
+        </div>
+    </div>
+    </div>
     </table>
     
     </div>

@@ -2,7 +2,7 @@
     <app-home-page></app-home-page>
     <!--home Content-->
     <div>
-        <h2 class="location">{{cityName}},Karnataka</h2>
+        <h2 class="location">{{data.cityName}},Karnataka</h2>
     </div>
     <div class="favorite">
        
@@ -21,11 +21,11 @@
  <div class="center">
     <div class="weatherimg">
         <!-- <img src="/assets/icon_mostly_sunny.png"> -->
-        <img [src]= "weatherIcon">
+        <img [src]= "data.image">
     </div>
     <div class="weatherTemp">
         <div class="temp">
-            <h1>{{temp}}</h1>
+            <h1>{{data.temp}}</h1>
         </div>
         <div class="tempBtn">
             <div class="tBtn">
@@ -36,7 +36,7 @@
         </div>
     </div>
     <div class="report">
-        <h2>{{weatherInfo | titlecase}}</h2>
+        <h2>{{data.info | titlecase}}</h2>
     </div>
  </div>
     <div class="line-copy"></div>
@@ -48,7 +48,7 @@
         </div>
         <div class="castDetail">
             <h2>Min-Max</h2>
-            <h1>{{temp_max}}&#176;-{{temp_min}}&#176;</h1>
+            <h1>{{data.temp_Max}}&#176;-{{data.temp_min}}&#176;</h1>
         </div>
         
     </div>
@@ -58,7 +58,7 @@
         </div>
         <div class="castDetail">
             <h2>Pressure</h2>
-            <h1>{{pressure}}hPa</h1>
+            <h1>{{data.pressure}}hPa</h1>
         </div>
         
     </div>
@@ -68,7 +68,7 @@
         </div>
         <div class="castDetail">
             <h2>Humidity</h2>
-            <h1>{{humidity}}%</h1>
+            <h1>{{data.humidity}}%</h1>
         </div>
         
     </div>
@@ -78,7 +78,7 @@
         </div>
         <div class="castDetail">
             <h2>Wind</h2>
-            <h1>{{wind}}mph</h1>
+            <h1>{{data.wind}}mph</h1>
         </div>
         
     </div>
@@ -88,7 +88,7 @@
         </div>
         <div class="castDetail">
             <h2>Visibility</h2>
-            <h1>{{visibility}}km</h1>
+            <h1>{{data.visibility}}km</h1>
         </div>
         
     </div>

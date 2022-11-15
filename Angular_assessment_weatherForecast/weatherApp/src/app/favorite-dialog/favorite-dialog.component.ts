@@ -13,6 +13,7 @@ export class FavoriteDialogComponent implements OnInit {
   }
 onClear(){
   localStorage.removeItem('favouriteDeatail');
+  window.location.reload();
   
 }
 }

@@ -56,6 +56,9 @@
     letter-spacing: 0;
     line-height: 0.9rem;
  }
+ .count p{
+  width:80vw;
+ }
 .tableContent{
     display: flex;
     justify-content: space-between;
@@ -80,17 +83,24 @@
     margin:2%;
 }
 .table table {
+  overflow-y:scroll;
     border-collapse: collapse;
     width: 80%;
     background-color:rgba(255,255,255,0.2);
-    
+    border-spacing: 5px 1rem;
     margin-left: 10%;
+   
+   
+  }
+   .table table tr{
+    margin-bottom: 10rem;
+   
   }
   
   td {
     padding: 2%;
     text-align: left;
-    border-bottom: 1px solid rgb(63, 50, 121);
+    
     color:#fff
     
   }
@@ -107,12 +117,14 @@
   .tableimg{
     display: flex;
     justify-content: space-between;
+    padding: 2%;
+    height: 12.5%;
+    width: 91.11%;
   }
   .info{
     display: flex;
     justify-content: space-evenly;
-    width:40%;
-    margin:3%;
+    width:80%;
     
   
   }
@@ -128,7 +140,7 @@
   .table-1{
     border-collapse: separate;
     border-spacing: 0 1rem;
-    border-bottom: 1px solid rgb(63, 50, 121);
+    
   }
   @media screen and (max-width:750px) and (min-width:480px) {
     .imgline{
@@ -185,9 +197,40 @@
     display: flex;
   
 }
+.name{
+  height: 2.81%;
+  width: 34.17%;
+  color: #FFE539;
+  font-family: 'Roboto';
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.125rem;
+  padding: 2%;
+}
+.tempinfo{
+  height: 3.28%;
+  width: 5.83%;
+  color: #FFFFFF;
+  font-family: 'Roboto';
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.3125rem;
+}
+.weatherinfo{
+  height: 2.5%;
+  width: 23.33%;
+  color: #FFFFFF;
+  font-family: 'Roboto';
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  line-height: 1rem;
+  margin-top: 1%;
+}
 .count{
     height: 2.34%;
-    width:40%;
+    width:80%;
     font-size: 0.8rem;
     line-height: 0.9rem;
 }
@@ -200,10 +243,18 @@
     font-size: 0.8rem;
     font-family: 'Roboto';
     text-align: right;
+    width:20vw;
 }
 .weatherImg{
-  width:60%
+  width:80%
 }
+.info{
+  gap:1rem;
+  
+}
+.info .weatherinfo{
+  width: 90vw;
+ }
 .table {
    display: none;
 }

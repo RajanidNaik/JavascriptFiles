@@ -12,31 +12,24 @@ export class RecentSearchComponent implements OnInit {
  recentSearchHistory:any=[];
  searchHistory:any = localStorage.getItem('weatherDeatail');
  recentHistory:any;
- temp:any;
- cityName:any;
- weatherInfo:any;
- imgId:any;
- weatherImg:any;
+//  temp:any;
+//  cityName:any;
+//  weatherInfo:any;
+//  imgId:any;
+//  weatherImg:any;
  search:any;
+ mobileMedia:any = window.matchMedia('(max-width:480px)');
   constructor(private dialog:MatDialog,public service:WeatherService) { }
  
   ngOnInit(): void {
-    localStorage.setItem('recentSearch',this.searchHistory);
-    this.search = localStorage.getItem('recentSearch');
-    console.log(this.search)
+    // localStorage.setItem('recentSearch',this.searchHistory);
+    this.search = localStorage.getItem('recentSearchWeather');
     this.recentHistory=JSON.parse(this.search);
-    console.log(this.recentHistory);
-    if(this.recentHistory != null){
-    this.temp = ((this.recentHistory['main'].temp)-273.15).toFixed(0);
-    this.cityName = this.recentHistory['name'];
-    this.weatherInfo = this.recentHistory['weather'][0].description;
-    this.imgId = this.recentHistory['weather'][0];
-    this.weatherImg = `http://openweathermap.org/img/wn/${this.imgId.icon}@2x.png`;
-    }else{
+    
+   
+    if(this.recentHistory == null){
       this.recentSearch=false;
     }
-    this.recentSearchHistory=([this.cityName,this.temp,this.weatherInfo,this.weatherImg]);
-   
   }
 
   openDialog(){
@@ -45,6 +38,10 @@ export class RecentSearchComponent implements OnInit {
     dialogConfig.autoFocus = true;
     dialogConfig.height='30.52%';
     dialogConfig.width='38.17%';
+    if(this.mobileMedia.matches){
+      dialogConfig.height='22%';
+      dialogConfig.width='80%';
+    }
     this.dialog.open(RecentDialogComponent,dialogConfig
       
     )   

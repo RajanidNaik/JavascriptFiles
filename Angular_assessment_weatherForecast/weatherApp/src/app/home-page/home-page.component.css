@@ -249,11 +249,14 @@
     .line{
         margin-left:10%;
         padding: 0%;
-        margin-top:-2%;
+        margin-top:-1.32%;
         box-sizing: border-box;
         height: 0.15%;
         width:80%;
         border: 1px solid #fff;
         opacity: 0.3;
+    }
+    .list ul{
+        margin-left: 10%;
     }
 }

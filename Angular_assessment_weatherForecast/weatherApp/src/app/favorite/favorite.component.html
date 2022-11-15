@@ -34,27 +34,27 @@
     </div>
 </div>
 <div class="table">
-<table *ngFor="let fav of favourites;index as i ">
+<table *ngFor="let fav of favWeatherDetails;index as i ">
     <tr>
-        <td>{{fav[0]}},Karnataka</td>
+        <td>{{fav.cityName}},Karnataka</td>
         <!-- <td><img src="/assets/icon_mostly_sunny_small.png"></td> -->
-        <td><img class="weatherimg" [src]="fav[3]"></td>
-        <td>{{fav[1]}}&#176;</td>
-        <td>{{fav[2]}}</td>
+        <td><img class="weatherimg" [src]="fav.image"></td>
+        <td>{{fav.temp}}&#176;</td>
+        <td >{{fav.info}}</td>
         <td *ngIf="!color"><mat-icon class="color" (click)="onFav()">favorite </mat-icon></td>
         <td *ngIf="color"><mat-icon>favorite_border </mat-icon></td>
     </tr>
 </table>
 
 </div>
-<table class="mediaTable" *ngFor="let fav of favourites;index as i ">
+<table class="mediaTable" *ngFor="let fav of favWeatherDetails;index as i ">
     <div class="table-1">
-    <div>{{fav[0]}},Karnataka</div>
+    <div class="name">{{fav.cityName}},Karnataka</div>
     <div class="tableimg">
     <div class="info">
-        <div><img class="weatherimg"[src]="fav[3]"></div>
-        <div>{{fav[1]}}&#176;</div>
-        <div class="weatherinfo">{{fav[2]}}</div>
+        <div><img class="weatherimg"[src]="fav.image"></div>
+        <div class="tempinfo">{{fav.temp}}&#176;</div>
+        <div class="weatherinfo">{{fav.info | titlecase}}</div>
     </div>
     <div *ngIf="!color">
         <mat-icon class="color" (click)="onFav()">favorite </mat-icon>

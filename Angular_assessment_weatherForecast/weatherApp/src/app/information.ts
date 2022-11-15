@@ -1,7 +1,13 @@
 export class Information {
     cityName:String='';
-    temp:Number=0;
+    temp:any;
     image:any;
     imageId:any;
     info:any;
+    humidity:any;
+    wind:any;
+    visibility:any;
+    pressure:any;
+    temp_Max:any;
+    temp_min:any;
 }

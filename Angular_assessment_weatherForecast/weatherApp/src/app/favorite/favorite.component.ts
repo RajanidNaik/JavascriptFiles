@@ -18,25 +18,27 @@ export class FavoriteComponent implements OnInit {
       temp:any;
       weatherInfo:any;
       favourites:any=[];
+      mobileMedia:any = window.matchMedia('(max-width:480px)');
   constructor(private dialog:MatDialog) { }
 
   ngOnInit(): void {
     this.favouriteDetails = localStorage.getItem('favouriteDeatail');
     this.favWeatherDetails=JSON.parse(this.favouriteDetails) ;
     console.log(this.favWeatherDetails);
-    if(this.favWeatherDetails != null){
-    this.cityName = this.favWeatherDetails['name'];
-    this.imgId = this.favWeatherDetails['weather'][0];
-    this.weatherImg = `http://openweathermap.org/img/wn/${this.imgId.icon}@2x.png`;
-    this.temp = ((this.favWeatherDetails['main'].temp)-273.15).toFixed(0);
-    this.weatherInfo = this.favWeatherDetails['weather'][0].description;
-    }else{
+    if(this.favWeatherDetails == null){
+    // this.cityName = this.favWeatherDetails['name'];
+    // this.imgId = this.favWeatherDetails['weather'][0];
+    // this.weatherImg = `http://openweathermap.org/img/wn/${this.imgId.icon}@2x.png`;
+    // this.temp = ((this.favWeatherDetails['main'].temp)-273.15).toFixed(0);
+    // this.weatherInfo = this.favWeatherDetails['weather'][0].description;
+    // }else{
       this.favourite=true;
     }
-    this.favourites.push([this.cityName,this.temp,this.weatherInfo,this.weatherImg]);
-    console.log(this.favourites);
-    this.count = this.favourites.length;
-    console.log(this.favourites.length)
+    // this.favourites.push([this.cityName,this.temp,this.weatherInfo,this.weatherImg]);
+    // console.log(this.favourites);
+    this.count = this.favWeatherDetails.length;
+    
+    
   }
   
 
@@ -44,8 +46,12 @@ export class FavoriteComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
-    dialogConfig.height='30.52%';
+    dialogConfig.height='30.25%';
     dialogConfig.width='38.17%';
+    if(this.mobileMedia.matches){
+      dialogConfig.height='22%';
+      dialogConfig.width='80%';
+    }
     this.dialog.open(FavoriteDialogComponent,dialogConfig
       
     )   

@@ -32,6 +32,8 @@
         font-size: 1rem;
         letter-spacing: 0;
         line-height: 1.5rem;
+        padding: 0;
+        text-align: start;
     }
     .btn{
         color:#673ab7;
@@ -47,6 +49,7 @@
     .buttons{
         display: flex;
         width:80%;
+        margin-top: 10%;
         
     }
     }

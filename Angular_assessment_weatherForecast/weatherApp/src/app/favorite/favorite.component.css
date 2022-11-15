@@ -88,17 +88,16 @@
     width: 80%;
     background-color:rgba(255,255,255,0.2);
     margin-left: 10%;
+    border-collapse: separate;
+    border-spacing: 0 1em;
    
   }
   
   td {
     padding: 2%;
     text-align: left;
-    border-bottom: 1px solid rgb(63, 50, 121);
+    margin-bottom: 1px;
     color:#fff;
-   
-    
-    
     
   }
   tr>:nth-child(2){
@@ -110,14 +109,15 @@
   .tableimg{
     display: flex;
     justify-content: space-between;
+    padding: 2%;
+    height: 12.5%;
+    width: 91.11%;
+   
   }
   .info{
     display: flex;
-    justify-content: space-evenly;
-    width:40%;
-    margin:3%;
+    width:80%;
     
-  
   }
   .mediaTable{
     width: 90%;
@@ -131,7 +131,6 @@
   .table-1{
     border-collapse: separate;
     border-spacing: 0 1rem;
-    border-bottom: 1px solid rgb(63, 50, 121);
   }
  
 
@@ -146,6 +145,7 @@
     width: 25%;
     margin-left: -10%;
  }
+ 
     
   }
   @media screen and (max-width:1200px) and (min-width:750px) {
@@ -177,6 +177,13 @@
     display: flex;
   
 }
+.info{
+  gap:1rem;
+  
+}
+.info .weatherinfo{
+  width: 90vw;
+ }
 .count{
     height: 2.34%;
     width:50vw;
@@ -184,18 +191,58 @@
     line-height: 0.9rem;
 }
 .weatherimg{
-  width:60%
+  width:80%;
+ 
 }
+div.table-1{
+  gap:1rem;
+  border-spacing: 0 1rem;
+}
+.name{
+  height: 2.81%;
+  width: 34.17%;
+  color: #FFE539;
+  font-family: 'Roboto';
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.125rem;
+  padding: 2%;
+}
+.tempinfo{
+  height: 3.28%;
+  width: 5.83%;
+  color: #FFFFFF;
+  font-family: 'Roboto';
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.3125rem;
+}
+.weatherinfo{
+  height: 2.5%;
+  width: 23.33%;
+  color: #FFFFFF;
+  font-family: 'Roboto';
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  line-height: 1rem;
+  margin-top: 1%;
+}
+
 .removeBtn button{
-    border: none;
-    cursor:pointer;
-    overflow: hidden;  
-    color:#fff;
-    font-weight: 500;
-    font-size: 0.8rem;
-    font-family: 'Roboto';
-    text-align: right;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;  
+  color: #FFFFFF;
+  font-family: 'Roboto';
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 0.9375rem;
+  text-align: right;
 }
+
 .table {
    display: none;
 }
@@ -205,6 +252,7 @@
   padding:0.5%;
   
 }
+
 
  
   }
