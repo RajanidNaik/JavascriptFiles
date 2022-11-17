@@ -37,12 +37,11 @@ openSearch(){
   this.serachVariable=!this.serachVariable;
 }
 onSearchCity(cityname:any){
-  this.onrecent();
   this.service.getData(this.cityName).subscribe((result)=>{
     localStorage.setItem('weatherDeatail',JSON.stringify(result));
     this.router.navigate(['home']).then(() => {
       window.location.reload();
-      
+      this.onrecent();
     });
   },(error)=>{
     alert("city not found")
@@ -53,7 +52,17 @@ onrecent(){
   if(localStorage.getItem('recentSearchWeather')){
     
     let oldData = JSON.parse(localStorage.getItem('recentSearchWeather') || '[]');
-    list= [this.object,...oldData];
+    let preData = oldData.find((old:any)=>{
+      return old['name'] == this.object['cityName'];
+    });
+    if(preData == undefined){
+      list= [this.object,...oldData];
+    }else{
+      let searchData = oldData.indexOf(preData);
+      let currentData = oldData.splice(searchData,1)[0];
+      list = [currentData,...oldData];
+    }
+    
   }else{
     list = [this.object];
   }

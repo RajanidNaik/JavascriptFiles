@@ -1,0 +1,140 @@
+footer{
+    position: relative;
+    top: 85%;
+}
+.line{
+    padding: 0%;
+    box-sizing: border-box;
+    height: 0.15%;
+    width:100%;
+    border: .2px solid #054979;
+   
+}
+.footerimg{
+    height: 50%;
+    width:60%;
+}
+.footerContent{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    font:Open 'Sans Semibold';
+    size:0.875rem;
+    font-size: 0.875rem;
+    color:#1b6ba2;
+    text-transform: uppercase;
+    
+}
+.disFooter{
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    margin-left: 15%;
+}
+.condition{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font:Open 'Sans Regular';
+    font-size: 0.875rem;
+    color:#47586b;
+    padding: 0;
+}
+.mediacontent{
+    font:Open 'Sans Semibold';
+    size:0.875rem;
+    font-size: 0.875rem;
+    color:#1b6ba2;
+    text-transform: uppercase;
+    display: none;
+}
+.firstline ,.secondline{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+@media screen and (max-width:1200px) {
+    .footerContent{
+        width:10%;
+        display:flex;
+        gap:0.5rem;
+        font-size: 0.8rem;
+        
+    }
+    .disFooter{
+        margin-left: 8%;
+    }
+}
+@media screen and (max-width:960px) {
+    .disFooter{
+        margin-left: 0%;
+    }
+    .footerContent{
+        font-size: 0.75rem;
+    }
+    .footerimg{
+        height: 40%;
+        width:50%;
+        margin-left: 20%;
+    }
+}
+@media screen and (max-width:800px) {
+    .disFooter{
+        margin-left: -4%;
+    }
+    .footerContent{
+        font-size: 0.7rem;
+    }
+    .footerimg{
+        height: 40%;
+        width:50%;
+        margin-left: 30%;
+    }
+}
+@media screen and (max-width:750px) {
+    .footerimg{
+        display: none;
+    }
+    .footerContent{
+       display: none;
+    }
+    .mediacontent{
+        display: block;
+       margin-left: 20%;
+    }
+    .line{
+        width:90%;
+        margin-left: 5%;
+    }
+   
+
+}
+@media screen and (max-width:500px) {
+    .footerimg{
+        display: none;
+    }
+    .footerContent{
+       display: none;
+    }
+    .mediacontent{
+        display: block;
+       margin-left: 5%;
+    }
+   
+
+}
+@media screen and (max-width:400px) {
+    .footerimg{
+        display: none;
+    }
+    .footerContent{
+       display: none;
+    }
+    .mediacontent{
+        display: block;
+       margin-left: 5%;
+       font-size: 0.75rem;
+    }
+   
+
+}

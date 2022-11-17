@@ -11,7 +11,7 @@ h2.location{
     line-height: 1.5rem;
     text-align: center;
     padding-top:3%;
-    margin-left: 11%;
+    margin-left: 5rem;
 }
 .favorite{
     display:flex;
@@ -21,7 +21,10 @@ h2.location{
     letter-spacing: 0;
     line-height: 1rem;
     font-family: 'Roboto';
-    margin-left: 11%;
+    margin-left: 6rem;
+}
+.favorite h3.fav{
+    color:#ffd639;
 }
 .onFav{
     color:#ffd639;
@@ -36,8 +39,8 @@ h2.location{
     align-items: center;
 }
 .weatherimg{
-    height: 12.21%;
-    width:6.67%;
+    height: 13%;
+    width:8%;
 }
 .weatherTemp{
     display: flex;
@@ -69,10 +72,14 @@ h2.location{
     
 }
 
-/* .tempBtn button:first-child{
+.tempBtn button:first-child.centi{
     color:red;
     background-color: #fff;
-} */
+}
+.tempBtn button:last-child.fara{
+    color:red;
+    background-color: #fff;
+}
 .tempBtn button:active{
     color:red;
     background-color: #fff;
@@ -81,6 +88,10 @@ h2.location{
     background-color: #fff;
     color:red;
   }
+  .tempBtn button:visited{
+    color:red;
+    background-color: #fff;
+}
 .report h2{
     height: 3.63%;
     width: 30vw;
@@ -157,10 +168,10 @@ h2.location{
 @media  screen and (max-width:360px){
     h2.location{
         margin-right: 0%;
-        margin-left: 7%;
+        margin-left: 18%;
     }
     .favorite .fav{
-        margin-left: -5%;
+        margin-left: -0%;
     }
    
     
@@ -244,12 +255,15 @@ h2.location{
         width:50%;
         margin:3%;
     }
+    .favorite{
+        margin-left: 12%;
+    }
 }
 @media screen and (min-width:1200px) {
    h2.location{
-        margin-left: 10%;
+        margin-left: 8rem;
     }
     .favorite{
-        margin-left: 11%;
+        margin-left: 10rem;
     }
 }

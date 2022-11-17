@@ -67,7 +67,7 @@
     margin-right: 10%;
 }
 .weatherimg{
-  width:270%
+  width:4rem;
 }
 .removeBtn button{
     background-color: Transparent;
@@ -89,7 +89,7 @@
     background-color:rgba(255,255,255,0.2);
     margin-left: 10%;
     border-collapse: separate;
-    border-spacing: 0 1em;
+    margin-block-end: 0.2%;
    
   }
   
@@ -98,6 +98,8 @@
     text-align: left;
     margin-bottom: 1px;
     color:#fff;
+    font-size: 1rem;
+    font-weight: 400;
     
   }
   tr>:nth-child(2){
@@ -125,6 +127,7 @@
     margin-left: 5%;
     border-bottom: none;
     color:white;
+    margin-block-end: 0.2%;
     display:none;
     
   }
@@ -191,12 +194,11 @@
     line-height: 0.9rem;
 }
 .weatherimg{
-  width:80%;
+  width:3rem;
  
 }
-div.table-1{
-  gap:1rem;
-  border-spacing: 0 1rem;
+.table-1{
+  margin-block-end: 0.2%;
 }
 .name{
   height: 2.81%;
@@ -218,6 +220,7 @@ div.table-1{
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.3125rem;
+  margin-top: 5%;
 }
 .weatherinfo{
   height: 2.5%;
@@ -227,7 +230,7 @@ div.table-1{
   font-size: 0.875rem;
   letter-spacing: 0;
   line-height: 1rem;
-  margin-top: 1%;
+  margin-top: 6%;
 }
 
 .removeBtn button{

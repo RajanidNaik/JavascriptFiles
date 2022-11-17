@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {MatDialog,MAT_DIALOG_DATA,MatDialogConfig} from '@angular/material/dialog';
 import { RecentDialogComponent } from '../recent-dialog/recent-dialog.component';
 import { WeatherService } from '../weather.service';
+import { Information } from '../information';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-recent-search',
   templateUrl: './recent-search.component.html',
@@ -10,28 +12,42 @@ import { WeatherService } from '../weather.service';
 export class RecentSearchComponent implements OnInit {
  recentSearch:boolean=true;
  recentSearchHistory:any=[];
+ color:boolean=false;
  searchHistory:any = localStorage.getItem('weatherDeatail');
  recentHistory:any;
-//  temp:any;
-//  cityName:any;
-//  weatherInfo:any;
-//  imgId:any;
-//  weatherImg:any;
  search:any;
+ data = new Information();
  mobileMedia:any = window.matchMedia('(max-width:480px)');
-  constructor(private dialog:MatDialog,public service:WeatherService) { }
+  constructor(private dialog:MatDialog,public service:WeatherService, public router:Router) { }
  
   ngOnInit(): void {
-    // localStorage.setItem('recentSearch',this.searchHistory);
     this.search = localStorage.getItem('recentSearchWeather');
     this.recentHistory=JSON.parse(this.search);
-    
-   
     if(this.recentHistory == null){
       this.recentSearch=false;
     }
   }
-
+  onFavourite(id:any){
+    this.color=true;
+    let list:any=[];
+   if(localStorage.getItem('favouriteDeatail')){
+     let oldData = JSON.parse(localStorage.getItem('favouriteDeatail') || '[]');
+     let preData = oldData.find((old:any)=>{
+             return old['name'] == id['name'];
+        });
+        if(preData == undefined){
+            list = [id,...oldData];
+            console.log(list)
+          }else{
+             let seracData = oldData.indexOf(preData);
+             let currentData = oldData.splice(seracData,1)[0];
+             list = [currentData,...oldData];
+          }
+   }else{
+     list = [id];
+   }
+   localStorage.setItem('favouriteDeatail',JSON.stringify(list));
+ }
   openDialog(){
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;

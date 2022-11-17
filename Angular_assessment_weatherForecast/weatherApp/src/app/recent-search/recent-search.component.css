@@ -79,41 +79,57 @@
     text-align: right;
 }
 .color{
-    color:#ffd639;
+    color:none;
     margin:2%;
 }
+.favheart{
+  color:#ffd639;
+}
+
 .table table {
-  overflow-y:scroll;
-    border-collapse: collapse;
     width: 80%;
-    background-color:rgba(255,255,255,0.2);
-    border-spacing: 5px 1rem;
     margin-left: 10%;
-   
-   
+    background-color:rgba(255,255,255,0.2);
+    border-collapse: separate;
+    margin-block-end: 0.2%;
   }
-   .table table tr{
-    margin-bottom: 10rem;
-   
+  .tablecontent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    color:#fff;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.1875rem;
+  }
+  table.tableContent:hover{
+    color:#ffd639;
+    background-color: rgba(255,255,255);
   }
   
-  td {
-    padding: 2%;
+  /* td {
+    padding: 1%;
+    padding-bottom: 2%;
     text-align: left;
-    
     color:#fff
-    
-  }
+  } */
   .weatherImg{
-    width:270%
+    width:4rem;
+  }
+  .imageContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   
-  tr>:nth-child(2){
+  /* tr>:nth-child(2){
     width: 5%;
   }
   tr>:nth-child(3){
-    width: 3%;
-  }
+    width: 5%;
+  } */
   .tableimg{
     display: flex;
     justify-content: space-between;
@@ -132,16 +148,12 @@
     width: 90%;
     background-color:rgba(255,255,255,0.2);
     margin-left: 5%;
-    border-bottom: none;
     color:white;
+    margin-block-end: 0.2%;
     display:none;
     
   }
-  .table-1{
-    border-collapse: separate;
-    border-spacing: 0 1rem;
-    
-  }
+  
   @media screen and (max-width:750px) and (min-width:480px) {
     .imgline{
       width:80%;
@@ -262,9 +274,13 @@
   color:#ffd639;
   
 }
+.table-1{
+  margin-block-end: 0.2%;
+}
 .mediaTable{
   display:block;
   padding:0.5%;
+ 
   
 }
 

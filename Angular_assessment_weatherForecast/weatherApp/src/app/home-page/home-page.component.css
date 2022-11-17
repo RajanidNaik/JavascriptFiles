@@ -109,7 +109,7 @@
 @media screen and (max-width:360px) {
     .date{
        
-        margin-left:-10%;
+        margin-left:-5%;
         
         
     }
@@ -233,23 +233,23 @@
    
 
 }
-@media screen and (min-width:980px) and (max-width:1100) {
+/* @media screen and (min-width:980px) and (max-width:1200) {
     .line{
         margin-left:10%;
         padding: 0%;
-        margin-top:-2.2%;
+       
         box-sizing: border-box;
         height: 0.15%;
         width:80%;
         border: 1px solid #fff;
         opacity: 0.3;
     }
-}
+} */
 @media screen and (min-width:1200px) {
     .line{
         margin-left:10%;
         padding: 0%;
-        margin-top:-1.32%;
+        margin-top:-2%;
         box-sizing: border-box;
         height: 0.15%;
         width:80%;

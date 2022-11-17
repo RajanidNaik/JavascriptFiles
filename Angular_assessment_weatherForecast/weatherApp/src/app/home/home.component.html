@@ -2,7 +2,7 @@
     <app-home-page></app-home-page>
     <!--home Content-->
     <div>
-        <h2 class="location">{{data.cityName}},Karnataka</h2>
+        <h2 class="location">{{data.cityName}}</h2>
     </div>
     <div class="favorite">
        
@@ -15,7 +15,7 @@
         </div>
     </ng-template>
         <div>
-            <h3>Add to favorite</h3>
+            <h3 [class.fav]="color">Add to favorite</h3>
         </div>
     </div>
  <div class="center">
@@ -25,12 +25,12 @@
     </div>
     <div class="weatherTemp">
         <div class="temp">
-            <h1>{{data.temp}}</h1>
+            <h1>{{temp}}</h1>
         </div>
         <div class="tempBtn">
             <div class="tBtn">
-                <button (click)="tempConvert()" >&#8451;</button>
-                <button (click)="tempFara()" >&#8457;</button>
+                <button (click)="tempConvert()" [class.centi]="centi" >&#8451;</button>
+                <button (click)="tempFara()" [class.fara]="fara">&#8457;</button>
             </div>
            
         </div>
@@ -58,7 +58,7 @@
         </div>
         <div class="castDetail">
             <h2>Pressure</h2>
-            <h1>{{data.pressure}}hPa</h1>
+            <h1>{{data.pressure}}Pa</h1>
         </div>
         
     </div>
