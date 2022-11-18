@@ -8,10 +8,10 @@
     
 }
 .name{
-    margin-block-end: 3%;
+    margin-block-end: 5%;
 }
 .footer{
-    margin-block-start: 7%;
+    margin-block-start: 10%;
 }
 .profileimages figure img{
     width:70%;
@@ -23,7 +23,48 @@
    text-align: center;
    
 }
+@media screen and (max-width:1000px) and (min-width:750px) {
+    .container{
+        width:60%;
+        margin-left: 10%;
+    }
+    .profileimages{
+        display: grid;
+        grid-template-columns:50% 50% 50%;
+       
+   }
+   .name{
+    margin-block-end: 8%;
+}
+   .footer{
+    margin-block-start: 15%;
+}
+}
 @media screen and (max-width:750px) {
+    .container{
+        width:60%;
+        margin-left: 10%;
+    }
+    .profileimages{
+     display: grid;
+     grid-template-columns:80% 80%;
+    
+}
+.profileimages figure img{
+    width:50%;
+}
+figcaption{
+    color:#FFFFFF;
+    font-size: 0.75rem;
+    font: open ' Sans semibold';
+   text-align: start;
+   
+}
+.footer{
+    margin-block-start: 10%;
+}
+}
+@media screen and (max-width:650px) {
     .container{
         width:60%;
         margin-left: 5%;
@@ -43,4 +84,20 @@ figcaption{
    text-align: start;
    
 }
+.footer{
+    margin-block-start: 10%;
+}
+}
+@media screen and (max-width:500px){
+    .footer{
+        margin-block-start: 20%;
+    }
+    .name{
+        margin-block-end: 8%;
+    }
+    .profileimages{
+        display: grid;
+        grid-template-columns:90% 90%;
+       
+   }
 }

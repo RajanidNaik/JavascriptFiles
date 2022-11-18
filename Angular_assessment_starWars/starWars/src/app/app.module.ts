@@ -10,6 +10,15 @@ import { ProfileComponent } from './profile/profile.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CharactersComponent } from './characters/characters.component';
 import { YodaComponent } from './yoda/yoda.component';
+import { FilmsComponent } from './films/films.component';
+import { SpeciesComponent } from './species/species.component';
+import { PlanetsComponent } from './planets/planets.component';
+import { StarshipComponent } from './starship/starship.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { CacheInterceptor } from './cache.interceptor';
+import { CacheResolverService } from './cache-resolver.service';
+import { StarWarsPeopleService } from './star-wars-people.service';
 
 @NgModule({
   declarations: [
@@ -20,13 +29,28 @@ import { YodaComponent } from './yoda/yoda.component';
     ProfileComponent,
     NavbarComponent,
     CharactersComponent,
-    YodaComponent
+    YodaComponent,
+    FilmsComponent,
+    SpeciesComponent,
+    PlanetsComponent,
+    StarshipComponent,
+    VehiclesComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    CacheResolverService,
+    StarWarsPeopleService,
+    {
+     provide: HTTP_INTERCEPTORS,
+     useClass:CacheInterceptor,
+       multi:true
+    }
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

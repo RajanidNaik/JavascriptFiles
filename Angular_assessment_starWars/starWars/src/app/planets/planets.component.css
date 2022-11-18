@@ -4,16 +4,15 @@
 .charaContent{
     display: flex;
     flex-direction: column;
-    gap:2rem;
     align-items: center;
+    gap:1rem;
     color:#fff;
-    height:5vh;
     padding: 0;
-   
     text-transform: uppercase;
+    height:50vh;
     font:Open 'Sans Bold';
     font-size: 1.25rem;
-    
+    overflow: auto;
 }
 .charaContent a{
     text-decoration: none;
@@ -71,7 +70,7 @@ padding: 1%;
         color:#fff;
         padding: 0;
         text-transform: uppercase;
-        height:5vh;
+        height:50vh;
         font:Open 'Sans Bold';
         overflow: auto;
         font-size: 1.5rem;

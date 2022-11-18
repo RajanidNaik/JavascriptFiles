@@ -4,28 +4,51 @@
     </div>
     <div class="container">
     <div class="profileimages">
+        <div>
+            <figure>
+                <!-- <img  src="/assets/image3normal.png"> -->
+                <img *ngIf="!films" src="/assets/image3normal.png" (click)="onFilms()">
+                <img *ngIf="films" src="/assets/image3press.png" >
+                <figcaption>FILMS</figcaption>
+            </figure>
+        </div>
+        
         <figure>
-            <img src="/assets/image3normal.png">
-            <figcaption>FILMS</figcaption>
-        </figure>
-        <figure>
-            <img src="/assets/speciesnormal.png">
+            <!-- <img  src="/assets/speciesnormal.png"> -->
+            <img *ngIf="!species" src="/assets/speciesnormal.png" (click)="onSpecies()">
+            <img *ngIf="species" src="/assets/speciespressed.png">
             <figcaption>SPECIES</figcaption>
         </figure>
+        <div>
+            <figure>
+                <!-- <img  src="/assets/image4normal.png"> -->
+                <img *ngIf="!planet" src="/assets/image4normal.png" (click)="onPlanets()">
+                <img *ngIf="planet" src="/assets/planetpressed.png">
+                <figcaption>PLANETS</figcaption>
+            </figure>
+           
+        </div>
+       
+        <div>
+            <figure >
+                <!-- <img  src="/assets/people1.png" > -->
+                <img *ngIf="!click" src="/assets/people1.png" (click)="onclick()">
+                 <img *ngIf="click" src="/assets/people1pressed.png">
+                <figcaption>CHARACTERS</figcaption>
+            </figure>
+            
+        </div>
+        
         <figure>
-            <img src="/assets/image4normal.png">
-            <figcaption>PLANETS</figcaption>
-        </figure>
-        <figure>
-            <img src="/assets/people1.png">
-            <figcaption>CHARACTERS</figcaption>
-        </figure>
-        <figure>
-            <img src="/assets/vehiclenormal.png">
+            <!-- <img  src="/assets/vehiclenormal.png"> -->
+            <img *ngIf="!starship" src="/assets/vehiclenormal.png" (click)="onStarship()">
+            <img *ngIf="starship" src="/assets/vehiclepressed.png">
             <figcaption>STARSHIP</figcaption>
         </figure>
         <figure>
-            <img src="/assets/image2.png">
+            <!-- <img  src="/assets/image2.png"> -->
+            <img *ngIf="!vehicles" src="/assets/image2.png" (click)="onVehicles()">
+            <img *ngIf="vehicles" src="/assets/image2press.png">
             <figcaption>VEHICLES</figcaption>
         </figure>
         

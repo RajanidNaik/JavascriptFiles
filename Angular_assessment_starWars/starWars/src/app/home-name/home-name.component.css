@@ -12,8 +12,8 @@
     box-sizing: border-box;
     height: 0.15%;
     width:60%;
-    border: .1px solid #054979;
-    border: .2px solid #fff;
+    border: .01px solid #054979;
+    /* border: .2px solid #fff; */
    margin-top: 2rem;
    margin-left: 20%;
 }
@@ -56,6 +56,7 @@
         /* border: .2px solid #fff; */
        margin-top: 2rem;
        margin-left: 5%;
+       display: none;
     }
    
 }
