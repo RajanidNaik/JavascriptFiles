@@ -1,0 +1,71 @@
+<div>
+    <div class="name">
+        <app-home-name></app-home-name>
+    </div>
+    <div class="navbar">
+        <app-navbar></app-navbar>
+    </div>
+    <div class="container">
+        <div class="yoda">
+            <img src="/assets/species1.jpeg">
+        </div>
+        <div class="yodaDes">
+            <h1>{{this.speciesDetails.name | uppercase}}</h1>
+            <div class="paragraph">
+                <div>Height:</div>
+                <p>{{this.speciesDetails.average_height}}</p>
+            </div>
+            <div class="paragraph">
+                <div>LifeSpan:</div>
+                <p>{{this.speciesDetails.average_lifespan}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Classification:</div>
+                <p>{{this.speciesDetails.classification}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Designation:</div>
+                <p>{{this.speciesDetails.designation}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Eye_color:</div>
+                <p>{{this.speciesDetails.eye_colors}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Hair_color:</div>
+                <p>{{this.speciesDetails.hair_colors}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Skin_color:</div>
+                <p>{{this.speciesDetails.skin_colors}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Homeworld:</div>
+                <p>{{this.speciesDetails.homeworld}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Language:</div>
+                <p>{{this.speciesDetails.language}}</p>
+            </div>
+            <div class="paragraph">
+                <div>People:</div>
+                <p>{{this.speciesDetails.people}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Films:</div>
+                <p>{{this.speciesDetails.films}}</p>
+            </div>
+            <div class="paragraph">
+                <div>url:</div>
+                <p>{{this.speciesDetails.url}}</p>
+            </div>
+            
+            <p><span></span></p>
+            <p><span></span></p>
+        </div>
+    </div>
+    <div class="footer">
+        <app-footer></app-footer>
+        </div>
+</div>
+

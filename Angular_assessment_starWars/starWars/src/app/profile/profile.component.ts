@@ -16,23 +16,30 @@ export class ProfileComponent implements OnInit {
   constructor(public router:Router) { }
 
   ngOnInit(): void {
+   
   }
 onclick(){
   this.click=true;
+  this.router.navigate(["/character"]);
 }
 onFilms(){
   this.films=true;
+  this.router.navigate(["/films"]);
 }
 onSpecies(){
   this.species=true;
+  this.router.navigate(["/species"]);
 }
 onPlanets(){
  this.planet =true;
+ this.router.navigate(["/planets"]);
 }
 onStarship(){
   this.starship=true;
+  this.router.navigate(["/starship"]);
 }
 onVehicles(){
  this.vehicles=true;
+ this.router.navigate(["/vehicles"]);
 }
 }

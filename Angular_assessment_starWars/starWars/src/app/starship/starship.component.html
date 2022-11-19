@@ -5,9 +5,9 @@
     <div class="navbar">
 <app-navbar></app-navbar>
     </div>
-    <div class="charaContent">
-         <a>darth&nbsp;vader</a>
-         <a>luke&nbsp;skywalker</a>
+    <div class="charaContent" *ngFor="let star of starship.results">
+         <a (click)="storeData(star)">{{star.name}}</a>
+         <!-- <a>luke&nbsp;skywalker</a>
          <a>obi-wan&nbsp;kenobi</a>
          <a routerLink="/yoda">yoda</a>
          <a>rey</a>
@@ -15,13 +15,13 @@
          <a>luke&nbsp;skywalker</a>
          <a>obi-wan&nbsp;kenobi</a>
          <a>yoda</a>
-         <a>rey</a>
+         <a>rey</a> -->
     </div>
     <div class="buttons">
-        <div class="prebtn">
+        <div class="prebtn" (click)="previous()">
             <button type="submit">PREVIOUS</button>
         </div>
-        <div class="nextbtn">
+        <div class="nextbtn" (click)="next()">
             <button type="submit">NEXT</button>
         </div>
     </div>

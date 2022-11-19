@@ -2,11 +2,11 @@
     <div class="name">
         <app-home-name></app-home-name>
     </div>
-    <div class="navbar" (click)="getPeople()">
+    <div class="navbar" >
 <app-navbar></app-navbar>
     </div>
-    <div class="charaContent" *ngFor="let character of people.results" >
-         <a>{{character.name}}</a>
+    <div class="charaContent" *ngFor="let character of people.results;index as i" >
+         <a (click)="storeData(character)">{{character.name}}</a>
          <!-- <a>luke&nbsp;skywalker</a>
          <a>obi-wan&nbsp;kenobi</a>
          <a routerLink="/yoda">yoda</a>

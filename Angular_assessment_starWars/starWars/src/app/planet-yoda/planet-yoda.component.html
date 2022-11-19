@@ -1,0 +1,66 @@
+<div>
+    <div class="name">
+        <app-home-name></app-home-name>
+    </div>
+    <div class="navbar">
+        <app-navbar></app-navbar>
+    </div>
+    <div class="container">
+        <div class="yoda">
+            <img src="/assets/yodahut.webp">
+        </div>
+        <div class="yodaDes">
+            <h1>{{this.planetDetails.name | uppercase}}</h1>
+            <div class="paragraph">
+                <div>Climate:</div>
+                <p>{{this.planetDetails.climate}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Diameter:</div>
+                <p>{{this.planetDetails.diameter}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Gravity:</div>
+                <p>{{this.planetDetails.gravity}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Orbital_period:</div>
+                <p>{{this.planetDetails.orbital_period}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Population:</div>
+                <p>{{this.planetDetails.population}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Residents:</div>
+                <p>{{this.planetDetails.residents}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Rotation_period:</div>
+                <p>{{this.planetDetails.rotation_period}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Surface_water:</div>
+                <p>{{this.planetDetails.surface_water}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Terrain:</div>
+                <p>{{this.planetDetails.terrain}}</p>
+            </div>
+            <div class="paragraph">
+                <div>films:</div>
+                <p>{{this.planetDetails.films}}</p>
+            </div><div class="paragraph">
+                <div>url:</div>
+                <p>{{this.planetDetails.url}}</p>
+            </div>
+            <p><span></span></p>
+            <p><span></span></p>
+        </div>
+    </div>
+    <div class="footer">
+        <app-footer></app-footer>
+        </div>
+</div>
+
+

@@ -11,11 +11,14 @@
     align-items: center;
     justify-content: space-around;
     background-color: rgba(117,140,255,0.12);
+    
+    
 }
 .yoda img{
     height: 21rem;
     width: 14rem;
-   
+    /* margin-left: 10%;
+    margin-top: 9%; */
 }
 .yodaDes h1{
 font: open 'Sans Bold';
@@ -35,7 +38,7 @@ color:#fff;
 }
 .yodaDes{
     height: 18rem;
-    overflow-x:hidden;
+    overflow-x: hidden;
     overflow-y:scroll
 }
 .yodaDes::-webkit-scrollbar {
@@ -50,16 +53,16 @@ color:#fff;
     background: #00a8ff; 
     border-radius: 1%;
   }
-  
- 
-   .yodaDes{
+  .yodaDes{
     width:50%;
    }
+  
+ 
+   
 .paragraph{
     display: flex;
     justify-content: left;
     align-items: baseline;
-    
 }
 .footer{
     margin-block-start: 2%;

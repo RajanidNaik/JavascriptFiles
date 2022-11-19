@@ -1,0 +1,76 @@
+<div>
+    <div class="name">
+        <app-home-name></app-home-name>
+    </div>
+    <div class="navbar">
+        <app-navbar></app-navbar>
+    </div>
+    <div class="container">
+        <div class="yoda">
+            <img src="/assets/starvehicle.webp">
+        </div>
+        <div class="yodaDes">
+            <h1>{{this.vehiclesDetails.name | uppercase}}&nbsp;</h1>
+            <div class="paragraph">
+                <div>Cargo_capacity:</div>
+                <p>{{this.vehiclesDetails.cargo_capacity}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Consumables:</div>
+                <p>{{this.vehiclesDetails.consumables}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Cost_in_Credits:</div>
+                <p>{{this.vehiclesDetails.cost_in_credits}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Crew:</div>
+                <p>{{this.vehiclesDetails.crew}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Length:</div>
+                <p>{{this.vehiclesDetails.length}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Manufacturer:</div>
+                <p>{{this.vehiclesDetails.manufacturer}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Max_atmosphering_speed:</div>
+                <p>{{this.vehiclesDetails.max_atmosphering_speed}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Model:</div>
+                <p>{{this.vehiclesDetails.model}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Passengers:</div>
+                <p>{{this.vehiclesDetails.passengers}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Pilots:</div>
+                <p>{{this.vehiclesDetails.pilots}}</p>
+            </div>
+            <div class="paragraph">
+                <div>Films:</div>
+                <p>{{this.vehiclesDetails.films}}</p>
+            </div>
+            <div class="paragraph">
+                <div>vehicles_class:</div>
+                <p>{{this.vehiclesDetails.vehicle_class}}</p>
+            </div>
+            <div class="paragraph">
+                <div>url:</div>
+                <p>{{this.vehiclesDetails.url}}</p>
+            </div>
+            
+            
+            <p><span></span></p>
+            <p><span></span></p>
+        </div>
+    </div>
+    <div class="footer">
+        <app-footer></app-footer>
+        </div>
+</div>
+

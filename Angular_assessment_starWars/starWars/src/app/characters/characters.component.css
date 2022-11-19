@@ -18,10 +18,11 @@
 .charaContent a{
     text-decoration: none;
     color: #fff;
+    padding: 1%;
 }
 .charaContent a:hover{
 background-color:rgba(0,171,255,0.4); 
-padding: 1%;
+
 }
 .buttons{
     display: flex;

@@ -9,7 +9,7 @@
     color:#fff;
     padding: 0;
     text-transform: uppercase;
-    height:50vh;
+    height:5vh;
     font:Open 'Sans Bold';
     font-size: 1.25rem;
     overflow: auto;
@@ -17,10 +17,11 @@
 .charaContent a{
     text-decoration: none;
     color: #fff;
+    padding: 1%;
 }
 .charaContent a:hover{
 background-color:rgba(0,171,255,0.4); 
-padding: 1%;
+
 }
 .buttons{
     display: flex;
@@ -70,7 +71,7 @@ padding: 1%;
         color:#fff;
         padding: 0;
         text-transform: uppercase;
-        height:50vh;
+        height:5vh;
         font:Open 'Sans Bold';
         overflow: auto;
         font-size: 1.5rem;

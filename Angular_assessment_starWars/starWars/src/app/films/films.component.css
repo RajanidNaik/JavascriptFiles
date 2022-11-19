@@ -1,15 +1,15 @@
 .navbar{
-    margin-block-end: 1rem;
+    margin-block-end: 2rem;
 }
 .charaContent{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:1rem;
+    gap:2rem;
     color:#fff;
     padding: 0;
     text-transform: uppercase;
-    height:50vh;
+    height:7vh;
     font:Open 'Sans Bold';
     font-size: 1.25rem;
     overflow: auto;
@@ -17,10 +17,11 @@
 .charaContent a{
     text-decoration: none;
     color: #fff;
+    padding: 1%;
 }
 .charaContent a:hover{
 background-color:rgba(0,171,255,0.4); 
-padding: 1%;
+
 }
 .buttons{
     display: flex;
@@ -50,7 +51,7 @@ padding: 1%;
     border-radius: 1%;
 }
 .footer{
-    margin-block-start: 2%;
+    margin-block-start: 4%;
 }
 @media screen and (max-width:750px) {
     .name{
@@ -70,7 +71,7 @@ padding: 1%;
         color:#fff;
         padding: 0;
         text-transform: uppercase;
-        height:50vh;
+        height:7vh;
         font:Open 'Sans Bold';
         overflow: auto;
         font-size: 1.5rem;

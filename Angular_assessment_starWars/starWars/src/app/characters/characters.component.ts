@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { CacheResolverService } from '../cache-resolver.service';
 @Component({
@@ -10,15 +11,44 @@ export class CharactersComponent implements OnInit {
 userSub$:Subscription | undefined;
 users:any;
 people:any;
-url:any;
-  constructor(private data:CacheResolverService) { }
+
+  constructor(private data:CacheResolverService,public router:Router) { }
 
   ngOnInit(): void {
-    // this.getPeople();
+    sessionStorage.removeItem('filmsS');
+    sessionStorage.removeItem('speciesS');
+    sessionStorage.removeItem('vehiclesS');
+    sessionStorage.removeItem('starshipS');
+    sessionStorage.removeItem('planetsS');
+    if(sessionStorage.getItem('characters')){
+      //  this.users = sessionStorage.getItem('characters') 
+      // this.people = JSON.parse(this.users)
+      // console.log(this.people);
+      this.people = JSON.parse((sessionStorage.getItem('characters'))as any)
+    }else{
+      // this.getPeople();
+      // let url =  "https://swapi.dev/api/people/";
+      // this.userSub$ =this.data.getUser(url).subscribe({
+      //   next:(users:any)=>{
+      //     console.log(`Data received`,users);
+      //   this.people = users;
+      //     }
+      //     ,
+      //     error:(err)=>{
+      //       console.error(err)
+            
+      //     }
+        
+      // })
+      this.getPeople()
+   }
+  //this.getPeople()
+    
   }
   // this.users=this.users['results'] 
 getPeople(){
-  this.userSub$ =this.data.getUser(this.url).subscribe({
+  let url =  "https://swapi.dev/api/people/";
+  this.userSub$ =this.data.getUser(url).subscribe({
     next:(users:any)=>{
       console.log(`Data received`,users);
     this.people = users;
@@ -34,15 +64,21 @@ getPeople(){
 next(){
   this.data.getUser(this.people?.next).subscribe(data=>{
     this.people = data;
+    sessionStorage.setItem('characters',JSON.stringify(this.people));
     console.log(this.people);
     
-    // this.users =this.users['results'];
+    
   })
 }
 previous(){
   this.data.getUser(this.people?.previous).subscribe(data=>{
     this.people = data;
-    // this.users = this.users['results'];
+    sessionStorage.setItem('characters',JSON.stringify(this.people));
+   
   })
+}
+storeData(data:any){
+  localStorage.setItem('character',JSON.stringify(data));
+  this.router.navigate(["/yoda"]);
 }
 }

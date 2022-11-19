@@ -6,7 +6,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CacheResolverService {
-  url =  "https://swapi.dev/api/people/"
   constructor(private http:HttpClient) { }
   getUser(url:string):Observable<HttpResponse<any>>{
     return this.http.get<HttpResponse<any>>(

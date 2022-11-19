@@ -19,6 +19,11 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CacheInterceptor } from './cache.interceptor';
 import { CacheResolverService } from './cache-resolver.service';
 import { StarWarsPeopleService } from './star-wars-people.service';
+import { SpeciesYodaComponent } from './species-yoda/species-yoda.component';
+import { VehicleYodaComponent } from './vehicle-yoda/vehicle-yoda.component';
+import { PlanetYodaComponent } from './planet-yoda/planet-yoda.component';
+import { StarshipYodaComponent } from './starship-yoda/starship-yoda.component';
+import { FilmYodaComponent } from './film-yoda/film-yoda.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +40,11 @@ import { StarWarsPeopleService } from './star-wars-people.service';
     PlanetsComponent,
     StarshipComponent,
     VehiclesComponent,
+    SpeciesYodaComponent,
+    VehicleYodaComponent,
+    PlanetYodaComponent,
+    StarshipYodaComponent,
+    FilmYodaComponent,
     
   ],
   imports: [
