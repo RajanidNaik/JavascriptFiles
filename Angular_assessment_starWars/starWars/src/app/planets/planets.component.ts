@@ -11,6 +11,8 @@ export class PlanetsComponent implements OnInit {
   userSub$:Subscription | undefined;
   planets:any;
   url="https://swapi.dev/api/planets/";
+  button:boolean=false;
+prebutton:boolean = false;
   constructor(private data:CacheResolverService,public router:Router) { }
 
   ngOnInit(): void {
@@ -44,7 +46,10 @@ export class PlanetsComponent implements OnInit {
       this.planets = data;
       sessionStorage.setItem('planetsS',JSON.stringify(this.planets));
       console.log(this.planets);
-      
+      if(this.planets.next == null){
+        this.button =true;
+        console.log('done');
+       }
       
     })
   }
@@ -52,6 +57,10 @@ export class PlanetsComponent implements OnInit {
     this.data.getUser(this.planets?.previous).subscribe(data=>{
       this.planets = data;
       sessionStorage.setItem('planetsS',JSON.stringify(this.planets));
+      if(this.planets.previous == null){
+        this.prebutton =true;
+        console.log('done');
+       }
      
     })
   }

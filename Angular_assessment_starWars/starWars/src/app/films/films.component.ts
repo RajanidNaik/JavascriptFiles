@@ -11,6 +11,9 @@ export class FilmsComponent implements OnInit {
   url = "https://swapi.dev/api/films/";
   userSub$:Subscription | undefined;
   films:any;
+  button:boolean=false;
+prebutton:boolean = false;
+load:boolean=true;
   constructor(private data:CacheResolverService,public router:Router) { }
 
   ngOnInit(): void {
@@ -28,6 +31,7 @@ export class FilmsComponent implements OnInit {
     
   }
   getFilms(){
+    this.load =false;
     this.userSub$ = this.data.getUser(this.url).subscribe({
       next:(users:any)=>{
         this.films = users;
@@ -43,6 +47,10 @@ export class FilmsComponent implements OnInit {
       this.films = data;
       sessionStorage.setItem('filmsS',JSON.stringify(this.films));
       console.log(this.films);
+      if(this.films.next == null){
+        this.button =true;
+        console.log('done');
+       }
       
       // this.users =this.users['results'];
     })
@@ -52,6 +60,10 @@ export class FilmsComponent implements OnInit {
       this.films = data;
       sessionStorage.setItem('filmsS',JSON.stringify(this.films));
       // this.users = this.users['results'];
+      if(this.films.previous == null){
+        this.prebutton =true;
+        console.log('done');
+       }
     })
   }
   storeData(data:any){

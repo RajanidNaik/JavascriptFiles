@@ -1,17 +1,17 @@
 .container{
     width:70%;
-    margin-left: 16%;
+    margin-left: 23%;
 }
 .profileimages{
      display: grid;
-     grid-template-columns:auto auto auto;
-    
+     /* grid-template-columns:auto auto auto; */
+     grid-template-columns:25% 25% 25%;
 }
 .name{
-    margin-block-end: 5%;
+    margin-block-end: 2%;
 }
 .footer{
-    margin-block-start: 10%;
+    margin-block-start: 5%;
 }
 .profileimages figure img{
     width:70%;
@@ -20,13 +20,48 @@
     color:#FFFFFF;
     font-size: 1rem;
     font: open ' Sans semibold';
-   text-align: center;
    
+   
+}
+.figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:0.3rem;
+}
+@media screen and (max-width:1400px) {
+    .container{
+        width:70%;
+        margin-left: 20%;
+    }
+    .profileimages{
+         display: grid;
+         /* grid-template-columns:auto auto auto; */
+         grid-template-columns:30% 30% 30%;
+    }
+    .footer{
+        margin-block-start: 8%;
+    }
+}
+@media screen and (max-width:1200px) {
+    .container{
+        width:70%;
+        margin-left: 15%;
+    }
+    .profileimages{
+         display: grid;
+         /* grid-template-columns:auto auto auto; */
+         grid-template-columns:35% 35% 35%;
+    }
+    .footer{
+        margin-block-start: 13%;
+    }
 }
 @media screen and (max-width:1000px) and (min-width:750px) {
     .container{
         width:60%;
-        margin-left: 10%;
+        margin-left: 5%;
     }
     .profileimages{
         display: grid;
@@ -43,7 +78,7 @@
 @media screen and (max-width:750px) {
     .container{
         width:60%;
-        margin-left: 10%;
+        margin-left: 4%;
     }
     .profileimages{
      display: grid;
@@ -67,7 +102,7 @@ figcaption{
 @media screen and (max-width:650px) {
     .container{
         width:60%;
-        margin-left: 5%;
+        margin-left: -2%;
     }
     .profileimages{
      display: grid;
@@ -89,6 +124,10 @@ figcaption{
 }
 }
 @media screen and (max-width:500px){
+    .container{
+        width:60%;
+        margin-left: -10%;
+    }
     .footer{
         margin-block-start: 20%;
     }
@@ -97,7 +136,7 @@ figcaption{
     }
     .profileimages{
         display: grid;
-        grid-template-columns:90% 90%;
+        grid-template-columns:100% 100%;
        
    }
 }

@@ -8,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class StarshipYodaComponent implements OnInit {
 starship:any;
 starshipDetails:any;
+image:any;
   constructor() { }
 
   ngOnInit(): void {
     this.getData();
+    if(this.starshipDetails.name== "Executor"){
+      this.image ="/assets/download (5).jpeg"
+    }else{
+      this.image = "assets/starshipimages.jpeg"
+    }
   }
   getData(){
     this.starship =localStorage.getItem('starships');

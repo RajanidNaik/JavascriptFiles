@@ -12,7 +12,7 @@
     height:5vh;
     font:Open 'Sans Bold';
     font-size: 1.25rem;
-    overflow: auto;
+    
 }
 .charaContent a{
     text-decoration: none;
@@ -25,23 +25,23 @@ background-color:rgba(0,171,255,0.4);
 }
 .buttons{
     display: flex;
-    margin-left: 39%;
+    margin-left: 42%;
     align-items: center;
-    gap:2rem;
+    gap:3rem;
     margin-block-start: 2%;
 }
 .prebtn button{
-    font:open 'Sans Regular';
+    font:Open 'Sans Regular';
     font-size: 1rem;
-    color:#7692a7;
+    color: #fff;
     border:none;
     background-color: #00a8ff;
     height: 2rem;
     width:6rem;
     border-radius: 1%;
 }
-.nextbtn button{
-    font:open 'Sans Regular';
+.nextbutton button{
+    font:Open 'Sans Regular';
     font-size: 1rem;
     color:#fff;
     border:none;
@@ -50,8 +50,36 @@ background-color:rgba(0,171,255,0.4);
     width:6rem;
     border-radius: 1%;
 }
+
+.disbutton button{
+    color:#7692a7;
+}
+
 .footer{
     margin-block-start: 2%;
+    
+}
+@media screen and (max-width:1200px) {
+   
+    .buttons{
+        display: flex;
+        margin-left: 40%;
+        align-items: center;
+        gap:2rem;
+        margin-block-start: 2%;
+    }
+
+}
+@media screen and (max-width:850px) {
+   
+    .buttons{
+        display: flex;
+        margin-left: 38%;
+        align-items: center;
+        gap:2rem;
+        margin-block-start: 2%;
+    }
+
 }
 @media screen and (max-width:750px) {
     .name{
@@ -73,8 +101,8 @@ background-color:rgba(0,171,255,0.4);
         text-transform: uppercase;
         height:5vh;
         font:Open 'Sans Bold';
-        overflow: auto;
-        font-size: 1.5rem;
+        
+        font-size: 1.15rem;
     }
 
 }

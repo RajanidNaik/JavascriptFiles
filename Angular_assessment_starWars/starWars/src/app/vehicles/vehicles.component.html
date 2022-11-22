@@ -7,22 +7,13 @@
     </div>
     <div class="charaContent" *ngFor="let vehi of vehicles.results">
          <a (click)="storeData(vehi)">{{vehi.name}}</a>
-         <!-- <a>luke&nbsp;skywalker</a>
-         <a>obi-wan&nbsp;kenobi</a>
-         <a routerLink="/yoda">yoda</a>
-         <a>rey</a>
-         <a>darth&nbsp;vader</a>
-         <a>luke&nbsp;skywalker</a>
-         <a>obi-wan&nbsp;kenobi</a>
-         <a>yoda</a>
-         <a>rey</a> -->
     </div>
-    <div class="buttons" (click)="previous()">
+    <div class="buttons" (click)="previous()" [class.disbutton]="vehicles.previous==null">
         <div class="prebtn">
-            <button type="submit">PREVIOUS</button>
+            <button type="submit" [disabled]="this.vehicles.previous==null">PREVIOUS</button>
         </div>
-        <div class="nextbtn" (click)="next()">
-            <button type="submit">NEXT</button>
+        <div class="nextbutton" (click)="next()" [class.disbutton]="vehicles.next==null" >
+            <button class="nextbutton" type="submit" [disabled]="this.vehicles.next==null">NEXT</button>
         </div>
     </div>
     <div class="footer">

@@ -24,13 +24,37 @@ const routes: Routes = [
   {path:'footer',component:FooterComponent},
   {path:'profile',component:ProfileComponent},
   {path:'navbar',component:NavbarComponent},
-  {path:'character',component:CharactersComponent},
+  {path:'character',component:CharactersComponent,
+  children:[{
+    path:'yoda',component:YodaComponent
+  }]
+},
+  
   {path:'yoda',component:YodaComponent},
-  {path:'films',component:FilmsComponent},
-  {path:'species',component:SpeciesComponent},
-  {path:'planets',component:PlanetsComponent},
-  {path:'starship',component:StarshipComponent},
-  {path:'vehicles',component:VehiclesComponent},
+  {path:'films',component:FilmsComponent,
+children:[{
+  path:'filmYoda',component:FilmYodaComponent
+}]
+},
+  {path:'species',component:SpeciesComponent,
+children:[{
+  path:'speciesYoda',component:SpeciesYodaComponent
+}]
+},
+  {path:'planets',component:PlanetsComponent,
+children:[{
+  path:'planetYoda',component:PlanetYodaComponent
+}]},
+  {path:'starship',component:StarshipComponent,
+children:[{
+  path:'starshipYoda',component:StarshipYodaComponent
+}]
+},
+  {path:'vehicles',component:VehiclesComponent,
+children:[{
+  path:'vehicleYoda',component:VehicleYodaComponent
+}]
+},
   {path:'speciesYoda',component:SpeciesYodaComponent},
   {path:'vehicleYoda',component:VehicleYodaComponent},
   {path:'planetYoda',component:PlanetYodaComponent},

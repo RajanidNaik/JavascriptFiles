@@ -13,17 +13,30 @@ export class ProfileComponent implements OnInit {
  starship:boolean=false;
  vehicles:boolean=false;
  planet:boolean = false;
+ prochara:boolean=false;
+ profilm:boolean=false
   constructor(public router:Router) { }
 
   ngOnInit(): void {
+  //   if(sessionStorage.getItem('prochara')){
+  //     this.prochara = JSON.parse((sessionStorage.getItem('prochara'))as any);
+  //  }
+//    if(sessionStorage.getItem('profilm')){
+//     this.prochara = JSON.parse((sessionStorage.getItem('profilm'))as any);
+//  }
    
   }
 onclick(){
   this.click=true;
+    // sessionStorage.setItem('prochara',JSON.stringify(this.click));
+
   this.router.navigate(["/character"]);
+  
 }
 onFilms(){
+  // sessionStorage.removeItem('prochara');
   this.films=true;
+  // sessionStorage.setItem('profilm',JSON.stringify(this.films));
   this.router.navigate(["/films"]);
 }
 onSpecies(){

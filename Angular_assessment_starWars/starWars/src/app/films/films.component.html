@@ -5,24 +5,30 @@
     <div class="navbar" >
 <app-navbar></app-navbar>
     </div>
-    <div class="charaContent" *ngFor="let chapter of films.results">
-         <a (click)="storeData(chapter)">{{chapter.title}}</a>
-         <!-- <a>luke&nbsp;skywalker</a>
-         <a>obi-wan&nbsp;kenobi</a>
-         <a routerLink="/yoda">yoda</a>
-         <a>rey</a>
-         <a>darth&nbsp;vader</a>
-         <a>luke&nbsp;skywalker</a>
-         <a>obi-wan&nbsp;kenobi</a>
-         <a>yoda</a>
-         <a>rey</a> -->
+    <div *ngIf="load" class="load">
+      <p>Loading....!</p>  
     </div>
+    <div *ngIf="!load">
+        <div  class="charaContent" *ngFor="let chapter of films.results">
+            <a (click)="storeData(chapter)">{{chapter.title}}</a>
+            <!-- <a>luke&nbsp;skywalker</a>
+            <a>obi-wan&nbsp;kenobi</a>
+            <a routerLink="/yoda">yoda</a>
+            <a>rey</a>
+            <a>darth&nbsp;vader</a>
+            <a>luke&nbsp;skywalker</a>
+            <a>obi-wan&nbsp;kenobi</a>
+            <a>yoda</a>
+            <a>rey</a> -->
+       </div>
+    </div>
+    
     <div class="buttons">
-        <div class="prebtn" (click)="previous()">
-            <button type="submit">PREVIOUS</button>
+        <div class="prebtn" (click)="previous()" [class.disbutton]="this.films.previous == null">
+            <button type="submit" [disabled]="this.films.previous == null" >PREVIOUS</button>
         </div>
-        <div class="nextbtn" (click)="next()">
-            <button type="submit">NEXT</button>
+        <div class="nextbtn" (click)="next()" [class.disbutton]="this.films.next == null">
+            <button type="submit"  [disabled]="this.films.next == null">NEXT</button>
         </div>
     </div>
     <div class="footer">

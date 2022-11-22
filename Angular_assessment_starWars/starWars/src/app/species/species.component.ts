@@ -11,7 +11,9 @@ import { CacheResolverService } from '../cache-resolver.service';
 export class SpeciesComponent implements OnInit {
   userSub$:Subscription | undefined;
   species:any;
-  url="https://swapi.dev/api/species/"
+  url="https://swapi.dev/api/species/";
+  button:boolean=false;
+prebutton:boolean = false;
   constructor(private data:CacheResolverService, public router:Router) { }
 
   ngOnInit(): void {
@@ -45,7 +47,10 @@ export class SpeciesComponent implements OnInit {
       this.species = data;
       sessionStorage.setItem('speciesS',JSON.stringify(this.species));
       console.log(this.species);
-      
+      if(this.species.next == null){
+        this.button =true;
+        console.log('done');
+       }
       
     })
   }
@@ -53,7 +58,10 @@ export class SpeciesComponent implements OnInit {
     this.data.getUser(this.species?.previous).subscribe(data=>{
       this.species = data;
       sessionStorage.setItem('speciesS',JSON.stringify(this.species));
-     
+      if(this.species.previous == null){
+        this.prebutton =true;
+        console.log('done');
+       }
     })
   }
   storeData(data:any){

@@ -11,6 +11,8 @@ export class StarshipComponent implements OnInit {
 url="https://swapi.dev/api/starships/"
 userSub$:Subscription | undefined;
 starship:any;
+button:boolean=false;
+prebutton:boolean = false;
   constructor(private data:CacheResolverService,public router:Router) { }
 
   ngOnInit(): void {
@@ -45,14 +47,20 @@ starship:any;
       sessionStorage.setItem('starshipS',JSON.stringify(this.starship));
       console.log(this.starship);
       
-      
+      if(this.starship.next == null){
+        this.button =true;
+        console.log('done');
+       }
     })
   }
   previous(){
     this.data.getUser(this.starship?.previous).subscribe(data=>{
       this.starship = data;
       sessionStorage.setItem('starshipS',JSON.stringify(this.starship));
-     
+      if(this.starship.previous == null){
+        this.prebutton =true;
+        console.log('done');
+       }
     })
   }
   storeData(data:any){

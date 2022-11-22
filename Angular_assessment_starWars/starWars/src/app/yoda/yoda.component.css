@@ -1,11 +1,11 @@
-.navbar{
-    margin-block-end: 2%;
-}
+/* .navbar{
+    margin-block-end: 1%;
+} */
 .container{
     width:37rem;
     height: 25rem;
     /* border:1px solid #fff; */
-    margin:5%;
+    margin:2%;
     margin-left: 20%;
     display: flex;
     align-items: center;
@@ -18,7 +18,7 @@
    
 }
 .yodaDes h1{
-font: open 'Sans Bold';
+font: Open 'Sans Bold';
 font-size: 2rem;
 color:#fff;
 }
@@ -64,6 +64,16 @@ color:#fff;
 .footer{
     margin-block-start: 2%;
 }
+
+
+@media screen  and (min-width:1200px) {
+    .container{
+        width:45rem;
+        height: 25rem;
+       
+    }
+
+}
 @media screen and (min-width:1000px) and (max-width:1100px) {
     .container{
         width:40rem;
@@ -77,14 +87,7 @@ color:#fff;
     }
 
 }
-@media screen  and (min-width:1200px) {
-    .container{
-        width:50rem;
-        height: 27rem;
-       
-    }
 
-}
 @media screen and (min-width:1100px) and (max-width:1200px) {
     .container{
         width:45rem;
@@ -109,6 +112,14 @@ color:#fff;
         
         
     }
+    .yoda img{
+        height: 20rem;
+        width: 12rem;
+       
+    }
+    .yodaDes{
+        width:15rem;
+    }
 }
 @media screen and (max-width:770px) {
     .container{
@@ -116,6 +127,14 @@ color:#fff;
         height: 22rem;
         
         
+    }
+    .yoda img{
+        height: 20rem;
+        width: 10rem;
+       
+    }
+    .yodaDes{
+        width:10rem;
     }
 }
 @media screen and (max-width:750px) {
@@ -132,8 +151,11 @@ color:#fff;
         margin-block-end: 2rem;
     }
     .yoda img{
-        height: 18rem;
-        width: 18rem;
+        height: 15rem;
+        width: 20rem;
+    }
+    .yodaDes{
+        width:20rem;
     }
     .yodaDes{
         overflow:auto;
@@ -143,13 +165,20 @@ color:#fff;
         display: none;
       }
     .footer{
-        margin-block-start: 5%;
+        margin-block-start: 10%;
     }
 }
 @media screen and (max-width:700px) {
     .container{
         width:45rem;
-        margin-left: 4%;
+        margin-left: -2%;
+    }
+    .yoda img{
+        height: 15rem;
+        width: 22rem;
+    }
+    .yodaDes{
+        width:22rem;
     }
 }
 @media screen and (max-width:650px) {
@@ -164,14 +193,28 @@ color:#fff;
 }
 @media screen and (max-width:500px) {
     .container{
-        width:30rem;
-        margin-left: 2%;
+        width:38rem;
+        
+    }
+    .yoda img{
+        height: 15rem;
+        width: 18rem;
+    }
+    .yodaDes{
+        width:18rem;
     }
 }
 @media screen and (max-width:450px) {
     .container{
         width:25rem;
-        margin-left: 2%;
+        margin-left: 1%;
+    }
+    .yoda img{
+        height: 15rem;
+        width: 18rem;
+    }
+    .yodaDes{
+        width:18rem;
     }
 }
 @media screen and (max-width:390px) {

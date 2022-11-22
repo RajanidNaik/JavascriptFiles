@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { CacheResolverService } from '../cache-resolver.service';
 @Component({
@@ -11,6 +11,9 @@ export class CharactersComponent implements OnInit {
 userSub$:Subscription | undefined;
 users:any;
 people:any;
+button:boolean=false;
+prebutton:boolean = false;
+imageId=0;
 
   constructor(private data:CacheResolverService,public router:Router) { }
 
@@ -42,6 +45,7 @@ people:any;
       // })
       this.getPeople()
    }
+   
   //this.getPeople()
     
   }
@@ -66,6 +70,12 @@ next(){
     this.people = data;
     sessionStorage.setItem('characters',JSON.stringify(this.people));
     console.log(this.people);
+    if(this.people.next == null){
+      this.button =true;
+      console.log('done');
+     }else{
+      this.button =false;
+     }
     
     
   })
@@ -74,11 +84,18 @@ previous(){
   this.data.getUser(this.people?.previous).subscribe(data=>{
     this.people = data;
     sessionStorage.setItem('characters',JSON.stringify(this.people));
-   
+    if(this.people.previous == null){
+      this.prebutton =true;
+      console.log('done');
+     }else{
+      this.prebutton =false;
+     }
   })
 }
 storeData(data:any){
   localStorage.setItem('character',JSON.stringify(data));
   this.router.navigate(["/yoda"]);
+  
 }
+
 }

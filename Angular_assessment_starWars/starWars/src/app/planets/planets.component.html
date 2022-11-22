@@ -18,11 +18,11 @@
          <a>rey</a> -->
     </div>
     <div class="buttons">
-        <div class="prebtn" (click)="previous()">
-            <button type="submit">PREVIOUS</button>
+        <div class="prebtn" (click)="previous()" [class.disbutton]="this.planets.previous == null">
+            <button type="submit" [disabled]="this.planets.previous == null" >PREVIOUS</button>
         </div>
-        <div class="nextbtn" (click)="next()">
-            <button type="submit">NEXT</button>
+        <div class="nextbtn" (click)="next()" [class.disbutton]="this.planets.next == null">
+            <button type="submit" [disabled]="this.planets.next == null">NEXT</button>
         </div>
     </div>
     <div class="footer">

@@ -10,7 +10,8 @@ import { CacheResolverService } from '../cache-resolver.service';
 export class VehiclesComponent implements OnInit {
   userSub$:Subscription | undefined;
   vehicles:any;
-  url="https://swapi.dev/api/vehicles/"
+  url="https://swapi.dev/api/vehicles/";
+  
   constructor(private data:CacheResolverService,public router:Router) { }
 
   ngOnInit(): void {
@@ -52,7 +53,7 @@ export class VehiclesComponent implements OnInit {
     this.data.getUser(this.vehicles?.previous).subscribe(data=>{
       this.vehicles = data;
       sessionStorage.setItem('vehiclesS',JSON.stringify(this.vehicles));
-     
+      
     })
   }
   storeData(data:any){
