@@ -1,0 +1,364 @@
+.container{
+    margin-block-start: 2%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:15rem
+}
+.image{
+    height: 4%;
+    width: 11%;
+}
+.searchBar{
+    align-items: center;
+    box-sizing: border-box;
+    height: 6.54%;
+    width: 35%;
+    opacity: 1;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 3px;
+    background-color: rgba(255,255,255,0.3);
+}
+
+.searchIcon{
+    color:#fff;
+}
+.searchBar ::placeholder{ 
+    color: white;
+    height: 5%;
+    opacity: 0.5;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 1rem;
+    letter-spacing: 0;
+    line-height: 19px;
+  }
+   
+  input{
+    outline: none;
+    border:none;
+    background-color: transparent;
+    color:#fff;
+  }
+  .display{
+    display: flex;
+  justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+  }
+  nav.navbar ul{
+    display: flex;
+    flex-direction: row;
+    gap:5rem;
+  }
+  nav.navbar ul li{
+    list-style:none;
+  }
+  nav.navbar ul li a{
+    height: 2.18%;
+    width: 5.67%;
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-size: 0.9rem;
+    letter-spacing: 0;
+    line-height: 0.94rem;
+   
+    text-decoration: none;
+    
+  }
+  nav.navbar ul li a:hover{
+    color:#FFD639;
+  }
+  .date{
+    height: 3%;
+    width: 20%;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 0.875rem;
+    letter-spacing: 0;
+    line-height: 1rem;
+    text-align: right;
+  }
+  .datenav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:18rem;
+    margin-block-start: 2%;
+    margin-bottom: 0;
+  }
+  .line{
+    box-sizing: border-box;
+    height: 0.15%;
+    width: 80%;
+    border: 1px solid #FFFFFF;
+    opacity: 0.3;
+    margin-left: 10%;
+    margin-top: -.8%;
+  }
+  nav.navbar ul li a.active{
+    color:#FFD639;
+    border-bottom:1.5px solid #ffd639;
+  }
+  .menubar{
+    color:#FFFFFF;
+    display:none;
+  }
+  .mediaSearch{
+    
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    width:100vw;
+    z-index: 1;
+    height: 100vh;
+    color:rgba(0,0,0,0.3);
+    font-family: 'Roboto';
+    font-size:0.875rem;
+    line-height: 2rem;
+    transition: all 0.5s ease-in-out;
+   display:none;
+    
+  
+}
+.back{
+    height: 5.63%;
+    width: 80%;
+    opacity: 0.3;
+    color: #000000;
+    font-family: 'Roboto';
+    font-size: 1rem;
+    letter-spacing: 0;
+    line-height: 2rem;
+}
+.align{
+    display:flex;
+    padding: 2%;
+     gap:3rem;
+    
+}
+.arrow{
+    margin-top: 2%;
+    color:#000;
+    
+}
+  @media screen and (max-width:1200px) {
+    .container{
+    margin-block-start: 2%;
+    display: flex;
+    align-items: center;
+    gap:18rem;
+    }
+    .searchBar{
+        width:30%;
+    }
+    
+    nav.navbar ul{
+        gap:1.5rem;
+    }
+    .datenav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-block-start: 2%;
+    margin-bottom: 0;
+    gap:2rem;
+       
+    }
+    .date{
+        width:40%;
+        margin-left: -6%;
+        text-align: start;
+    }
+    
+  }
+  
+  @media screen and (max-width:1600px) {
+    .container{
+    margin-block-start: 2%;
+    display: flex;
+    align-items: center;
+    gap:15rem
+       
+    }
+    
+    .datenav{
+    display: flex;
+    
+    align-items: center;
+    margin-block-start: 2%;
+    margin-bottom: 0;
+    gap:10rem;
+       
+    }
+    nav.navbar ul{
+        gap:1.5rem;
+    }
+    .date{
+        width:30%;
+        text-align: right;
+        
+    }
+    
+    .line{
+        margin-top: -.9%;
+    }
+  }
+  @media screen and (max-width:1400px) {
+    .container{
+    margin-block-start: 2%;
+    display: flex;
+    align-items: center;
+    gap:12rem
+       
+    }
+    
+    .datenav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-block-start: 2%;
+    margin-bottom: 0;
+    gap:6rem;
+       
+    }
+    .date{
+        width:30%;
+        text-align: right;
+        
+    }nav.navbar ul{
+        gap:2rem;
+    }
+    .line{
+        margin-top: -1.1%;
+    }
+  }
+  @media screen and (max-width:950px){
+    .date{
+        width:50%;
+        text-align: right;
+        margin-left: -40%;
+    }
+    .container{
+        margin-block-start: 2%;
+        display: flex;
+        align-items: center;
+        gap:9rem
+           
+        }
+       
+        .datenav{
+            margin-left: -3%;
+        }
+        .line{
+            margin-top: -1.6%;
+        }
+  }
+@media screen and (max-width:750px) {
+    .menubar{
+        display: flex;
+    }
+    .searchBar{
+        display: none;
+    }
+    .logo{
+        margin-block-start: 1%;
+        display: flex;
+        gap:5rem;
+        align-items: center;
+        padding: 1%;
+    }
+    .mobile{
+        display: flex;
+       justify-content: space-around;
+       align-items: center;
+       gap:12rem;
+    }
+    .image{
+        height: 4vh;
+        width: 15vw;
+    }
+    .line{
+        display: none;
+    }
+    
+    nav.navbar{
+        height: 100%;
+        width:80%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+        background-color: #fff;
+        display: none;
+
+    }
+    nav.navbar ul{
+        display:flex;
+        flex-direction: column;
+        gap:5rem;
+    }
+    nav.navbar ul li a{
+        text-align: left;
+        color:#707070;
+        text-transform: lowercase; 
+        font-family: 'Roboto';
+        font-size: 0.875rem;
+        letter-spacing: 0;
+        line-height: 2.25rem;
+    }
+    nav.navbar ul li::first-letter{
+        text-transform: uppercase;
+    }
+    nav.navbar ul li a:hover{
+        color: #000;
+      }
+      nav.navbar ul li a.active{
+        color: #000;
+        border-bottom: none;
+        
+      }
+    nav.menu{
+        display: flex;
+        transition: all 0.5s ease-in-out;
+    }
+    .date h3{
+        width: 20rem;
+        color:#fff;
+        opacity:0.6;
+        font-family: 'Roboto';
+        font-size:1rem;
+        letter-spacing: 1.5px;
+        line-height: 0.9375rem;
+        text-align:center;
+        margin-left: 40%;
+       margin-block-start: 5%;
+       text-transform: uppercase;
+        
+    }
+    .mediaSearch.click{
+        display: flex;
+    }
+    
+}
+@media screen and (max-width:500px){
+    .image{
+        height: 4vh;
+        width: 17vw;
+    }
+    .date h3{
+        margin-left: 25%;
+    }
+}
+@media screen and (max-width:400px){
+    .image{
+        height: 4vh;
+        width: 20vw;
+    }
+    .date h3{
+        margin-left: 15%;
+    }
+    .logo{
+        gap:3rem
+    }
+}

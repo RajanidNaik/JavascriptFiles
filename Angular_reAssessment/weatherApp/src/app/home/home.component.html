@@ -1,0 +1,55 @@
+<div>
+  <div class="mobile">
+    <div class="logo">
+  <div class="menubar">
+    <mat-icon (click)="onclick()">menu</mat-icon>
+  </div>
+    <div class="container">
+        <img  class="image" src="/assets/logo_web.png">
+    
+    <div class="searchBar">
+          <div class="display">
+          <div>
+            <input class="searchField" type="text"  placeholder=" Search city" >
+          </div>
+          <div>
+            <mat-icon  class="searchIcon" >search</mat-icon>
+          </div>
+          </div>
+    </div>
+  </div>
+</div>
+  <div class="menubar" >
+    <mat-icon (click)="onSearchClick()">search</mat-icon>
+</div>
+</div>
+ <div class="datenav">
+  
+    <nav class="navbar" [class.menu]="menu">
+      <ul>
+        <li><a routerLink="/homePage"  routerLinkActive="active">HOME</a></li>
+        <li><a routerLink="/favPage"  routerLinkActive="active">FAVOURITE</a></li>
+        <li><a routerLink="/recent"  routerLinkActive="active">RECENT&nbsp;SEARCH</a></li>
+      </ul>
+    </nav>
+  
+    <div class="date">
+      <h3>{{date | date:'ccc'}},&nbsp;{{date|date:'dd MMM YYYY'}}&nbsp;&nbsp;&nbsp;{{date|date:'h:mm a'}}</h3>
+    </div>
+  </div>
+  <div class="line"></div>
+  <div class="mediaSearch" [class.click]="search"  >
+    <div class="align">
+    <div class="arrow"  >
+        <mat-icon (click)="onSearchClick()">keyboard_backspace</mat-icon>
+    </div>
+    <div >
+        <input class="back"  placeholder=" Search  for City" >
+    </div>
+    <!-- <div class="clear">
+        <mat-icon >search</mat-icon>
+    </div> -->
+  </div>
+</div>
+</div>
+

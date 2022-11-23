@@ -8,7 +8,7 @@
             <figure class="figure">
                 <!-- <img  src="/assets/image3normal.png"> -->
                 <img *ngIf="!films" src="/assets/image3normal.png" (click)="onFilms()">
-                <img *ngIf="films" src="/assets/image3press.png" >
+                <img *ngIf="films " src="/assets/image3press.png" >
                 <figcaption>FILMS</figcaption>
             </figure>
         </div>
@@ -32,8 +32,8 @@
         <div>
             <figure class="figure">
                 <!-- <img  src="/assets/people1.png" > -->
-                <img *ngIf="!click" src="/assets/people1.png" (click)="onclick()">
-                 <img *ngIf="click" src="/assets/people1pressed.png">
+                <img *ngIf="!click && !prochara" src="/assets/people1.png" (click)="onclick()">
+                 <img *ngIf="click || prochara" src="/assets/people1pressed.png">
                 <figcaption>CHARACTERS</figcaption>
             </figure>
             

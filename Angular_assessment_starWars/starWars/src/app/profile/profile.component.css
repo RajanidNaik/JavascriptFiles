@@ -44,28 +44,89 @@
         margin-block-start: 8%;
     }
 }
-@media screen and (max-width:1200px) {
+/* @media screen and (max-width:1300px) {
     .container{
         width:70%;
         margin-left: 15%;
     }
     .profileimages{
          display: grid;
-         /* grid-template-columns:auto auto auto; */
-         grid-template-columns:35% 35% 35%;
+         
+         grid-template-columns:32% 32% 32%;
     }
     .footer{
         margin-block-start: 13%;
     }
-}
-@media screen and (max-width:1000px) and (min-width:750px) {
+} */
+/* @media screen and (max-width:1200px) {
+    .container{
+        width:70%;
+        margin-left: 15%;
+    }
+    .profileimages{
+         
+         grid-template-columns:34% 34% 34%;
+    }
+    .footer{
+        margin-block-start: 13%;
+    }
+} */
+/* @media screen and (max-width:1150px) {
+    .container{
+        width:70%;
+        margin-left: 15%;
+    }
+    .profileimages{
+         display: grid;
+         
+         grid-template-columns:36% 36% 36%;
+    }
+    .footer{
+        margin-block-start: 13%;
+    }
+} */
+@media screen and (max-width:1200px)  {
     .container{
         width:60%;
-        margin-left: 5%;
+        margin-left: 15%;
     }
     .profileimages{
         display: grid;
-        grid-template-columns:50% 50% 50%;
+        grid-template-columns:38% 38% 38%;
+       
+   }
+   .name{
+    margin-block-end: 8%;
+}
+   .footer{
+    margin-block-start: 5%;
+}
+}
+@media screen and (max-width:1000px)  {
+    .container{
+        width:60%;
+        margin-left: 10%;
+    }
+    .profileimages{
+        display: grid;
+        grid-template-columns:42% 42% 42%;
+       
+   }
+   .name{
+    margin-block-end: 8%;
+}
+   .footer{
+    margin-block-start: 15%;
+}
+}
+@media screen and (max-width:900px)  {
+    .container{
+        width:60%;
+        margin-left: 10%;
+    }
+    .profileimages{
+        display: grid;
+        grid-template-columns:45% 45% 45%;
        
    }
    .name{
@@ -78,11 +139,11 @@
 @media screen and (max-width:750px) {
     .container{
         width:60%;
-        margin-left: 4%;
+        margin-left: 10%;
     }
     .profileimages{
      display: grid;
-     grid-template-columns:80% 80%;
+     grid-template-columns:65% 65%;
     
 }
 .profileimages figure img{
@@ -94,6 +155,8 @@ figcaption{
     font: open ' Sans semibold';
    text-align: start;
    
+} .name{
+    margin-block-end: 5%;
 }
 .footer{
     margin-block-start: 10%;
@@ -106,7 +169,7 @@ figcaption{
     }
     .profileimages{
      display: grid;
-     grid-template-columns:90% 90%;
+     grid-template-columns:75% 75%;
     
 }
 .profileimages figure img{
@@ -136,7 +199,7 @@ figcaption{
     }
     .profileimages{
         display: grid;
-        grid-template-columns:100% 100%;
+        grid-template-columns:95% 95%;
        
    }
 }
