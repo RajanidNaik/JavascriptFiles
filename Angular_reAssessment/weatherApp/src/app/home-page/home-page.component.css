@@ -1,0 +1,116 @@
+.like{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin-block-start: 2%;
+   
+}
+.fav{
+    display: flex;
+    color: #fff;
+    margin-left: 10rem;
+}
+h2.location{
+    height: 4%;
+    width:10%;
+    color:#fff;
+    font-family: 'Roboto';
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.5rem;
+    text-align: center;
+    margin-left: 10rem;
+}
+.like{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1rem;
+    font-family: 'Roboto';
+}
+.button{
+    display: flex;
+}
+.tempBtn button{
+    cursor: pointer;
+    width: 2rem;
+    height: 5vh;
+    color:#fff;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+.center{
+    margin-block-start: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+}
+.insideTemp h1{
+    /* height: 10.9%;
+    width: 6.08%; */
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-size: 4rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 4.68rem;
+}
+.report h2{
+    height: 3.63%;
+    width: 30vw;
+    color: #fff;
+    font-family: 'Roboto';
+    font-size: 1.375rem;
+    letter-spacing: 0;
+    line-height: 1.6rem;
+    text-align: center;
+}
+.temp{
+    display: flex;
+    align-items: center;
+    padding: 1%;
+}
+.line{
+    margin-block-start: 2%;
+    box-sizing: border-box;
+    height: 0.15%;
+    width: 80%;
+    border: 1px solid #FFFFFF;
+    opacity: 0.3;
+    margin-left: 10%;
+  
+  }
+  .cast{
+    display: flex;
+    justify-content: space-around;
+    gap:1rem;
+    
+}
+.castDetail h2{
+    color:#fff;
+    font-size: 1rem;
+    letter-spacing: 0;
+    line-height: 1.2rem;
+   
+    
+}
+.castDetail h1{
+    color: #fff;
+    font-size: 1.375rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.6rem;
+}
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    
+    margin-block-start: 2%;
+   
+   
+   
+}
