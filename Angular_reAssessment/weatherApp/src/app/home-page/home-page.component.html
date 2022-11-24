@@ -1,10 +1,11 @@
+{{call()}}
 <div>
     <div class="header">
        <app-home></app-home> 
     </div>
     <div class="like">
     <div>
-        <h2 class="location">Udupi,Karnataka</h2>
+        <h2 class="location">{{weatherdata.name}}</h2>
     </div>
     <div class="fav">
         <div class="onFav" >
@@ -17,24 +18,27 @@
 </div>
 <div class="center">
     <div class="image">
-        <img src="/assets/icon_mostly_sunny.png">
+        <!-- <img src="/assets/icon_mostly_sunny.png"> -->
+        <img src="http://openweathermap.org/img/wn/{{ weatherdata.icon }}@2x.png">
     </div>
     <div class="temp">
         <div class="insideTemp">
-<h1>87</h1>
+<h1>{{temp}}</h1>
     </div>
     <div class="tempBtn">
         <div class="button">
-            <button>&#8451;</button>
-            <button>&#8457;</button>
+            <button (click)="tempcenti()">&#8451;</button>
+            <button (click)="tepFara()">&#8457;</button>
         </div>
     </div>
 </div>
     <div class="report"> 
-        <h2>Mostly&nbsp;Sunny</h2>
+        <h2>{{weatherdata.description | titlecase}}</h2>
     </div>
 </div>
 <div class="line"></div>
+<div class="lineCopy"></div>
+
 <div class="footer">
     <div class="cast">
         <div>
@@ -42,7 +46,7 @@
         </div>
         <div class="castDetail">
             <h2>Min-Max</h2>
-            <h1>75&#176;-90&#176;</h1>
+            <h1>{{temp_max}}&#176;-{{temp_min}}&#176;</h1>
         </div>
         
     </div>
@@ -52,7 +56,7 @@
         </div>
         <div class="castDetail">
             <h2>Pressure</h2>
-            <h1>0Pa</h1>
+            <h1>{{pressure}}Pa</h1>
         </div>
         
     </div>
@@ -62,7 +66,7 @@
         </div>
         <div class="castDetail">
             <h2>Humidity</h2>
-            <h1>47%</h1>
+            <h1>{{humidity}}%</h1>
         </div>
         
     </div>
@@ -72,7 +76,7 @@
         </div>
         <div class="castDetail">
             <h2>Wind</h2>
-            <h1>4mph</h1>
+            <h1>{{wind}}mph</h1>
         </div>
         
     </div>
@@ -82,7 +86,7 @@
         </div>
         <div class="castDetail">
             <h2>Visibility</h2>
-            <h1>10km</h1>
+            <h1>{{visibility}}km</h1>
         </div>
         
     </div>

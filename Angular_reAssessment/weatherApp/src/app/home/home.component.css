@@ -273,6 +273,7 @@
        justify-content: space-around;
        align-items: center;
        gap:12rem;
+       
     }
     .image{
         height: 4vh;
@@ -331,7 +332,7 @@
         letter-spacing: 1.5px;
         line-height: 0.9375rem;
         text-align:center;
-        margin-left: 40%;
+        margin-left: 45%;
        margin-block-start: 5%;
        text-transform: uppercase;
         
@@ -341,13 +342,22 @@
     }
     
 }
+@media screen and (max-width:650px){
+    .image{
+        height: 4vh;
+        width: 17vw;
+    }
+    .date h3{
+        margin-left: 35%;
+    }
+}
 @media screen and (max-width:500px){
     .image{
         height: 4vh;
         width: 17vw;
     }
     .date h3{
-        margin-left: 25%;
+        margin-left: 20%;
     }
 }
 @media screen and (max-width:400px){
@@ -356,7 +366,7 @@
         width: 20vw;
     }
     .date h3{
-        margin-left: 15%;
+        margin-left: 20%;
     }
     .logo{
         gap:3rem

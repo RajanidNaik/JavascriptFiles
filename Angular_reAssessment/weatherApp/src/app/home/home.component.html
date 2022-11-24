@@ -10,10 +10,10 @@
     <div class="searchBar">
           <div class="display">
           <div>
-            <input class="searchField" type="text"  placeholder=" Search city" >
+            <input class="searchField" type="text"  placeholder=" Search city" [(ngModel)]="cityName">
           </div>
           <div>
-            <mat-icon  class="searchIcon" >search</mat-icon>
+            <mat-icon  class="searchIcon" (click)="onserach()">search</mat-icon>
           </div>
           </div>
     </div>
@@ -44,10 +44,10 @@
         <mat-icon (click)="onSearchClick()">keyboard_backspace</mat-icon>
     </div>
     <div >
-        <input class="back"  placeholder=" Search  for City" >
+        <input class="back"  placeholder=" Search  for City" [(ngModel)]="cityName">
     </div>
     <!-- <div class="clear">
-        <mat-icon >search</mat-icon>
+        <mat-icon (click)="onSearchClick()">search</mat-icon>
     </div> -->
   </div>
 </div>

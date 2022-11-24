@@ -8,7 +8,7 @@
 .fav{
     display: flex;
     color: #fff;
-    margin-left: 10rem;
+    margin-left: 14rem;
 }
 h2.location{
     height: 4%;
@@ -20,7 +20,7 @@ h2.location{
     letter-spacing: 0;
     line-height: 1.5rem;
     text-align: center;
-    margin-left: 10rem;
+    margin-left: 14rem;
 }
 .like{
     color: #fff;
@@ -75,14 +75,22 @@ h2.location{
     padding: 1%;
 }
 .line{
-    margin-block-start: 2%;
+    margin-block-start: 7%;
     box-sizing: border-box;
     height: 0.15%;
     width: 80%;
     border: 1px solid #FFFFFF;
     opacity: 0.3;
     margin-left: 10%;
+    
   
+  }
+  .lineCopy{
+    box-sizing: border-box;
+    width:100%;
+    border: 1px solid #FFFFFF;
+    opacity: 0.3;
+    display: none;
   }
   .cast{
     display: flex;
@@ -95,6 +103,7 @@ h2.location{
     font-size: 1rem;
     letter-spacing: 0;
     line-height: 1.2rem;
+    width:100%;
    
     
 }
@@ -107,10 +116,80 @@ h2.location{
 }
 .footer{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap:9rem;
+    align-items: center;
+    margin-block-start: 3%;
+   
+   
+   
+}
+@media screen and (max-width:1800px){
+    h2.location,.fav{
+        margin-left: 12.5rem;
+    }
+}
+@media screen and (max-width:1600px){
+    h2.location,.fav{
+        margin-left: 11.5rem;
+    }
+    .footer{
+        gap:7rem;
+    }
+}
+@media screen and (max-width:1400px){
+    h2.location,.fav{
+        margin-left: 11rem;
+    }
+    .footer{
+        gap:5rem;
+    }
+}
+@media screen and (max-width:1200px){
+    h2.location,.fav{
+        margin-left: 9.5rem;
+    }
+    .footer{
+        gap:3rem;
+    }
+}
+@media screen and (max-width:1000px){
+    h2.location,.fav{
+        margin-left: 8rem;
+    }
+    .footer{
+        gap:2rem;
+    }
+}
+@media screen and (max-width:750px){
+   .like{
+    align-items: center;
     
-    margin-block-start: 2%;
-   
-   
-   
+   }
+   h2.location,.fav{
+    margin-left: 0;
+}
+div.line{
+    display: none;
+    
+}
+.lineCopy{
+    display: flex;
+}
+.like,.center{
+    margin-right: 7%;
+}
+.footer{
+    /* align-items: center;
+    justify-content: left;
+    overflow:auto; */
+    width: 100%;
+    justify-content: left;
+    overflow-x: scroll;
+}
+.footer::-webkit-scrollbar {
+    
+    display: none;
+}
+
 }

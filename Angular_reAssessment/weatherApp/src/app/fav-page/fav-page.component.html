@@ -1,5 +1,63 @@
 <div>
-    <div>
+    <div class="header">
        <app-home></app-home> 
+    </div>
+    <div class="mobile">
+        <div class="back">
+            <div>
+                <mat-icon routerLink="/homePage">keyboard_backspace</mat-icon>
+            </div >
+            <div class="fav">Favourite</div>
+        </div>
+        <div>
+            <mat-icon>search</mat-icon>
+        </div>
+    </div>
+    <div class="noFav">
+        <div class="img">
+            <img  src="/assets/icon_nothing.png">
+        </div>
+        <div class="imgline">
+            No Favourites added
+        </div>
+    </div>
+    <div class="favourites">
+        <div class="tableContent">
+            <div class="count">
+                <p>6 City added as favorite</p>
+            </div>
+            <div class="removeBtn">
+                <button (click)="openDialog()">Remove All</button>
+            </div>
+        </div>
+        <div class="table">
+           <table>
+            <tr>
+                <td>Udupi,Karnataka</td>
+                <!-- <td><img src="/assets/icon_mostly_sunny_small.png"></td> -->
+                <td><img class="weatherimg" src="/assets/icon_mostly_sunny_small.png" ></td>
+                <td>27&#176;</td>
+                <td >Mostly&nbsp;Sunny</td>
+                <td ><mat-icon class="color" >favorite </mat-icon></td>
+                
+            </tr>
+           </table>
+        </div>
+        <table class="mediaTable" >
+            <div class="table-1">
+            <div class="name">Udupi,Karnataka</div>
+            <div class="tableimg">
+            <div class="info">
+                <div><img class="weatherimg"src="/assets/icon_mostly_sunny_small.png"></div>
+                <div class="tempinfo">27&#176;</div>
+                <div class="weatherinfo">Mostly&nbsp;Sunny</div>
+            </div>
+            <div class="heart">
+                <mat-icon class="color" >favorite </mat-icon>
+            </div>
+            
+        </div>
+        </div>
+        </table>
     </div>
 </div>
