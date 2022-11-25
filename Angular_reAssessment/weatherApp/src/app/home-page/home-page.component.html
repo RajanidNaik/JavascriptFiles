@@ -7,12 +7,22 @@
     <div>
         <h2 class="location">{{weatherdata.name}}</h2>
     </div>
-    <div class="fav">
+    <div class="fav" *ngIf="weatherdata['like']==false">
         <div class="onFav" >
-            <mat-icon>favorite</mat-icon>
+            <mat-icon (click)="addtoFavorite()" [class.heartColor]="color">favorite</mat-icon>
         </div>
+        
         <div>
-            <h3 class="color">Add to favorite</h3>
+            <h3 class="color" [class.heartColor]="color">Add to favorite</h3>
+        </div>
+    </div>
+    <div class="fav" *ngIf="weatherdata['like']==true">
+        <div class="onFav" >
+            <mat-icon (click)="removeFavourite()" [class.heartColor]="color">favorite</mat-icon>
+        </div>
+        
+        <div>
+            <h3 class="color" [class.heartColor]="color">Add to favorite</h3>
         </div>
     </div>
 </div>
@@ -27,8 +37,8 @@
     </div>
     <div class="tempBtn">
         <div class="button">
-            <button (click)="tempcenti()">&#8451;</button>
-            <button (click)="tepFara()">&#8457;</button>
+            <button (click)="tempcenti()"[class.centi]="centi">&#8451;</button>
+            <button (click)="tempFara()"[class.fara]="fara">&#8457;</button>
         </div>
     </div>
 </div>

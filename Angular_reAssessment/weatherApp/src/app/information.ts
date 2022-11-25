@@ -10,4 +10,5 @@ export class Information {
     "wind":string='0.62000';
     "visibility":string='10000';
     "like":boolean=false;
+    "centifara":any;
 }

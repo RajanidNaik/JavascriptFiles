@@ -13,7 +13,7 @@
             <mat-icon>search</mat-icon>
         </div>
     </div>
-    <div class="noFav">
+    <div class="noFav" *ngIf="count == 0 ">
         <div class="img">
             <img  src="/assets/icon_nothing.png">
         </div>
@@ -21,43 +21,56 @@
             No Favourites added
         </div>
     </div>
-    <div class="favourites">
+    <div class="favourites" *ngIf="count>0">
         <div class="tableContent">
             <div class="count">
-                <p>6 City added as favorite</p>
+                <p>{{count}}&nbsp;City&nbsp;added&nbsp;as&nbsp;favorite</p>
             </div>
             <div class="removeBtn">
                 <button (click)="openDialog()">Remove All</button>
             </div>
         </div>
-        <div class="table">
-           <table>
-            <tr>
-                <td>Udupi,Karnataka</td>
+        <div class="tablebox">
+        <div class="table" *ngFor="let fev of fevouriteData;index as i">
+           <table >
+           
+                <div  (click)="detailsToHome(fev)">{{fev.name}}</div>
+                <div class="inside">
+                <div>
+                    <img class="weatherimg" src="http://openweathermap.org/img/wn/{{ fev.icon }}@2x.png" >
+                </div>
                 <!-- <td><img src="/assets/icon_mostly_sunny_small.png"></td> -->
-                <td><img class="weatherimg" src="/assets/icon_mostly_sunny_small.png" ></td>
-                <td>27&#176;</td>
-                <td >Mostly&nbsp;Sunny</td>
-                <td ><mat-icon class="color" >favorite </mat-icon></td>
+               <div>{{(fev.temp-273.15).toFixed(0)}}&#176;</div>
+               <div>
+                {{fev.description | titlecase}}
+               </div>
+            </div>
+                <div>
+                    <mat-icon class="color" (click)="removeFavourite(fev)">favorite </mat-icon>
+                </div>
                 
-            </tr>
+                
+            
            </table>
         </div>
-        <table class="mediaTable" >
+        <table class="mediaTable" *ngFor="let fev of fevouriteData;index as i" >
             <div class="table-1">
-            <div class="name">Udupi,Karnataka</div>
+            <div class="name" (click)="detailsToHome(fev)">{{fev.name}}</div>
             <div class="tableimg">
             <div class="info">
-                <div><img class="weatherimg"src="/assets/icon_mostly_sunny_small.png"></div>
-                <div class="tempinfo">27&#176;</div>
-                <div class="weatherinfo">Mostly&nbsp;Sunny</div>
+                <div><img class="weatherimg"src="http://openweathermap.org/img/wn/{{ fev.icon }}@2x.png"></div>
+                <div class="tempinfo">{{(fev.temp-273.15).toFixed(0)}}&#176;</div>
+                <div class="weatherinfo">{{fev.description | titlecase}}</div>
             </div>
             <div class="heart">
-                <mat-icon class="color" >favorite </mat-icon>
+                <mat-icon class="color" (click)="removeFavourite(fev)">favorite </mat-icon>
             </div>
             
         </div>
         </div>
         </table>
+    </div>
+   
+        
     </div>
 </div>

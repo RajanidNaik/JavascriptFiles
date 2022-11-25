@@ -11,5 +11,8 @@ export class RecDialogComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  onClear(){
+    localStorage.removeItem('recentSearch');
+    window.location.reload();
+  }
 }

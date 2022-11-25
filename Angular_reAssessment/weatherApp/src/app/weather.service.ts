@@ -29,7 +29,7 @@ export class WeatherService {
             this.weatherData.wind = this.data['wind'].speed;
             this.weatherData.visibility = this.data['visibility'];
             this.weatherData.like = false;
-
+            this.weatherData.centifara =this.data['main'].temp;
             this.setData(this.weatherData);
             this.addRecentSearch(this.weatherData);
     }));
@@ -142,8 +142,10 @@ export class WeatherService {
         return old['name'] == data['name'];
       });
       let index = oldData.indexOf(presentData);
+      console.log(index)
       oldData.splice(index, 1);
       localStorage.setItem('favourite', JSON.stringify(oldData));
+      
     }
   }
 }

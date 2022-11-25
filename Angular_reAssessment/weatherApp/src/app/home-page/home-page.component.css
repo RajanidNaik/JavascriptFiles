@@ -30,6 +30,9 @@ h2.location{
     line-height: 1rem;
     font-family: 'Roboto';
 }
+.heartColor{
+    color:#FAD05B;
+}
 .button{
     display: flex;
 }
@@ -41,6 +44,26 @@ h2.location{
     font-size: 1rem;
     background-color: transparent;
     border: 1px solid #fff;
+}
+.tempBtn button:first-child.centi{
+    color:red;
+    background-color: #fff;
+}
+.tempBtn button:last-child.fara{
+    color:red;
+    background-color: #fff;
+}
+.tempBtn button:active{
+    color:red;
+    background-color: #fff;
+}
+ .tempBtn button:hover {
+    background-color: #fff;
+    color:red;
+  }
+  .tempBtn button:visited{
+    color:red;
+    background-color: #fff;
 }
 .center{
     margin-block-start: 2%;

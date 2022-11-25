@@ -11,5 +11,8 @@ export class FavDilogComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+onClear(){
+  localStorage.removeItem('favourite');
+  window.location.reload();
+}
 }
