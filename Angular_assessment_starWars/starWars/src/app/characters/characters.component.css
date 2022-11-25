@@ -7,17 +7,28 @@
     gap:2rem;
     align-items: center;
     color:#fff;
-    height:5vh;
+    /* height:5vh; */
     padding: 0;
     text-transform: uppercase;
     font:Open 'Sans Bold';
     font-size: 1.25rem;
     
+    
+}
+/* .borderbox{
+  
+    height: 55vh;
+    overflow: scroll;
+} */
+.borderbox::-webkit-scrollbar{
+    display: none;
 }
 .charaContent a{
     text-decoration: none;
     color: #fff;
     padding: 1%;
+   
+   
 }
 .charaContent a:hover{
 background-color:rgba(0,171,255,0.4); 
@@ -108,7 +119,7 @@ background-color:rgba(0,171,255,0.4);
         color:#fff;
         padding: 0;
         text-transform: uppercase;
-        height:5vh;
+        /* height:5vh; */
         font:Open 'Sans Bold';
         
     }

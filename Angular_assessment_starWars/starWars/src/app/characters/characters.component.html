@@ -5,6 +5,7 @@
     <div class="navbar" >
 <app-navbar></app-navbar>
     </div>
+    <div class="borderbox">
     <div class="charaContent" *ngFor="let character of people.results;index as i" >
          <a (click)="storeData(character)">{{character.name}}</a>
          <!-- <a>luke&nbsp;skywalker</a>
@@ -17,6 +18,7 @@
          <a>yoda</a>
          <a>rey</a> -->
     </div>
+</div>
     <div class="buttons">
         <div class="prebtn" (click)="previous()" [class.disbutton]="this.people.previous == null">
             <button type="submit" [disabled]="this.people.previous == null" >PREVIOUS</button>
