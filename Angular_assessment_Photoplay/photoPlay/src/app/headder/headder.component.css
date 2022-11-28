@@ -1,0 +1,164 @@
+.back{
+/* height: 32.19%; */
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background:  url('../../assets/Mask.png')no-repeat center center/cover ;
+  /* position:relative;
+  overflow: scroll; */
+  padding: 3%;
+}
+.back::-webkit-scrollbar{
+    display: none;
+}
+.logo{
+    margin-left: 10%;
+    margin-top: -2%;
+    
+    
+}
+.imgline{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem
+   
+   
+}
+.medialine h1{
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 28px;
+    text-align: center;
+    display:none;
+   
+    justify-content: center;
+}
+.medialine p{
+    color: #FFFFFF;
+  font-family: Roboto;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-align: center;
+ 
+  display: none;
+}
+.mediaSearch{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:1rem;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    width: 80%;
+    padding: 1%;
+    display: none;
+    
+}
+
+input{
+    outline: none;
+    border:none;
+    opacity: 0.37;
+    color: #37474F;
+    font-family: Roboto;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 16px;
+}
+
+.imgline h1{
+   
+  color: #FFFFFF;
+  font-family: 'Roboto';
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 35px;
+  text-align: center;
+  margin:0
+}
+.imgline p{
+   
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 24px;
+    text-align: center;
+    margin: 0;
+    
+}
+.searchBar{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap:20rem;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    padding: .2%;
+}
+
+.searchBar input{
+    opacity: 0.53;
+    color: #2F2F2F;
+    font-family: 'Roboto';
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 24px;
+    outline: none;
+    border:none;
+}
+.searchBar button{
+    border: none;
+    cursor:pointer;
+    border-radius: 2px;
+    background-color: #560014;
+    padding:.6rem;
+   
+    
+}
+.searchBar button.button{
+    color:#fff;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.32px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width:1200px){
+    .logo{
+        margin-left: 7%;
+    }
+    .searchBar{
+        gap:10rem;
+    }
+}
+@media screen and (max-width:700px) {
+   .back{
+    width:90%;
+    padding: 5%;
+    margin: 0;
+   }
+    .medialine h1{
+        display: flex;
+    }
+    .medialine p{
+        display: flex;
+        justify-content: center;
+    }
+    .imgline{
+        display: none;
+    }
+    .mediaSearch{
+        display: flex;
+       margin-left: 5%;
+    }
+}

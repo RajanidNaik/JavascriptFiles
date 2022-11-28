@@ -30,7 +30,7 @@ const routes: Routes = [
   }]
 },
   
-  {path:'yoda',component:YodaComponent},
+  
   {path:'films',component:FilmsComponent,
 children:[{
   path:'filmYoda',component:FilmYodaComponent
@@ -55,11 +55,7 @@ children:[{
   path:'vehicleYoda',component:VehicleYodaComponent
 }]
 },
-  {path:'speciesYoda',component:SpeciesYodaComponent},
-  {path:'vehicleYoda',component:VehicleYodaComponent},
-  {path:'planetYoda',component:PlanetYodaComponent},
-  {path:'starshipYoda',component:StarshipYodaComponent},
-  {path:'filmYoda',component:FilmYodaComponent}
+  
 ];
 
 @NgModule({

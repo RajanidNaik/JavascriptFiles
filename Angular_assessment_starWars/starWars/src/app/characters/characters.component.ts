@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Router, RouterLink,ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { CacheResolverService } from '../cache-resolver.service';
 @Component({
@@ -15,7 +15,7 @@ button:boolean=false;
 prebutton:boolean = false;
 imageId=0;
 
-  constructor(private data:CacheResolverService,public router:Router) { }
+  constructor(private route: ActivatedRoute,private data:CacheResolverService,public router:Router) { }
 
   ngOnInit(): void {
     sessionStorage.removeItem('filmsS');
@@ -94,7 +94,7 @@ previous(){
 }
 storeData(data:any){
   localStorage.setItem('character',JSON.stringify(data));
-  this.router.navigate(["/yoda"]);
+  this.router.navigate(["/yoda"],{relativeTo:this.route});
   
 }
 

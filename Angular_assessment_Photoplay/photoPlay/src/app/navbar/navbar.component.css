@@ -1,0 +1,77 @@
+.navbar{
+    width: 65.28%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-block-start: 1%;
+}
+.insideNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+}
+.inside {
+    display: flex;
+    flex-direction: row;
+    gap:5rem
+}
+
+.navbar .insideNav a{
+    text-decoration: none;
+    opacity: 0.5;
+    color: #230735;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 21px;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+.navbar .insideNav a:hover{
+    color: #E81244;
+    opacity: .7;
+    border-bottom: 1.5px solid #E81244;
+}
+.navbar .insideNav a.active{
+    color: #E81244;
+    opacity: .7;
+    border-bottom: 2px solid #E81244;
+}
+
+
+
+
+.line{
+    box-sizing: border-box;
+    height: 0.18%;
+    width: 65.35%;
+    border: 1px solid #276AA0;
+    opacity: 0.31;
+    margin-left: auto;
+    margin-right: auto;
+}
+.lineCopy{
+    box-sizing: border-box;
+    height: 0.18%;
+    width: 100%;
+    border: 1px solid #276AA0;
+    opacity: 0.31; 
+    display: none;
+}
+@media screen and (max-width:700px) {
+    .line{
+        display: none;
+    }
+    .lineCopy{
+        display: flex;
+    }
+    
+    .navbar{
+        width:95%;
+       
+    }
+   
+    
+}

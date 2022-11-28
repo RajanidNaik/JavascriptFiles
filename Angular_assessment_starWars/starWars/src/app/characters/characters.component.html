@@ -8,15 +8,9 @@
     <div class="borderbox">
     <div class="charaContent" *ngFor="let character of people.results;index as i" >
          <a (click)="storeData(character)">{{character.name}}</a>
-         <!-- <a>luke&nbsp;skywalker</a>
-         <a>obi-wan&nbsp;kenobi</a>
-         <a routerLink="/yoda">yoda</a>
-         <a>rey</a>
-         <a>darth&nbsp;vader</a>
-         <a>luke&nbsp;skywalker</a>
-         <a>obi-wan&nbsp;kenobi</a>
-         <a>yoda</a>
-         <a>rey</a> -->
+         <p><router-outlet></router-outlet></p>
+         
+         
     </div>
 </div>
     <div class="buttons">
