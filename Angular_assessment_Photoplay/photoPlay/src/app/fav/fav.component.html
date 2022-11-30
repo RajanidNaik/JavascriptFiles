@@ -1,218 +1,38 @@
 <div>
-    <div class="head">
+    <div class="head" *ngIf="!head">
         <app-headder></app-headder>
+    </div>
+    <div class="head" *ngIf="head">
+        <app-second-head></app-second-head>
     </div>
     <div class="navbar">
         <app-navbar></app-navbar>
     </div>
     <div class="gallery">
-        <div class="image">
-          
-            <img  class="image1" src="/assets/Rectangle Copy 6.png">
+        
+        <div class="image" *ngFor="let fev of fevouriteData">
+          {{checkImage(fev)}}
+          <div *ngIf="image" (click)="detailsToImage(fev)">
+            <img  class="image1" src="{{fev.src.large}}">
+          </div>
+          <div *ngIf="!image" (click)="detailsToImage(fev)">
+            <video  controls class="image2"  (click)="detailsToImage(fev)">
+                <source src="{{fev.url}}" type="video/mp4">
+              </video>
+          </div>
             <div class="icon">
-                <mat-icon>favorite</mat-icon>
+                <mat-icon (click)=" removeFavourite(fev)">favorite</mat-icon>
             </div>
            
-            <div class="owner">
-             <div>
+            <div class="owner" (click)="detailsToImage(fev)">
+             <div >
                 <img src="/assets/Oval.png">
              </div>
-             <div>Ariana&nbsp;Barros</div>
+             <div>{{userName(fev) | titlecase}}</div>
             </div>
            
     
   </div>
-  <div class="image">
-          
-    <img  class="image1" src="/assets/Rectangle Copy 6.png">
-    <div class="icon">
-        <mat-icon>favorite</mat-icon>
-    </div>
-    <div class="pause">
-        <img src="/assets/Shape.png">
-    </div>
-    <div class="owner">
-     <div>
-        <img src="/assets/Oval.png">
-     </div>
-     <div>Ariana&nbsp;Barros</div>
-    </div>
-   
-
-</div>
-<div class="image">
-          
-    <img  class="image1" src="/assets/Rectangle Copy 6.png">
-    <div class="icon">
-        <mat-icon>favorite</mat-icon>
-    </div>
-    <div class="pause">
-        <img src="/assets/Shape.png">
-    </div>
-    <div class="owner">
-     <div>
-        <img src="/assets/Oval.png">
-     </div>
-     <div>Ariana&nbsp;Barros</div>
-    </div>
-   
-
-</div>
-<div class="image">
-          
-    <img  class="image1" src="/assets/Rectangle Copy 6.png">
-    <div class="icon">
-        <mat-icon>favorite</mat-icon>
-    </div>
-   
-    <div class="owner">
-     <div>
-        <img src="/assets/Oval.png">
-     </div>
-     <div>Ariana&nbsp;Barros</div>
-    </div>
-   
-
-</div>
-  <div class="image">
-          
-    <img  class="image1" src="/assets/Rectangle Copy 5.png">
-    <div class="icon">
-        <mat-icon>favorite</mat-icon>
-    </div>
-    <div class="pause">
-        <img src="/assets/Shape.png">
-    </div>
-    <div class="owner">
-     <div>
-        <img src="/assets/Oval.png">
-     </div>
-     <div>Ariana&nbsp;Barros</div>
-    </div>
-   
-
-</div>
-<div class="image">
-          
-    <img  class="image1" src="/assets/Rectangle Copy 5.png">
-    <div class="icon">
-        <mat-icon>favorite</mat-icon>
-    </div>
-    <div class="pause">
-        <img src="/assets/Shape.png">
-    </div>
-    <div class="owner">
-     <div>
-        <img src="/assets/Oval.png">
-     </div>
-     <div>Ariana&nbsp;Barros</div>
-    </div>
-   
-
-</div>
-<div class="image">
-          
-    <img  class="image1" src="/assets/Rectangle Copy 5.png">
-    <div class="icon">
-        <mat-icon>favorite</mat-icon>
-    </div>
-   
-    <div class="owner">
-     <div>
-        <img src="/assets/Oval.png">
-     </div>
-     <div>Ariana&nbsp;Barros</div>
-    </div>
-   
-
-</div>
-<div class="image">
-          
-    <img  class="image1" src="/assets/Rectangle Copy 5.png">
-    <div class="icon">
-        <mat-icon>favorite</mat-icon>
-    </div>
-    <div class="pause">
-        <img src="/assets/Shape.png">
-    </div>
-    <div class="owner">
-     <div>
-        <img src="/assets/Oval.png">
-     </div>
-     <div>Ariana&nbsp;Barros</div>
-    </div>
-   
-
-</div>
-<div class="image">
-          
-    <img  class="image1" src="/assets/Rectangle Copy 5.png">
-    <div class="icon">
-        <mat-icon>favorite</mat-icon>
-    </div>
-    
-    <div class="owner">
-     <div>
-        <img src="/assets/Oval.png">
-     </div>
-     <div>Ariana&nbsp;Barros</div>
-    </div>
-   
-
-</div>
-<div class="image">
-          
-    <img  class="image1" src="/assets/Rectangle Copy 6.png">
-    <div class="icon">
-        <mat-icon>favorite</mat-icon>
-    </div>
-    <div class="pause">
-        <img src="/assets/Shape.png">
-    </div>
-    <div class="owner">
-     <div>
-        <img src="/assets/Oval.png">
-     </div>
-     <div>Ariana&nbsp;Barros</div>
-    </div>
-   
-
-</div>
-<div class="image">
-          
-    <img  class="image1" src="/assets/Rectangle Copy 6.png">
-    <div class="icon">
-        <mat-icon>favorite</mat-icon>
-    </div>
-    <div class="pause">
-        <img src="/assets/Shape.png">
-    </div>
-    <div class="owner">
-     <div>
-        <img src="/assets/Oval.png">
-     </div>
-     <div>Ariana&nbsp;Barros</div>
-    </div>
-   
-
-</div>
-<div class="image">
-          
-    <img  class="image1" src="/assets/Rectangle Copy 6.png">
-    <div class="icon">
-        <mat-icon>favorite</mat-icon>
-    </div>
-    
-    <div class="owner">
-     <div>
-        <img src="/assets/Oval.png">
-     </div>
-     <div>Ariana&nbsp;Barros</div>
-    </div>
-   
-
-</div>
-            
            
         </div>
        

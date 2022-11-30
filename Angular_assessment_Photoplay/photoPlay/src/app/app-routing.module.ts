@@ -17,11 +17,15 @@ const routes: Routes = [
   {path:'footer',component:FooterComponent},
   {path:'photo',component:PhotosComponent},
   {path:'video',component:VideosComponent},
-  {path:'fav',component:FavComponent},
-  {path:'search',component:OnSearchComponent},
+  {path:'fav',component:FavComponent,
+children:[{
+  path:'search',component:OnSearchComponent
+}]},
+  { path:'search',component:OnSearchComponent},
   {path:'second',component:SecondHeadComponent},
   {path:'image',component:ImageZoomComponent},
-  {path:'play',component:VideoPlayComponent}
+  {path:'play',component:VideoPlayComponent},
+  {path:'',redirectTo:'photo',pathMatch:'full'}
 ];
 
 @NgModule({
