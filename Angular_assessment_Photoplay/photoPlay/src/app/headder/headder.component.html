@@ -9,10 +9,10 @@
         <p>Best&nbsp;memories&nbsp;online</p>
         <div class="searchBar">
             <div class="input">
-                <input class="field" type="text" placeholder="Search photos,videos,artists">
+                <input class="field" type="text" placeholder="Search photos,videos,artists" [(ngModel)]="search">
             </div>
             <div>
-                <button class="button">Search</button>
+                <button class="button" (click)="searchPhoto()">Search</button>
             </div>
         </div>
        </div>
@@ -23,10 +23,10 @@
     </div>
     <div class="mediaSearch">
         <div>
-            <mat-icon>search</mat-icon>
+            <mat-icon (click)="searchPhoto()">search</mat-icon>
         </div>
             <div class="input">
-                <input class="field" type="text" placeholder="Search photos,videos,artists">
+                <input class="field" type="text" placeholder="Search photos,videos,artists" [(ngModel)]="search">
             </div>
         
     </div>

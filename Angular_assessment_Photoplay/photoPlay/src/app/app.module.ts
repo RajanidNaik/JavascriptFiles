@@ -15,6 +15,8 @@ import { OnSearchComponent } from './on-search/on-search.component';
 import { SecondHeadComponent } from './second-head/second-head.component';
 import { ImageZoomComponent } from './image-zoom/image-zoom.component';
 import { VideoPlayComponent } from './video-play/video-play.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { VideoPlayComponent } from './video-play/video-play.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,31 +1,64 @@
+{{checkFev(data)}}
 <div>
     <div class="head">
         <app-second-head></app-second-head>
     </div>
-    <div class="box">
-        <img  class="image" src="/assets/Rectangle.png">
+    <div class="media">
+        <div>
+            <mat-icon routerLink="/photo">keyboard_backspace</mat-icon>
+        </div>
+        <div>
+            <div class="lineCopy">{{data.alt}}</div>
+        </div>
+        <div>
+            <mat-icon >more_vert</mat-icon>
+        </div>
+    </div>
+    <div class="box" >
+        <!-- [class.zooms]="zoom" [class.zooms]="zoom" [class.zoomin]="zoomouts" -->
+        <img  class="image" [style.transform]="scaleXY"  src="{{data.src.large}}" >
         <div class="content">
-            <div class="line">A&nbsp;warm&nbsp;smile&nbsp;is&nbsp;the&nbsp;universal&nbsp;language&nbsp;of&nbsp;kindness</div>
+            <div class="line">{{data.alt}}</div>
         
         <div class="whole">
-        <div class="heart">
-            <img src="/assets/Path.png">
-        </div>
+        <!-- <div class="icon">
+            {{checkFev(data)}}
+                <mat-icon (click)="addtoFavourite(data)"  [class.color]="color" [class.heart]="heart">favorite</mat-icon>
+                <mat-icon (click)="removeFavourite(data)" *ngIf="heart" [class.color]="color">favorite</mat-icon>
+        </div> -->
         <div class="icons">
-            <div class="zoom-in">
+            <div class="zoom-in" (click)="zoomIns()" >
                 <img src="/assets/Combined Shape.png">
             </div>
-            <div class="zoom-out">
+            <div class="zoom-out" (click)="zoomOut()">
                 <img src="/assets/Combined Shape(1).png">
             </div>
+           
         </div>
     </div>
     <div class="person">
         <div>
             <img src="/assets/Oval.png">
         </div>
-        <div class="personLine">Bonelwa&nbsp;Ngqawana</div>
+        <div class="personLine">{{data.photographer | titlecase}}</div>
     </div>
+    <div class="heartCopy">
+        {{checkFev(data)}}
+        <mat-icon (click)="addtoFavourite(data)"  [class.color]="color" [class.heart]="heart">favorite</mat-icon>
+            <mat-icon (click)="removeFavourite(data)" *ngIf="heart" [class.color]="color">favorite</mat-icon>
+    </div>
+    <div class="zoom">
+        <div class="iconsCopy">
+            <div class="zoom-in" (click)="zoomIns()">
+                <img  src="/assets/Combined Shape.png" >
+            </div>
+            <div class="zoom-out" (click)="zoomOut()">
+                <img src="/assets/Combined Shape(1).png">
+            </div>
+           
+        </div>
+    </div>
+   
 </div>
     </div>
     <div class="footer">
@@ -33,3 +66,4 @@
     </div>
 
 </div>
+

@@ -1,16 +1,65 @@
 .box{
-    height: 38rem;
-  width: 75rem;
+    height: 36rem;
+  width: 66rem;
   margin-left: auto;
   margin-right: auto;
   /* border: 1px solid #000; */
   position: relative;
+  overflow: hidden;
 }
 .image{
     object-fit: fill;
     width:100%;
     height: 100%;
+  
 }
+.heart{
+    display: none;
+}
+
+.color{
+    color:#FF0055;
+}
+
+.heartCopy{
+    display: flex;
+    position: absolute;
+    left:45rem;
+    color:#fff;
+    top:1rem;
+    cursor: pointer;
+}
+.heartCopy mat-icon{
+    font-size: 2.5rem;
+}
+/* .icon{
+    position: absolute;
+    top:20%;
+    right: 20%;
+    color:#fff;
+   
+  
+} .icon mat-icon{
+    font-size: 3rem;
+    color:#fff;
+} */
+/* .zoomin.image{
+object-fit: fill;
+width:100%;
+height: 100%;
+transform:scale(1);
+
+
+} */
+/* .zooms.image{
+    object-fit: fill;
+    width:100%;
+    height: 100%;
+transform:scale(1.5);
+
+
+
+} */
 .line{
     height: 28px;
     width: 30rem;
@@ -20,6 +69,7 @@
     font-weight: 500;
     letter-spacing: 0;
     line-height: 28px;
+    overflow:hidden
 }
 .icons{
     display:flex;
@@ -53,13 +103,7 @@
   
    
 }
-.heart{
-    box-sizing: border-box;
-  height: 1.8rem;
-  width: 2rem;
-  /* border: 2px solid #FFDCDC; */
-  background-color: rgba(255,220,220,0.15);
-}
+
 .content{
     position: absolute;
     top:0;
@@ -67,7 +111,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap:30rem;
+    gap:20rem;
     padding: 1.5%;
 }
 .person{
@@ -81,10 +125,304 @@
 }
 .personLine{
     height: 24px;
-  width: 124px;
+  width: 10rem;
   color: #FFFFFF;
   font-family: Roboto;
   font-size: 14px;
   letter-spacing: 0;
   line-height: 24px;
+}
+.media{
+    display: flex;
+    flex-direction: row;
+   justify-content: space-between;
+   margin: 0;
+    width:94%;
+    padding:3%;
+    color:#fff;
+  background-color: #212121;
+  display:none;
+}
+.lineCopy{
+ 
+ width:100%;
+ height:3.5vh;
+  color: #FFFFFF;
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 28px;
+  overflow:hidden;
+}
+.zoom{
+    display: none;
+}
+@media screen and (max-width:1800px){
+    .box{
+        height: 35rem;
+        width: 63rem;
+    }
+    .heartCopy{
+        left:42rem;
+    }
+    
+}
+@media screen and (max-width:1600px){
+    .box{
+        height: 35rem;
+        width: 59rem;
+    }
+    .content{
+        gap:15rem;
+    }
+    .heartCopy{
+        left:40rem;
+    }
+    
+}
+@media screen and (max-width:1400px){
+    .box{
+        height: 35rem;
+        width: 54rem;
+    }
+    .content{
+        gap:10rem;
+    }
+    .heartCopy{
+        left:35rem;
+    }
+    
+}
+@media screen and (max-width:1200px){
+    .box{
+        height: 35rem;
+        width: 49rem;
+    }
+    .content{
+        gap:6rem;
+    }
+    .icon{
+        position: absolute;
+        top:20%;
+        left: 70%;
+        color:#fff;
+       
+      /* background-color: rgba(255,220,220,0.15); */
+    } 
+    .heartCopy{
+        left:30rem;
+    }
+    
+}
+@media screen and (max-width:1000px){
+    .box{
+        height: 30rem;
+        width: 42rem;
+    }
+    .content{
+        gap:3.2rem;
+    }
+    .icon{
+        position: absolute;
+        top:20%;
+        left: 75%;
+        color:#fff;
+       
+      /* background-color: rgba(255,220,220,0.15); */
+    } 
+    .heartCopy{
+        left:30rem;
+    }
+    
+}
+@media screen and (max-width:800px){
+    .box{
+        height: 30rem;
+        width: 38rem;
+    }
+    .content{
+        gap:5%;
+    }
+    .line{
+        font-size: 1rem;
+    }
+    .whole{
+        gap:1%;
+        margin-right: 5%;
+    }
+    .icon{
+        position: absolute;
+        top:20%;
+        left: 65%;
+        color:#fff;
+       
+      /* background-color: rgba(255,220,220,0.15); */
+    } 
+    .heartCopy{
+        left:26rem;
+    }
+}
+@media screen and (max-width:700px){
+    .box{
+        height: 30rem;
+        width: 42rem;
+    }
+    .content{
+        gap:.1rem;
+    }
+    .media{
+        display: flex;
+    }
+    .head{
+        display: none;
+    }
+    .iconsCopy{
+        
+        display: flex;
+        gap:2%;
+        
+    }
+    .person{
+        margin-left: 5%;
+    }
+    .zoom{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        top:30rem;
+        left: 18rem;
+    }
+    .whole, .line{
+        display:none;
+    }
+    .heartCopy{
+        
+        /* position: absolute; */
+        left:38rem;
+        top:1rem
+    }
+    .box{
+        height: 35rem;
+        width: 100%;
+    }
+    .footer{
+        display:none;
+    }
+   
+    .heartCopy mat-icon{
+        font-size: 2rem;
+        
+    }
+}
+@media screen and (max-width:650px){
+   
+    .zoom{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        top:30rem;
+        left: 16rem;
+    }
+    .whole, .line{
+        display:none;
+    }
+    .heartCopy{
+        display: flex;
+        position: absolute;
+        left:32rem;
+        top:1rem
+    }
+    .box{
+        height: 35rem;
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width:600px){
+   
+    .zoom{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        top:30rem;
+        left: 15rem;
+    }
+    .whole, .line{
+        display:none;
+    }
+    .heartCopy{
+        display: flex;
+        position: absolute;
+     left:30rem;
+        
+        top:1rem
+    }
+    .box{
+        height: 35rem;
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width:500px){
+   
+    .zoom{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        top:30rem;
+        left: 12rem;
+    }
+    .whole, .line{
+        display:none;
+    }
+    .heartCopy{
+        display: flex;
+        position: absolute;
+     left:26rem;
+        
+        top:1rem
+    }
+    .box{
+        height: 35rem;
+        width: 100%;
+    }
+   
+}
+@media screen and (max-width:450px){
+   
+    
+    .heartCopy{
+        display: flex;
+        position: absolute;
+     left:23rem;
+        
+        top:1rem
+    }
+    .box{
+        height: 35rem;
+        width: 100%;
+    }
+   
+}
+@media screen and (max-width:400px){
+   
+    .heartCopy{
+        display: flex;
+        position: absolute;
+     left:20rem;
+        
+        top:1rem
+    }
+    .box{
+        height: 35rem;
+        width: 100%;
+    }
+    .zoom{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        top:30rem;
+        left: 8rem;
+    }
 }

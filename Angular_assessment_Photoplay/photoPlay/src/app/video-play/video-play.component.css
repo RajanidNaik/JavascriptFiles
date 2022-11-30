@@ -1,6 +1,6 @@
 .box{
-    height: 38rem;
-  width: 75rem;
+    height: 36rem;
+  width: 66rem;
   margin-left: auto;
   margin-right: auto;
   /* border: 1px solid #000; */
@@ -21,6 +21,25 @@
     letter-spacing: 0;
     line-height: 28px;
 }
+.heart{
+    display: none;
+}
+
+.color{
+    color:#FF0055;
+}
+.icon{
+    color:#fff;
+    cursor: pointer;
+}
+.iconCopy{
+    color:#fff;
+    display: none;
+    cursor: pointer;
+}
+.icon mat-icon{
+    font-size: 2rem;
+}
 .icons{
     display:flex;
     flex-direction: row;
@@ -28,19 +47,9 @@
     gap:1%
     
 }
-/* .whole{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap:2rem;
-} */
 
-.heart mat-icon{
-    box-sizing: border-box;
-  font-size:2.3rem;
- color:#FF0055;
- 
-}
+
+
 .content{
     position: absolute;
     top:0;
@@ -48,7 +57,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap:40rem;
+    gap:30rem;
     padding: 1.5%;
 }
 .person{
@@ -71,7 +80,7 @@
 }
 .play{
     position: absolute;
-    top:35rem;
+    top:30rem;
 left:7rem;
     display: flex;
     flex-direction: row;
@@ -91,15 +100,191 @@ font-size: 2rem;
 }
 .playLine{
  box-sizing: border-box;
-  height: 2px;
-  width: 51rem;
-  border: 4px solid #858585;
+ height: 0.28%;
+ width: 42rem;
+  border: 3px solid #858585;
  
 }
-.playLine .inline{
+ .inline{
     box-sizing: border-box;
-    height: 2px;
-    width: 22rem;
-    border: 4px solid #FF0000;
+    height: 0.28%;
+    width: 24.1%;
+    border: 1px solid #FF0000;
     
+}
+.media{
+    display: flex;
+    flex-direction: row;
+   justify-content: space-between;
+   margin: 0;
+    width:94%;
+    padding:3%;
+    color:#fff;
+  background-color: #212121;
+  display:none;
+}
+.lineCopy{
+    width: 59.72%;
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 28px;
+  }
+  .heartCopy{
+    display: none;
+}
+.playCopy{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:2rem;
+    display: none;
+}
+.personCopy{
+    display: none;
+}
+@media screen and (max-width:1600px){
+    .box{
+        height: 35rem;
+        width: 59rem;
+    }
+    .content{
+        gap:25rem;
+    }
+    .pause{
+        position:absolute;
+        top:15rem;
+        left:30rem;
+    }
+    
+}
+@media screen and (max-width:1200px){
+    .box{
+        height: 35rem;
+        width: 49rem;
+    }
+    .content{
+        gap:15rem;
+    }
+    .playLine{
+        width:30rem
+    }
+    .pause{
+        position:absolute;
+        top:15rem;
+        left:23rem;
+    }
+    
+}
+@media screen and (max-width:1000px){
+    .box{
+        height: 35rem;
+        width: 42rem;
+    }
+    .content{
+        gap:9rem;
+    }
+    .playLine{
+        width:20rem
+    }
+    
+}
+@media screen and (max-width:900px){
+    .box{
+        height: 35rem;
+        width: 38rem;
+    }
+    .content{
+        gap:5rem;
+    }
+    .playLine{
+        width:20rem
+    }
+    .pause{
+        position:absolute;
+        top:15rem;
+        left:18rem;
+    }
+}
+@media screen and (max-width:700px){
+    .box{
+        height: 25rem;
+        width: 100%;
+       
+    }
+    .contain{
+        background-color: #212121;
+    }
+    .content{
+        gap:.1rem;
+    }
+    .media{
+        display: flex;
+    }
+    .head{
+        display: none;
+    }
+    
+     .line{
+        display:none;
+    }
+    .vedio{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding:2%;
+        align-items: center;
+        background-color: #212121;
+        /* background: linear-gradient(180deg, rgba(0,0,0,1) 0%, #000000 100%); */
+    }
+     
+    .personCopy{
+        display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1%;
+    gap:1rem;
+    }
+    .heartCopy{
+        display: flex;
+        color:#FF0055;
+    }
+    .heartCopy mat-icon{
+        font-size:2rem;
+        margin-right: 5%;
+    }
+    
+    .playCopy{
+        display: flex;
+        width:90;
+        margin-block-start: 2%;
+        padding: 10%;
+    }
+    .playCopy mat-icon{
+        color:#FFFFFF;
+        font-size: 2rem;
+    }
+    .playLineCopy{
+        box-sizing: border-box;
+        height: 0.31%;
+        width: 69.17%;
+        border: 2px solid #858585;
+    }
+    .inlineCopy{
+        box-sizing: border-box;
+        height: 0.08%;
+        width: 28.89%;
+        border: 1px solid #FF0000;
+    }
+    .footer,.play,.pause,.heart,.person{
+        display:none;
+    }
+    .icon{
+        display:none;
+    }
+    .iconCopy{
+        display:flex
+    }
 }

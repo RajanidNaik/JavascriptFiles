@@ -1,3 +1,5 @@
+{{recentPhoto()}}
+
 <div>
     <div class="head">
         <app-headder></app-headder>
@@ -6,187 +8,23 @@
         <app-navbar></app-navbar>
     </div>
     <div class="gallery">
-        <div class="image">
-          
-            <img  class="image1" src="/assets/Rectangle Copy 6.png">
+        <div class="image" *ngFor="let d of data" >
+          <div></div>
+            <img  class="image1" src="{{d.src.medium}}" (click)="detailsToImage(d)">
             <div class="icon">
-                <mat-icon>favorite</mat-icon>
+                {{checkFev(d)}}
+                <mat-icon (click)="addtoFavourite(d)"  [class.color]="color" [class.heart]="heart">favorite</mat-icon>
+                <mat-icon (click)="removeFavourite(d)" *ngIf="heart" [class.color]="color">favorite</mat-icon>
             </div>
             <div class="owner">
-             <div>
+             <div >
                 <img src="/assets/Oval.png">
              </div>
-             <div>Ariana&nbsp;Barros</div>
+             <div >{{d.photographer}}</div>
             </div>
            
     
   </div>
-  <div class="image">
-          
-    <img  class="image1" src="/assets/Rectangle Copy 6.png">
-    <div class="icon">
-        <mat-icon>favorite</mat-icon>
-    </div>
-    <div class="owner">
-     <div>
-        <img src="/assets/Oval.png">
-     </div>
-     <div>Ariana&nbsp;Barros</div>
-    </div>
-   
-
-</div>
-<div class="image">
-          
-    <img  class="image1" src="/assets/Rectangle Copy 6.png">
-    <div class="icon">
-        <mat-icon>favorite</mat-icon>
-    </div>
-    <div class="owner">
-     <div>
-        <img src="/assets/Oval.png">
-     </div>
-     <div>Ariana&nbsp;Barros</div>
-    </div>
-   
-
-</div>
-<div class="image">
-          
-    <img  class="image1" src="/assets/Rectangle Copy 6.png">
-    <div class="icon">
-        <mat-icon>favorite</mat-icon>
-    </div>
-    <div class="owner">
-     <div>
-        <img src="/assets/Oval.png">
-     </div>
-     <div>Ariana&nbsp;Barros</div>
-    </div>
-   
-
-</div>
-  <div class="image">
-          
-    <img  class="image1" src="/assets/Rectangle Copy 5.png">
-    <div class="icon">
-        <mat-icon>favorite</mat-icon>
-    </div>
-    <div class="owner">
-     <div>
-        <img src="/assets/Oval.png">
-     </div>
-     <div>Ariana&nbsp;Barros</div>
-    </div>
-   
-
-</div>
-<div class="image">
-          
-    <img  class="image1" src="/assets/Rectangle Copy 5.png">
-    <div class="icon">
-        <mat-icon>favorite</mat-icon>
-    </div>
-    <div class="owner">
-     <div>
-        <img src="/assets/Oval.png">
-     </div>
-     <div>Ariana&nbsp;Barros</div>
-    </div>
-   
-
-</div>
-<div class="image">
-          
-    <img  class="image1" src="/assets/Rectangle Copy 5.png">
-    <div class="icon">
-        <mat-icon>favorite</mat-icon>
-    </div>
-    <div class="owner">
-     <div>
-        <img src="/assets/Oval.png">
-     </div>
-     <div>Ariana&nbsp;Barros</div>
-    </div>
-   
-
-</div>
-<div class="image">
-          
-    <img  class="image1" src="/assets/Rectangle Copy 5.png">
-    <div class="icon">
-        <mat-icon>favorite</mat-icon>
-    </div>
-    <div class="owner">
-     <div>
-        <img src="/assets/Oval.png">
-     </div>
-     <div>Ariana&nbsp;Barros</div>
-    </div>
-   
-
-</div>
-<div class="image">
-          
-    <img  class="image1" src="/assets/Rectangle Copy 5.png">
-    <div class="icon">
-        <mat-icon>favorite</mat-icon>
-    </div>
-    <div class="owner">
-     <div>
-        <img src="/assets/Oval.png">
-     </div>
-     <div>Ariana&nbsp;Barros</div>
-    </div>
-   
-
-</div>
-<div class="image">
-          
-    <img  class="image1" src="/assets/Rectangle Copy 6.png">
-    <div class="icon">
-        <mat-icon>favorite</mat-icon>
-    </div>
-    <div class="owner">
-     <div>
-        <img src="/assets/Oval.png">
-     </div>
-     <div>Ariana&nbsp;Barros</div>
-    </div>
-   
-
-</div>
-<div class="image">
-          
-    <img  class="image1" src="/assets/Rectangle Copy 6.png">
-    <div class="icon">
-        <mat-icon>favorite</mat-icon>
-    </div>
-    <div class="owner">
-     <div>
-        <img src="/assets/Oval.png">
-     </div>
-     <div>Ariana&nbsp;Barros</div>
-    </div>
-   
-
-</div>
-<div class="image">
-          
-    <img  class="image1" src="/assets/Rectangle Copy 6.png">
-    <div class="icon">
-        <mat-icon>favorite</mat-icon>
-    </div>
-    <div class="owner">
-     <div>
-        <img src="/assets/Oval.png">
-     </div>
-     <div>Ariana&nbsp;Barros</div>
-    </div>
-   
-
-</div>
-            
            
         </div>
        
